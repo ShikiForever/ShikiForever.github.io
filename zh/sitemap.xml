@@ -71,19 +71,6 @@
                 href="http://localhost:1313/zh/post/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/p/my-first-post/</loc>
-    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/p/my-first-post/"
-                />
-  </url><url>
     <loc>http://localhost:1313/zh/categories/documentation/</loc>
     <lastmod>2026-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -105,6 +92,19 @@
                 rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/categories/documentation/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/zh/p/my-first-post/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://localhost:1313/zh/p/my-first-post/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/tags/gallery/</loc>
@@ -199,29 +199,6 @@
                 href="http://localhost:1313/zh/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/zh/p/%E7%9F%AD%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/p/shortcodes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant-tw"
-                href="http://localhost:1313/zh-hant-tw/p/%E7%9F%AD%E4%BB%A3%E7%A2%BC/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/p/%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%B3%E3%83%BC%E3%83%89/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/p/%E7%9F%AD%E4%BB%A3%E7%A0%81/"
-                />
-  </url><url>
     <loc>http://localhost:1313/zh/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -266,24 +243,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="http://localhost:1313/zh/p/image-gallery/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/zh/tags/%E9%9A%90%E7%A7%81/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant-tw"
-                href="http://localhost:1313/zh-hant-tw/tags/%E9%9A%90%E7%A7%81/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="http://localhost:1313/ja/tags/%E9%9A%90%E7%A7%81/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="http://localhost:1313/zh/tags/%E9%9A%90%E7%A7%81/"
                 />
   </url><url>
     <loc>http://localhost:1313/zh/tags/css/</loc>
