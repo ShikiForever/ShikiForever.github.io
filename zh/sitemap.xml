@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://demo.stack.cai.im/zh/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,7 +26,7 @@
                 />
   </url><url>
     <loc>https://demo.stack.cai.im/zh/categories/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -46,6 +46,65 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://demo.stack.cai.im/zh/categories/"
+                />
+  </url><url>
+    <loc>https://demo.stack.cai.im/zh/post/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://demo.stack.cai.im/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://demo.stack.cai.im/zh-hant-tw/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://demo.stack.cai.im/ja/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://demo.stack.cai.im/zh/post/"
+                />
+  </url><url>
+    <loc>https://demo.stack.cai.im/zh/p/my-first-post/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://demo.stack.cai.im/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://demo.stack.cai.im/zh/p/my-first-post/"
+                />
+  </url><url>
+    <loc>https://demo.stack.cai.im/zh/categories/documentation/</loc>
+    <lastmod>2026-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://demo.stack.cai.im/categories/documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hant-tw"
+                href="https://demo.stack.cai.im/zh-hant-tw/categories/documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://demo.stack.cai.im/ja/categories/documentation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://demo.stack.cai.im/zh/categories/documentation/"
                 />
   </url><url>
     <loc>https://demo.stack.cai.im/zh/tags/gallery/</loc>
@@ -117,29 +176,6 @@
                 href="https://demo.stack.cai.im/zh/tags/photoswipe/"
                 />
   </url><url>
-    <loc>https://demo.stack.cai.im/zh/post/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://demo.stack.cai.im/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://demo.stack.cai.im/zh-hant-tw/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://demo.stack.cai.im/ja/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://demo.stack.cai.im/zh/post/"
-                />
-  </url><url>
     <loc>https://demo.stack.cai.im/zh/tags/</loc>
     <lastmod>2026-01-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -207,29 +243,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://demo.stack.cai.im/zh/%E5%85%B3%E4%BA%8E/"
-                />
-  </url><url>
-    <loc>https://demo.stack.cai.im/zh/categories/documentation/</loc>
-    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://demo.stack.cai.im/categories/documentation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://demo.stack.cai.im/zh-hant-tw/categories/documentation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://demo.stack.cai.im/ja/categories/documentation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://demo.stack.cai.im/zh/categories/documentation/"
                 />
   </url><url>
     <loc>https://demo.stack.cai.im/zh/p/image-gallery/</loc>

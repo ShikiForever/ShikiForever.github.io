@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Hugo 主题 Stack</title>
+        <title>Posts on 织式就是力量</title>
         <link>https://demo.stack.cai.im/zh/post/</link>
-        <description>Recent content in Posts on Hugo 主题 Stack</description>
+        <description>Recent content in Posts on 织式就是力量</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.cai.im/zh/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.cai.im/zh/post/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>第二遍学抽象代数</title>
+            <link>https://demo.stack.cai.im/zh/p/my-first-post/</link>
+            <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+            <guid>https://demo.stack.cai.im/zh/p/my-first-post/</guid>
+            <description>&lt;ul&gt;&#xA;&lt;li&gt;等价关系&#xA;&lt;ul&gt;&#xA;&lt;li&gt;$A\cong A$（对应于群的单位元$A\overset{\sim}{\underset{\operatorname{id}_A}{\rightarrow}} A$）&lt;/li&gt;&#xA;&lt;li&gt;$A\cong B\Rightarrow B\cong A$（对应于群的逆元$A\overset{\sim}{\underset{f}{\rightarrow}} B\Rightarrow B\overset{\sim}{\underset{f^{-1}}{\rightarrow}} A$）&lt;/li&gt;&#xA;&lt;li&gt;$(A\cong B)\vee (B\cong C)\Rightarrow A\cong C$（对应于群的乘法运算$(A\overset{\sim}{\underset{f}{\rightarrow}} B)\vee (B\overset{\sim}{\underset{g}{\rightarrow}} C)\Rightarrow A\overset{\sim}{\underset{gf}{\rightarrow}} C$）&lt;/li&gt;&#xA;&lt;li&gt;从而每个群中的元素如果看成是某个范畴中的所有态射，那么范畴中的对象在这些群元素的作用下可以得到一个等价关系&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;态射的复合满足结合律，我们称所有态射为同构（也就是要求可逆）的范畴为一个广群（groupoid），此时$\operatorname{Hom}_C(A,A)=\operatorname{End}_C(A)=\operatorname{Aut}_C(A)$为一个群，可逆性和广群理论应该是对应的，考虑广群的例子时应该注重考虑什么是可逆的&lt;/li&gt;&#xA;&lt;li&gt;广群的例子&#xA;&lt;ul&gt;&#xA;&lt;li&gt;显然等价关系诱导的范畴都是广群&#xA;&lt;ul&gt;&#xA;&lt;li&gt;最显然的是等于关系，所有的自同构群都是单点集&lt;/li&gt;&#xA;&lt;li&gt;集合配备态射全为双射的范畴，此时每个等价类代表势（cardinality），其为一个广群&lt;/li&gt;&#xA;&lt;li&gt;模$n$同余的等价关系，对应的范畴为一个广群&lt;/li&gt;&#xA;&lt;li&gt;矩阵代数中的相似、相合等等&lt;/li&gt;&#xA;&lt;li&gt;拓扑的等价&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;商运算本质上是把等价关系变成等号，如果模的是某个映射的核就是把非单射变成单射&lt;/li&gt;&#xA;&lt;li&gt;bilinear form本身应该与乘积相关，同时因为双线性型是定义在线性空间上的，所以与环论相关&lt;/li&gt;&#xA;&lt;li&gt;单射的右逆是唯一的这一事实的推广得到了monomorphism的定义&lt;/li&gt;&#xA;&lt;li&gt;满射的左逆是唯一的这一事实的推广得到了epimorphism的定义&lt;/li&gt;&#xA;&lt;li&gt;或者说如果单射的左逆唯一，那么它一定是满射，从而是双射，如果满射的右逆唯一，那么它一定是单射，从而是双射&lt;/li&gt;&#xA;&lt;li&gt;对于一个自反且传递的关系，它对应的集合构成一个范畴，其中任意两个对象之间的态射定义为它们之间的有序对，从而两个对象之间的态射至多只有一个，从而显然每个态射都是单射且满射，但是由于这个关系不一定具有对称性，如偏序关系就不具有对称性，故单射且满射推不出是同构，反过来，同构一定既是单射又是满射。&#xA;&lt;ul&gt;&#xA;&lt;li&gt;我们想问，什么时候单射+满射可以推出同构？&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;单态射也可以看作是满足左消去律的态射&lt;/li&gt;&#xA;&lt;li&gt;满态射也可以看作是满足右消去律的态射&lt;/li&gt;&#xA;&lt;li&gt;&#xA;$$f=\pi_{A}\circ\sigma$$$$g=\pi_{B}\circ\sigma$$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;</description>
+        </item><item>
             <title>短代码</title>
             <link>https://demo.stack.cai.im/zh/p/%E7%9F%AD%E4%BB%A3%E7%A0%81/</link>
             <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
