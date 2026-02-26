@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Chapter0的笔记">
-<title>最后一次！</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 等价关系 $A\\cong A$（对应于群的单位元$A\\overset{\\sim}{\\underset{\\operatorname{id}_A}{\\rightarrow}} A$） $A\\cong B\\Rightarrow B\\cong A$（对应于群的逆元$A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B\\Rightarrow B\\overset{\\sim}{\\underset{f^{-1}}{\\rightarrow}} A$） $(A\\cong B)\\vee (B\\cong C)\\Rightarrow A\\cong C$（对应于群的乘法运算$(A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B)\\vee (B\\overset{\\sim}{\\underset{g}{\\rightarrow}} C)\\Rightarrow A\\overset{\\sim}{\\underset{gf}{\\rightarrow}} C$） 从而每个群中的元素如果看成是某个范畴中的所有态射，那么范畴中的对象在这些群元素的作用下可以得到一个等价关系 态射的复合满足结合律，我们称所有态射为同构（也就是要求可逆）的范畴为一个广群（groupoid），此时$\\operatorname{Hom}_C(A,A)=\\operatorname{End}_C(A)=\\operatorname{Aut}_C(A)$为一个群，可逆性和广群理论应该是对应的，考虑广群的例子时应该注重考虑什么是可逆的 广群的例子 显然等价关系诱导的范畴都是广群 最显然的是等于关系，所有的自同构群都是单点集 集合配备态射全为双射的范畴，此时每个等价类代表势（cardinality），其为一个广群 模$n$同余的等价关系，对应的范畴为一个广群 矩阵代数中的相似、相合等等 拓扑的等价 商运算本质上是把等价关系变成等号，如果模的是某个映射的核就是把非单射变成单射 bilinear form本身应该与乘积相关，同时因为双线性型是定义在线性空间上的，所以与环论相关 单射的右逆是唯一的这一事实的推广得到了monomorphism的定义 满射的左逆是唯一的这一事实的推广得到了epimorphism的定义 或者说如果单射的左逆唯一，那么它一定是满射，从而是双射，如果满射的右逆唯一，那么它一定是单射，从而是双射 对于一个自反且传递的关系，它对应的集合构成一个范畴，其中任意两个对象之间的态射定义为它们之间的有序对，从而两个对象之间的态射至多只有一个，从而显然每个态射都是单射且满射，但是由于这个关系不一定具有对称性，如偏序关系就不具有对称性，故单射且满射推不出是同构，反过来，同构一定既是单射又是满射。 我们想问，什么时候单射+满射可以推出同构？ 单态射也可以看作是满足左消去律的态射 满态射也可以看作是满足右消去律的态射 $$f=\\pi_{A}\\circ\\sigma$$$$g=\\pi_{B}\\circ\\sigma$$ ">
+<title>Chapter0的笔记</title>
 
 
 <link rel="canonical" href="http://localhost:1313/zh/p/my-first-post/">
@@ -12,13 +12,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.51bbf1ce24f77edff532a0abed84dd20364a30771816f60306d916a1f2e70719.css"><meta property='og:title' content="最后一次！">
-<meta property='og:description' content="Chapter0的笔记">
+<link rel="stylesheet" href="/scss/style.min.51bbf1ce24f77edff532a0abed84dd20364a30771816f60306d916a1f2e70719.css"><meta property='og:title' content="Chapter0的笔记">
+<meta property='og:description' content=" 等价关系 $A\\cong A$（对应于群的单位元$A\\overset{\\sim}{\\underset{\\operatorname{id}_A}{\\rightarrow}} A$） $A\\cong B\\Rightarrow B\\cong A$（对应于群的逆元$A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B\\Rightarrow B\\overset{\\sim}{\\underset{f^{-1}}{\\rightarrow}} A$） $(A\\cong B)\\vee (B\\cong C)\\Rightarrow A\\cong C$（对应于群的乘法运算$(A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B)\\vee (B\\overset{\\sim}{\\underset{g}{\\rightarrow}} C)\\Rightarrow A\\overset{\\sim}{\\underset{gf}{\\rightarrow}} C$） 从而每个群中的元素如果看成是某个范畴中的所有态射，那么范畴中的对象在这些群元素的作用下可以得到一个等价关系 态射的复合满足结合律，我们称所有态射为同构（也就是要求可逆）的范畴为一个广群（groupoid），此时$\\operatorname{Hom}_C(A,A)=\\operatorname{End}_C(A)=\\operatorname{Aut}_C(A)$为一个群，可逆性和广群理论应该是对应的，考虑广群的例子时应该注重考虑什么是可逆的 广群的例子 显然等价关系诱导的范畴都是广群 最显然的是等于关系，所有的自同构群都是单点集 集合配备态射全为双射的范畴，此时每个等价类代表势（cardinality），其为一个广群 模$n$同余的等价关系，对应的范畴为一个广群 矩阵代数中的相似、相合等等 拓扑的等价 商运算本质上是把等价关系变成等号，如果模的是某个映射的核就是把非单射变成单射 bilinear form本身应该与乘积相关，同时因为双线性型是定义在线性空间上的，所以与环论相关 单射的右逆是唯一的这一事实的推广得到了monomorphism的定义 满射的左逆是唯一的这一事实的推广得到了epimorphism的定义 或者说如果单射的左逆唯一，那么它一定是满射，从而是双射，如果满射的右逆唯一，那么它一定是单射，从而是双射 对于一个自反且传递的关系，它对应的集合构成一个范畴，其中任意两个对象之间的态射定义为它们之间的有序对，从而两个对象之间的态射至多只有一个，从而显然每个态射都是单射且满射，但是由于这个关系不一定具有对称性，如偏序关系就不具有对称性，故单射且满射推不出是同构，反过来，同构一定既是单射又是满射。 我们想问，什么时候单射+满射可以推出同构？ 单态射也可以看作是满足左消去律的态射 满态射也可以看作是满足右消去律的态射 $$f=\\pi_{A}\\circ\\sigma$$$$g=\\pi_{B}\\circ\\sigma$$ ">
 <meta property='og:url' content='http://localhost:1313/zh/p/my-first-post/'>
 <meta property='og:site_name' content='织式就是力量'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-02-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-02-10T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="最后一次！">
-<meta name="twitter:description" content="Chapter0的笔记">
+<meta name="twitter:title" content="Chapter0的笔记">
+<meta name="twitter:description" content=" 等价关系 $A\\cong A$（对应于群的单位元$A\\overset{\\sim}{\\underset{\\operatorname{id}_A}{\\rightarrow}} A$） $A\\cong B\\Rightarrow B\\cong A$（对应于群的逆元$A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B\\Rightarrow B\\overset{\\sim}{\\underset{f^{-1}}{\\rightarrow}} A$） $(A\\cong B)\\vee (B\\cong C)\\Rightarrow A\\cong C$（对应于群的乘法运算$(A\\overset{\\sim}{\\underset{f}{\\rightarrow}} B)\\vee (B\\overset{\\sim}{\\underset{g}{\\rightarrow}} C)\\Rightarrow A\\overset{\\sim}{\\underset{gf}{\\rightarrow}} C$） 从而每个群中的元素如果看成是某个范畴中的所有态射，那么范畴中的对象在这些群元素的作用下可以得到一个等价关系 态射的复合满足结合律，我们称所有态射为同构（也就是要求可逆）的范畴为一个广群（groupoid），此时$\\operatorname{Hom}_C(A,A)=\\operatorname{End}_C(A)=\\operatorname{Aut}_C(A)$为一个群，可逆性和广群理论应该是对应的，考虑广群的例子时应该注重考虑什么是可逆的 广群的例子 显然等价关系诱导的范畴都是广群 最显然的是等于关系，所有的自同构群都是单点集 集合配备态射全为双射的范畴，此时每个等价类代表势（cardinality），其为一个广群 模$n$同余的等价关系，对应的范畴为一个广群 矩阵代数中的相似、相合等等 拓扑的等价 商运算本质上是把等价关系变成等号，如果模的是某个映射的核就是把非单射变成单射 bilinear form本身应该与乘积相关，同时因为双线性型是定义在线性空间上的，所以与环论相关 单射的右逆是唯一的这一事实的推广得到了monomorphism的定义 满射的左逆是唯一的这一事实的推广得到了epimorphism的定义 或者说如果单射的左逆唯一，那么它一定是满射，从而是双射，如果满射的右逆唯一，那么它一定是单射，从而是双射 对于一个自反且传递的关系，它对应的集合构成一个范畴，其中任意两个对象之间的态射定义为它们之间的有序对，从而两个对象之间的态射至多只有一个，从而显然每个态射都是单射且满射，但是由于这个关系不一定具有对称性，如偏序关系就不具有对称性，故单射且满射推不出是同构，反过来，同构一定既是单射又是满射。 我们想问，什么时候单射+满射可以推出同构？ 单态射也可以看作是满足左消去律的态射 满态射也可以看作是满足右消去律的态射 $$f=\\pi_{A}\\circ\\sigma$$$$g=\\pi_{B}\\circ\\sigma$$ ">
     <link rel="shortcut icon" href="/img/avatar.jpg" />
 
     </head>
@@ -230,7 +230,7 @@
                                 
                                     
                                 
-                                <option value="/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" >English</option>
+                                <option value="/zh/p/my-first-post/" selected>简体中文</option>
                             
                                 
                                 
@@ -240,23 +240,7 @@
                                         
                                     
                                 
-                                <option value="/zh/p/my-first-post/" selected>简体中文</option>
-                            
-                                
-                                
-                                    
-                                
-                                    
-                                
-                                <option value="/zh-hant-tw/" >正體中文</option>
-                            
-                                
-                                
-                                    
-                                
-                                    
-                                
-                                <option value="/ja/" >日本語</option>
+                                <option value="/p/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" >English</option>
                             
                         </select>
                     </li>
@@ -310,13 +294,9 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/zh/p/my-first-post/">最后一次！</a>
+            <a href="/zh/p/my-first-post/">Chapter0的笔记</a>
         </h2>
     
-        
-        <h3 class="article-subtitle">
-            Chapter0的笔记
-        </h3>
         
     </div>
 
@@ -480,44 +460,12 @@ $$f=\pi_{A}\circ\sigma$$$$g=\pi_{B}\circ\sigma$$</li>
         <div class="flex article-list--tile">
             
                 
-<article class="has-image">
-    <a href="/zh/p/image-gallery/">
-        
-        <div class="article-image">
-            <img src="/p/image-gallery/helena-hertz-wWZzXlDpMog-unsplash.jpg" width="1000" height="750" loading="lazy"
-                alt="Featured image of post 相册">
-        </div>
-        
-
-        <div class="article-details"style="background: linear-gradient(0deg, #4d554c80 0%, #edeeefC0 100%);">
-            <h2 class="article-title">相册</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="has-image">
-    <a href="/zh/p/markdown-%E8%AF%AD%E6%B3%95%E6%8C%87%E5%8D%97/">
-        
-        <div class="article-image">
-            <img src="/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" width="1000" height="667" loading="lazy"
-                alt="Featured image of post Markdown 语法指南">
-        </div>
-        
-
-        <div class="article-details"style="background: linear-gradient(0deg, #679ddc80 0%, #bbbadcC0 100%);">
-            <h2 class="article-title">Markdown 语法指南</h2>
-        </div>
-    </a>
-</article>
-            
-                
 <article class="">
-    <a href="/zh/p/math-typesetting/">
+    <a href="/zh/p/springer-info/">
         
 
         <div class="article-details">
-            <h2 class="article-title">数学公式</h2>
+            <h2 class="article-title">Springer的介绍</h2>
         </div>
     </a>
 </article>
