@@ -5,7 +5,13 @@
         <description>Recent content in Pages on ShikiForever</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shikiforever.github.io/en/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://shikiforever.github.io/en/page/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Changelog</title>
+            <link>https://shikiforever.github.io/en/log/</link>
+            <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
+            <guid>https://shikiforever.github.io/en/log/</guid>
+            <description>&lt;h2 id=&#34;changelog&#34;&gt;Changelog&#xA;&lt;/h2&gt;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Update&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Date&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Notes&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Added a chibi Megumi Kato avatar&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-30&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The avatar is also used as the site icon&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Added the blog trash&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-30&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Supports deleting, restoring, and permanently removing a complete blog bundle&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Simplified deletion confirmation&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-30&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Uses a two-step confirmation instead of typing the URL slug&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Added the changelog page&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-30&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Provides update records in Chinese and English&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Added icon rotation&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;2026-07-30&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The avatar and social icons such as GitHub rotate on hover&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;</description>
+        </item><item>
             <title>About</title>
             <link>https://shikiforever.github.io/en/about/</link>
             <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
