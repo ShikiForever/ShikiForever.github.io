@@ -7,22 +7,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
                 href="https://shikiforever.github.io/zh/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/log/</loc>
@@ -30,12 +20,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/log/"
+                href="https://shikiforever.github.io/zh/log/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/zh/log/"
+                href="https://shikiforever.github.io/en/log/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/page/</loc>
@@ -43,22 +33,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/page/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
                 href="https://shikiforever.github.io/zh/page/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/page/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/page/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/page/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/post/</loc>
@@ -66,12 +46,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/post/"
+                href="https://shikiforever.github.io/zh/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/zh/post/"
+                href="https://shikiforever.github.io/en/post/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/p/my-first-post/</loc>
@@ -79,12 +59,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/p/my-first-post/"
+                href="https://shikiforever.github.io/zh/p/my-first-post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/zh/p/my-first-post/"
+                href="https://shikiforever.github.io/en/p/my-first-post/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/about/</loc>
@@ -92,22 +72,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
                 href="https://shikiforever.github.io/zh/%E5%85%B3%E4%BA%8E/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/%E9%97%9C%E6%96%BC/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/about/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/archives/</loc>
@@ -115,30 +85,15 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/archives/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
                 href="https://shikiforever.github.io/zh/archives/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/archives/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/archives/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/archives/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/categories/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -146,21 +101,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/categories/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/categories/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/categories/documentation/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/categories/documentation/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -168,21 +113,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/categories/documentation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/categories/documentation/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/categories/documentation/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/links/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/links/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -190,21 +125,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/%E9%8F%88%E6%8E%A5/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/%E3%83%AA%E3%83%B3%E3%82%AF/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/links/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/search/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/search/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -212,21 +137,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/search/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/search/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/tags/"
-                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -234,13 +149,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-hant-tw"
-                href="https://shikiforever.github.io/zh-hant-tw/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://shikiforever.github.io/ja/tags/"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/tags/"
                 />
   </url>
 </urlset>
