@@ -4,5 +4,18 @@
         <link>https://shikiforever.github.io/zh/tags/</link>
         <description>Recent content in Tags on 织式就是力量</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh</language><atom:link href="https://shikiforever.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" /></channel>
+        <language>zh</language>
+        <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://shikiforever.github.io/zh/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>XJTU</title>
+            <link>https://shikiforever.github.io/zh/tags/xjtu/</link>
+            <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
+            <guid>https://shikiforever.github.io/zh/tags/xjtu/</guid>
+            <description></description>
+        </item><item>
+            <title>开源项目</title>
+            <link>https://shikiforever.github.io/zh/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+            <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
+            <guid>https://shikiforever.github.io/zh/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
+            <description></description>
+        </item></channel>
 </rss>
