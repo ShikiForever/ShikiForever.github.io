@@ -5,11 +5,5 @@
         <description>Recent content on ShikiForever</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Thu, 26 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shikiforever.github.io/en/index.xml" rel="self" type="application/rss+xml" /><item>
-            <title>我的第一篇博客</title>
-            <link>https://shikiforever.github.io/en/p/my-first-post/</link>
-            <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
-            <guid>https://shikiforever.github.io/en/p/my-first-post/</guid>
-            <description>&lt;p&gt;这是我建立博客以来的第一篇文章，感觉非常神奇！&lt;/p&gt;&#xA;&lt;h2 id=&#34;这是一级标题前面加两个井号和一个空格&#34;&gt;这是一级标题（前面加两个井号和一个空格）&#xA;&lt;/h2&gt;&lt;h3 id=&#34;这是二级标题前面加三个井号&#34;&gt;这是二级标题（前面加三个井号）&#xA;&lt;/h3&gt;&lt;p&gt;这是一段普通的正文。如果你想让文字加粗，可以使用 &lt;strong&gt;加粗文字&lt;/strong&gt;（两边各加两个星号）。&lt;/p&gt;&#xA;&lt;p&gt;下面是一个简单的列表：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;第一件事：建好了博客框架&lt;/li&gt;&#xA;&lt;li&gt;第二件事：修改了好看的主题和名字&lt;/li&gt;&#xA;&lt;li&gt;第三件事：成功发布了第一篇文章！&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;做一个修改&lt;/p&gt;&#xA;</description>
-        </item></channel>
+        <lastBuildDate></lastBuildDate><atom:link href="https://shikiforever.github.io/en/index.xml" rel="self" type="application/rss+xml" /></channel>
 </rss>
