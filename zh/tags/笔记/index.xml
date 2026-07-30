@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>笔记 on 织式就是力量</title>
+        <link>https://shikiforever.github.io/zh/tags/%E7%AC%94%E8%AE%B0/</link>
+        <description>Recent content in 笔记 on 织式就是力量</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Thu, 30 Jul 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://shikiforever.github.io/zh/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>流形与几何初步学习笔记</title>
+            <link>https://shikiforever.github.io/zh/p/mfd-geometry/</link>
+            <pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
+            <guid>https://shikiforever.github.io/zh/p/mfd-geometry/</guid>
+            <description>&lt;h1 id=&#34;微分流形&#34;&gt;微分流形&#xA;&lt;/h1&gt;&lt;h2 id=&#34;流形的定义与例子&#34;&gt;流形的定义与例子&#xA;&lt;/h2&gt;&lt;h2 id=&#34;子流形&#34;&gt;子流形&#xA;&lt;/h2&gt;&lt;h2 id=&#34;单位分解&#34;&gt;单位分解&#xA;&lt;/h2&gt;&lt;p&gt;我们知道坐标卡可以用来局部拉回欧氏空间的一些概念（比如内积），但是一般来说不同的坐标卡之间拉回的概念是不兼容的，为此，我们要引入单位分解，用来把局部的对象拼接为整体的对象。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;定义（单位分解）&lt;/strong&gt;:给定一个微分流形$M$和它的一个开覆盖$\{U_\alpha\}_{\alpha\in \Gamma}$，如果存在（至多可数个）$(g_i:M\to \mathbb{R})\in C^\infty(M)$使得&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;$0\leq g_i(x)\leq 1\quad \forall x\in M$&lt;/li&gt;&#xA;&lt;li&gt;对任意的$i$，都存在$\alpha(i)\in\Gamma$使得$\operatorname{supp} g_i\subset U_{\alpha(i)}$&lt;/li&gt;&#xA;&lt;li&gt;$\{\operatorname{supp} g_i\}$是局部有限的&lt;/li&gt;&#xA;&lt;li&gt;$\sum_i g_i=1$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;则称$\{g_i\}$是从属于$\{U_\alpha\}$的一个（光滑）单位分解。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;注&lt;/strong&gt;：第三点不能改成点点有限，因为光滑性是局部定义的，而不是点点定义的，每个点上只有有限个$g_i$不为$0$不能确保第四点中的和式局部上是有限和，这导致我们无法判断和式的光滑性，更不用谈把一些局部概念光滑地拼接到一起了。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;例&lt;/strong&gt;：&#xA;令&lt;/p&gt;&#xA;$$f:\mathbb{R}\to\mathbb{R},f(x)=&#xA;\begin{cases}&#xA;\dfrac{1+\cos x}{2} &amp; \textrm{for}\ -\pi\leq x\leq\pi \\\\&#xA;0 &amp; \textrm{otherwise}&#xA;\end{cases}&#xA;$$&lt;p&gt;&#xA;则$f\in C^1(\mathbb{R})$&lt;/p&gt;&#xA;&lt;p&gt;令&lt;/p&gt;&#xA;$$\phi_{2m}(x)=f(x-m\pi)$$&lt;p&gt; &lt;/p&gt;&#xA;$$\phi_{2m-1}(x)=f(x+m\pi)$$&lt;p&gt;&#xA;那么 $\operatorname{supp}(\phi_i)$ 是一个长度为 $2\pi$ 的闭区间，因而是紧集。每个函数的取值范围都是 $[0,1]$。&lt;/p&gt;&#xA;&lt;p&gt;每个点的邻域至多与三个支集相交，因此该函数族的支集满足局部有限性。在任意一点处，非零函数至多只有两个，并且&lt;/p&gt;&#xA;$$&#xA;\begin{aligned}&#xA;\phi_{2m}(x)+\phi_{2m+2}(x)&#xA;&amp;=f(x-m\pi)+f\bigl(x-(m+1)\pi\bigr)\\\\&#xA;&amp;=1+\frac{\cos(x-m\pi)+\cos\bigl(x-(m+1)\pi\bigr)}{2}\\\\&#xA;&amp;=1,\\\\&#xA;\phi_{2m-1}(x)+\phi_{2m+1}(x)&#xA;&amp;=f(x+m\pi)+f\bigl(x+(m+1)\pi\bigr)\\\\&#xA;&amp;=1+\frac{\cos(x+m\pi)+\cos\bigl(x+(m+1)\pi\bigr)}{2}\\\\&#xA;&amp;=1,\\\\&#xA;\phi_1(x)+\phi_0(x)&#xA;&amp;=f(x+\pi)+f(x)\\\\&#xA;&amp;=1.&#xA;\end{aligned}&#xA;$$&lt;p&gt;从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单位分解。&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>
