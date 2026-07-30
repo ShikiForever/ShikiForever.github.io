@@ -417,37 +417,97 @@
 <li>$\{\operatorname{supp} g_i\}$是局部有限的</li>
 <li>$\sum_i g_i=1$</li>
 </ul>
-<p>则称$\{g_i\}$是从属于$\{U_\alpha\}$的一个（光滑）单位分解。</p>
+<p>则称$\{g_i\}$是从属于$\{U_\alpha\}$的一个（光滑）单位分解。进一步，我们令$g_\alpha=\sum_{\alpha(i)=\alpha}g_i$（从而如果没有$i$满足$\alpha(i)=\alpha$，则求和自动为$0$），则由于
+</p>
+$$
+\begin{aligned}
+  \operatorname{supp} g_\alpha &= \overline{\{x:g_\alpha(x)\neq0\}} \\
+  &= \overline{\{x:\sum_{\alpha(i)=\alpha}g_i(x)\neq0\}} \\
+  &= \overline{\{x:\exists i \textnormal{ s.t. } \alpha(i)=\alpha,  g_i(x)\neq0\}} \\
+  &= \overline{\bigcup_{\alpha(i)=\alpha}\{x:g_i(x)\neq 0\}}\\
+  &= \overline{\bigcup_{\alpha(i)=\alpha}\overline{\{x:g_i(x)\neq 0\}}}\\
+  &= \overline{\bigcup_{\alpha(i)=\alpha}\operatorname{supp} g_i}\\
+  &= {\bigcup_{\alpha(i)=\alpha}\overline{\operatorname{supp} g_i}}\\
+  &= {\bigcup_{\alpha(i)=\alpha}\operatorname{supp} g_i}
+\end{aligned}
+$$<p>
+（其中倒数第二步用到了$\{\operatorname{supp} g_i\}$的局部有限性），我们有$\{\operatorname{supp} g_\alpha\}$也是局部有限的。我们称$\{g_\alpha\}$为从属于$\{U_\alpha\}$的（广义）单位分解。</p>
+<p><strong>注</strong>：为什么我们要求从属于某个开覆盖，一来是因为我们希望把局部的信息拼接起来，二来是不需要从属于某个开覆盖的单位分解非常容易找，比如常数函数$1$就满足上面的所有条件。</p>
+<p><strong>注</strong>：局部有限性使得第四点的和式点点有定义。</p>
 <p><strong>注</strong>：第三点不能改成点点有限，因为光滑性是局部定义的，而不是点点定义的，每个点上只有有限个$g_i$不为$0$不能确保第四点中的和式局部上是有限和，这导致我们无法判断和式的光滑性，更不用谈把一些局部概念光滑地拼接到一起了。</p>
 <p><strong>例</strong>：
 令</p>
 $$f:\mathbb{R}\to\mathbb{R},f(x)=
 \begin{cases}
-\dfrac{1+\cos x}{2} & \textrm{for}\ -\pi\leq x\leq\pi \\\\
+\dfrac{1+\cos x}{2} & \textrm{for}\ -\pi\leq x\leq\pi \\
 0 & \textrm{otherwise}
 \end{cases}
 $$<p>
 则$f\in C^1(\mathbb{R})$</p>
 <p>令</p>
-$$\phi_{2m}(x)=f(x-m\pi)$$<p> </p>
-$$\phi_{2m-1}(x)=f(x+m\pi)$$<p>
+$$\phi_{m}(x)=f(x-m\pi)$$<p>
 那么 $\operatorname{supp}(\phi_i)$ 是一个长度为 $2\pi$ 的闭区间，因而是紧集。每个函数的取值范围都是 $[0,1]$。</p>
 <p>每个点的邻域至多与三个支集相交，因此该函数族的支集满足局部有限性。在任意一点处，非零函数至多只有两个，并且</p>
 $$
 \begin{aligned}
 \phi_{2m}(x)+\phi_{2m+2}(x)
-&=f(x-m\pi)+f\bigl(x-(m+1)\pi\bigr)\\\\
-&=1+\frac{\cos(x-m\pi)+\cos\bigl(x-(m+1)\pi\bigr)}{2}\\\\
-&=1,\\\\
+&=f(x-m\pi)+f\bigl(x-(m+1)\pi\bigr)\\
+&=1+\frac{\cos(x-m\pi)+\cos\bigl(x-(m+1)\pi\bigr)}{2}\\
+&=1,
+\end{aligned}
+$$<p>
+</p>
+$$
+\begin{aligned}
 \phi_{2m-1}(x)+\phi_{2m+1}(x)
-&=f(x+m\pi)+f\bigl(x+(m+1)\pi\bigr)\\\\
-&=1+\frac{\cos(x+m\pi)+\cos\bigl(x+(m+1)\pi\bigr)}{2}\\\\
-&=1,\\\\
+&=f(x+m\pi)+f\bigl(x+(m+1)\pi\bigr)\\
+&=1+\frac{\cos(x+m\pi)+\cos\bigl(x+(m+1)\pi\bigr)}{2}\\
+&=1,
+\end{aligned}
+$$<p>
+</p>
+$$
+\begin{aligned}
 \phi_1(x)+\phi_0(x)
-&=f(x+\pi)+f(x)\\\\
+&=f(x+\pi)+f(x)\\
 &=1.
 \end{aligned}
 $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单位分解。</p>
+<p><img src="/zh/p/mfd-geometry/clipboard-20260731-062351-005-1.zh.gif"
+	width="1400"
+	height="900"
+	loading="lazy"
+	
+		alt="clipboard-20260731-062351-005-1"
+	
+    
+	
+		class="gallery-image" 
+		data-flex-grow="155"
+		data-flex-basis="373px"
+	
+></p>
+<p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的函数，像图中这样叠起来，非常可惜的是我们这里构造的函数只有$C^1$的光滑性，所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$f$，满足在原点处的各阶导数都为$0$，也就是：
+</p>
+$$f(0)=f'(0)=\cdots=f^{(k)}(0)=\cdots=0$$<p>由泰勒展开我们知道：
+</p>
+$$\begin{aligned}
+   f(t)
+   &= f(0)+f'(0)t+\cdots+\frac{f^{(k)}(0)}{k!}t^k+o(t^k) \\
+   &= o(t^k)
+\end{aligned}$$<p>
+也就是说对任何自然数$k$都有
+</p>
+$$\lim_{t \to 0} \frac{f(t)}{t^k}=0$$<p>
+做变量代换$t=\frac{1}{s}$，我们得到：
+</p>
+$$\lim_{s \to \infty} {s^k}{f(\frac{1}{s})}=0$$<p>
+很显然我们可以取$f(1/s)=e^{-s}$，也即$f(t)=e^{-1/t}$。再利用归纳法，我们可以计算$f$在$0$点的各阶导数</p>
+$$f^{(m)}(0)=\lim_{t \to 0} P_{2m}(t)f(t)=0$$<p>
+其中$P_{2m}$是一个不超过$2m$次的多项式，从而$f(t)$满足我们的需求。</p>
+<p>进一步，我们希望说明微分流形上从属于某个开覆盖的（至多可数）光滑单位分解的存在性。思路是这样的：首先我们构造一列穷竭，对每个（紧）环都可以给每个点取一个充分小的坐标球使得整个坐标球$U_x$都落在某个$U_{\alpha(x)}$中，<strong>由于我们需要让最后的单位分解在每个点上求和为$1$，我们必须迫使每个点都有一个单位分解的元素大于$0$</strong>，为此，我们把坐标球缩小一点，缩小后的坐标球是紧环的一个开覆盖，所以必然有有限子覆盖，由此我们得到至多可数个小坐标球，小坐标球对应的原先的坐标球上可以构造一个鼓包函数，鼓包函数满足在小坐标球上恒为$1$，而支集落在大坐标球中，由于我们还可以控制大坐标球只和有限多个紧环相交，所以每个紧环中的点都有一个大坐标球只和有限多个紧环相交，自然也就只能和有限多个大坐标球相交，所以全体支集是局部有限的。</p>
+<p>对紧空间而言，我们很容易找单位分解，我们只需要在每个点找一个坐标球包含于某个覆盖元素，然后取缩小的坐标球（确保每个点都有单位分解的元素大于$0$），在大坐标球上拉回欧氏空间的鼓包函数，由于空间是紧的，我们可以找到有限多个这样的元素，最后归一化得到一个有限单位分解。</p>
+<p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性</p>
 
 </section>
 
