@@ -414,7 +414,7 @@
 <ul>
 <li>$0\leq g_i(x)\leq 1\quad \forall x\in M$</li>
 <li>对任意的$i$，都存在$\alpha(i)\in\Gamma$使得$\operatorname{supp} g_i\subset U_{\alpha(i)}$</li>
-<li>$\{\operatorname{supp} g_i\}$是局部有限的</li>
+<li>$\{\operatorname{supp} g_i\}$是局部有限的（也就是说，空间中的每个点都有一个邻域，这个邻域只和集族中有限多个集合相交）</li>
 <li>$\sum_i g_i=1$</li>
 </ul>
 <p>则称$\{g_i\}$是从属于$\{U_\alpha\}$的一个（光滑）单位分解。进一步，我们令$g_\alpha=\sum_{\alpha(i)=\alpha}g_i$（从而如果没有$i$满足$\alpha(i)=\alpha$，则求和自动为$0$），则由于
@@ -478,7 +478,7 @@ $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单�
 	height="900"
 	loading="lazy"
 	
-		alt="clipboard-20260731-062351-005-1"
+		alt="partition of unity"
 	
     
 	
@@ -535,6 +535,8 @@ $$g(t)=\frac{\varphi(t)}{\varphi(t)+\varphi(1-t)}$$<p>
 	height="1309"
 	loading="lazy"
 	
+		alt="g_1(t)"
+	
     
 	
 		class="gallery-image" 
@@ -589,9 +591,23 @@ $$f(x)\in (0,1] \quad\forall \|x\|< 1;$$
 $$f(x)=1\quad \forall \|x\|\leq \frac{1}{2}$$</li>
 </ol>
 <p>进一步，我们希望说明微分流形上从属于某个开覆盖的（至多可数）光滑单位分解的存在性。思路是这样的：首先我们构造一列穷竭，对每个（紧）环都可以给每个点取一个充分小的坐标球使得整个坐标球$U_x$都落在某个$U_{\alpha(x)}$中，<strong>由于我们需要让最后的单位分解在每个点上求和为$1$，我们必须迫使每个点都有一个单位分解的元素大于$0$</strong>，为此，我们把坐标球缩小一点，缩小后的坐标球是紧环的一个开覆盖，所以必然有有限子覆盖，由此我们得到至多可数个小坐标球，小坐标球对应的原先的坐标球上可以构造一个鼓包函数，鼓包函数满足在小坐标球上恒为$1$，而支集落在大坐标球中，由于我们还可以控制大坐标球只和有限多个紧环相交，所以每个紧环中的点都有一个大坐标球只和有限多个紧环相交，自然也就只能和有限多个大坐标球相交，所以全体支集是局部有限的。</p>
-<p>对紧空间而言，我们很容易找单位分解，我们只需要在每个点找一个坐标球包含于某个覆盖元素，然后取缩小的坐标球（确保每个点都有单位分解的元素大于$0$），在大坐标球上拉回欧氏空间的鼓包函数，由于空间是紧的，我们可以找到有限多个这样的元素，最后归一化得到一个有限单位分解。</p>
-<p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性</p>
-
+<p>对紧空间而言，我们很容易找单位分解，因为开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$一定有有限子覆盖$\{U_i\}_{i=1}^n$，对于连续、可度量化的情形，我们只需构造$f_i(x)=d(x,X\backslash U_i)$再归一化就可以了，对于光滑的情形，我们可以局部拉回鼓包函数、零延拓来替代距离函数。</p>
+<p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性把空间分解成可数个紧集的并，就像欧氏空间是$\sigma$-紧的，可以分解成$\bigcup_n \overline{B_n(0)}$的并集一样，我们也可以对拓扑流形做这样的操作：</p>
+<p><strong>注</strong>：事实上连通流形上第二可数等价于$\sigma$-紧，等价于可度量化，等价于仿紧，直接用$\{B_n(x_0)\}_n$即可，下面我们给出第二可数推出“穷竭”的直接证明。</p>
+<p><strong>引理（Lindelöf）</strong>：设$X$为第二可数空间，$B$为它的可数拓扑基，$\{U_\alpha\}_{\alpha\in \Gamma}$为$X$的一个开覆盖，则$\{U_\alpha\}$必有可数子覆盖。</p>
+<p><strong>证明</strong>：设$B_\alpha=\{\beta\in B\mid \beta\subset U_\alpha\}$，$B'=\bigcup_{\alpha\in\Gamma}B_\alpha$
+</p>
+$$\begin{aligned}
+  X &= \bigcup_{\alpha\in\Gamma}U_\alpha \\
+   &= \bigcup_{\alpha\in\Gamma}\bigcup_{\beta\in B_\alpha}\beta\\
+   &= \bigcup_{\beta\in B'}\beta
+\end{aligned}$$<p>
+由于每个$\beta\in B'$都落在某一个$U_{\alpha(\beta)}$，所以$X=\bigcup_{\beta\in B'}U_{\alpha(\beta)}$。又因为$B'\subset B$是一个可数集，所以$\{U_\alpha\}_{\alpha\in\Gamma}$有可数子覆盖$\{U_{\alpha(\beta)}\}_{\beta\in B'}$。</p>
+<p><strong>引理1.3.2（穷竭）</strong>：对于任何微分流形，均存在一列开集$\{G_i\}$，使得$\overline{G_i}$都是紧致的，且
+</p>
+$$\overline{G_i}\subset G_{i+1}\quad \forall i\geq 1;$$<p>
+</p>
+$$\bigcup_i G_i=M.$$
 </section>
 
 
