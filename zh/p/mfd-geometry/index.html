@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.76ce458534a8039746b22162445766a2d14dfe1b795b9fff2140c98b8db8ba26.css"><meta property='og:title' content="流形与几何初步学习笔记">
+<link rel="stylesheet" href="/scss/style.min.3e896791bc1d57e35b2297325943bb6d1c9475bc7e582c97b586a09631a0926c.css"><meta property='og:title' content="流形与几何初步学习笔记">
 <meta property='og:description' content="使用的教材是梅加强的流形与几何初步，讨论班的笔记会放到这里喵~">
 <meta property='og:url' content='https://shikiforever.github.io/zh/p/mfd-geometry/'>
 <meta property='og:site_name' content='织式就是力量'>
@@ -615,8 +615,12 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 <p><strong>注</strong>：如果我们保证空间的连通性，假设$I_k\nrightarrow \infty$，由于$I_k$单调递增（注意，书上甚至没有要求单调递增，所以这个也是预设之一），所以$I_k$有界，设$I_k\leq N=\max_j I_j$，那么$G_k=\bigcup_{i\leq I_k} V_{x_i}\subset\bigcup_{i\leq N} V_{x_i}$。所以对充分大的$k$，都有$G_k=\bigcup_{i\leq N}V_{x_i}$，这说明$G_k\subset\overline{G_{k+1}}\subset {G_{k+2}}$，从而$G_k=\overline{G_k}$，由空间的连通性得到$G_k=M$。</p>
 <p><span id="thm-existence-of-pou" data-ref-type="theorem" data-ref-label="定理1.3.3" data-ref-name="单位分解的存在性"></span>
 <strong>定理1.3.3（单位分解的存在性）</strong>：对于微分流形$M$的任何开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，均存在从属于它的单位分解。</p>
-<p><strong>证明</strong>：由前面的<a class="link" href="#lem-existence-of-exhaustion" >引理1.3.2</a>，我们可以</p>
-<p>每个点$x$附近我们可以找一个坐标邻域$(U_x,\varphi_x)$，</p>
+<p><strong>证明</strong>：由前面的<a class="link" href="#lem-existence-of-exhaustion" >引理1.3.2</a>，我们可以找一个开集列$\{G_i\}$，现在定义紧集$A_i=\overline{G_i}\backslash{G_{i-1}}$。</p>
+<p>每个点$x$附近我们可以找一个坐标邻域$(U_x,\varphi_x)$，使得</p>
+<ul>
+<li>$\varphi_x(U_x)=B_2(0)$;</li>
+<li>$U_x\subset U_{\alpha(x)}$对某个$\alpha(x)\in\Gamma$成立；</li>
+</ul>
 
 </section>
 
@@ -850,7 +854,7 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 </div>
 
 <canvas id="sakura-effect-canvas" class="sakura-effect" aria-hidden="true" hidden></canvas>
-<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.1262fac304543076c3a8ecbd0ac8b77882b11b620ab3fe1a447c0ddc603d8d67.js" defer></script>
+<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.1262fac304543076c3a8ecbd0ac8b77882b11b620ab3fe1a447c0ddc603d8d67.js" defer></script><script src="/js/reference-preview.min.e92f0a4115d6f62a58c7f13fa3115a390a679ae384f7c958c514693afcf90c26.js" defer></script>
 
 
     </body>
