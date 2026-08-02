@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.3e896791bc1d57e35b2297325943bb6d1c9475bc7e582c97b586a09631a0926c.css"><meta property='og:title' content="Documentation">
+<link rel="stylesheet" href="/scss/style.min.ebf4f7f0550610894a4949340eb9a7a6b981d6ea4124be0792a9d3fa9d22c98a.css"><meta property='og:title' content="Documentation">
 <meta property='og:description' content="Posts about how to use Stack theme">
 <meta property='og:url' content='https://shikiforever.github.io/en/categories/documentation/'>
 <meta property='og:site_name' content='ShikiForever'>
@@ -446,6 +446,8 @@
     data-sakura-off="Falling sakura disabled"
     data-formula-on="Click a formula to copy its LaTeX"
     data-formula-off="Formula copy disabled"
+    data-reference-on="Reference hover previews enabled"
+    data-reference-off="Reference hover previews disabled"
 >
     <button
         id="display-settings-toggle"
@@ -500,11 +502,23 @@
                 <span class="sr-only">Enable formula copy</span>
             </label>
         </div>
+
+        <div class="display-settings__group display-settings__reference">
+            <div>
+                <h3>Reference previews</h3>
+                <p>Show theorem or concept details when hovering over a reference</p>
+            </div>
+            <label class="display-settings__switch">
+                <input id="reference-preview-toggle" type="checkbox" checked>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">Enable reference hover previews</span>
+            </label>
+        </div>
     </section>
 </div>
 
 <canvas id="sakura-effect-canvas" class="sakura-effect" aria-hidden="true" hidden></canvas>
-<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.1262fac304543076c3a8ecbd0ac8b77882b11b620ab3fe1a447c0ddc603d8d67.js" defer></script><script src="/js/reference-preview.min.e92f0a4115d6f62a58c7f13fa3115a390a679ae384f7c958c514693afcf90c26.js" defer></script>
+<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.e80c29c499051bc7a4185e453c27c5d9199dd222f232e2c9854f70366cd402c8.js" defer></script><script src="/js/reference-preview.min.0c173c042b782283f01b8fa3d8fcb04abfe9b2217e8776c28e9b1bd642f9ccec.js" defer></script>
 
 
     </body>
