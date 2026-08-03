@@ -595,7 +595,8 @@ $$f(x)=1\quad \forall \|x\|\leq \frac{1}{2}$$</li>
 <p>对紧空间而言，我们很容易找单位分解，因为开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$一定有有限子覆盖$\{U_i\}_{i=1}^n$，对于连续、可度量化的情形，我们只需构造$f_i(x)=d(x,X\backslash U_i)$再归一化就可以了，对于光滑的情形，我们可以局部拉回鼓包函数、零延拓来替代距离函数。</p>
 <p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性把空间分解成可数个紧集的并，就像欧氏空间是$\sigma$-紧的，可以分解成$\bigcup_n \overline{B_n(0)}$一样，我们也可以对拓扑流形做这样的操作：</p>
 <p><strong>注</strong>：事实上连通流形上第二可数等价于$\sigma$-紧，等价于可度量化，等价于仿紧，所以直接用$\{B_n(x_0)\}_n$即可，下面我们给出第二可数推出“穷竭”的直接证明。</p>
-<p><strong>引理（Lindelöf）</strong>：设$X$为第二可数空间，$B$为它的可数拓扑基，$\{U_\alpha\}_{\alpha\in \Gamma}$为$X$的一个开覆盖，则$\{U_\alpha\}$必有可数子覆盖。</p>
+<p><span id="lem-mfd-geometry-1we1j8y" data-ref-type="lemma" data-ref-label="Lindelöf引理" data-ref-name="Lindelöf引理"></span>
+<strong>引理（Lindelöf）</strong>：设$X$为第二可数空间，$B$为它的可数拓扑基，$\{U_\alpha\}_{\alpha\in \Gamma}$为$X$的一个开覆盖，则$\{U_\alpha\}$必有可数子覆盖。</p>
 <p><strong>证明</strong>：设$B_\alpha=\{\beta\in B\mid \beta\subset U_\alpha\}$，$B'=\bigcup_{\alpha\in\Gamma}B_\alpha$
 </p>
 $$\begin{aligned}
@@ -622,7 +623,25 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 <li>$U_x\subset U_{\alpha(x)}$对某个$\alpha(x)\in\Gamma$成立；</li>
 <li>$U_x\cap A_j=\emptyset\quad|j-i| > 1$</li>
 </ul>
-<p>令$V_x=\varphi_x^{-1}(B_{\frac{1}{2}}(0))$，则$\{V_x\}_{x\in A_i}$是$A_i$的一个开覆盖，所以有有限子覆盖$\{V_{x_j^i}\}_{j=1}^{n_i}$。</p>
+<p>令$V_x=\varphi_x^{-1}(B_{\frac{1}{2}}(0))$，则$\{V_x\}_{x\in A_i}$是$A_i$的一个开覆盖，所以有有限子覆盖$\{V_{x_j^i}\}_{j=1}^{n_i}$。定义$f_x$为$f\circ \varphi_x$的零延拓，自动是光滑的，并且$\operatorname{supp}  f_x\subset U_x$。并且$\{U_{x^i_j}\}$是局部有限的，从而$f_{x_j^i}$的归一化就是我们要的单位分解。</p>
+<p><strong>推论1.3.4</strong>：设$A$是微分流形$M$的闭子集，如果$U$为$A$的开邻域，则存在光滑函数$\phi:M\to\mathbb{R}$使得$\phi|_A=1$且$\operatorname{supp} \phi\subset U$。</p>
+<p><strong>证明</strong>：考虑开覆盖$\{U,M\backslash A\}$和从属于它的单位分解$\phi_U,\phi_{M\backslash A}$，从而$(\phi_U)|_A$=1，满足支集落在$U$中。</p>
+<p><strong>定义（逆紧函数）</strong>：称连续映射是逆紧的，如果紧集的原像是紧集。</p>
+<p><strong>注</strong>：流形之间的逆紧局部同胚是覆叠映射。</p>
+<p><strong>注</strong>：紧空间上的连续函数自动是逆紧的，所以我们下面关心非紧空间上是否存在逆紧函数。</p>
+<p><strong>命题1.3.5（逆紧函数的存在性）</strong>：非紧微分流形上总存在光滑的逆紧函数。</p>
+<p><strong>证明</strong>：由<a class="link" href="#lem-mfd-geometry-1we1j8y" >Lindelöf引理</a>知流形的地图册可以有可数子覆盖，记为$\{U_i\}$，并且由于流形是局部紧的，我们可以不妨设$\overline{U_i}$是紧的，设$\{g_i\}$是从属于它的广义单位分解，令$\rho:M\to\mathbb{R}$为
+</p>
+$$\rho(x)=\sum_iig_i(x)$$<p>
+</p>
+$$\rho(x)\geq 1$$<p>
+只需证明$\rho^{-1}(-\infty,k]$是紧集，若对$i<k$有$g_i(x)=0$，则$\rho(x)\geq k$，则$\rho^{-1}(-\infty,k]\subset \bigcup_{i=1}^{k+1}\overline{U_i}$，从而$\rho^{-1}(-\infty,k]$是紧集。</p>
+<p><strong>注</strong>：若$\rho:M\to\mathbb{R}$是光滑逆紧函数，则$\rho^{-1}(-i,i)$是一列穷竭。</p>
+<p><strong>命题1.3.6（连续延拓）</strong>：设$K$是微分流形$M$中的闭集，$f:K\to\mathbb{R}^n$是连续映射，则存在连续映射$F:M\to\mathbb{R}^n$，使得$F|_K=f$，且$F(M)\subset\operatorname{conv} f(K)$</p>
+<p><strong>注</strong>：这个命题的结论不能升级为光滑延拓，因为可能原本在$K$中就不光滑。</p>
+<p><strong>证明</strong>：我们先默认$M$上存在度量$d$使得$(M,d)$为度量空间。我们希望用已有的信息来延拓，也就是说闭集$K$外每个点找一个$K$中离它充分近的点，然后用这些点形成的覆盖的单位分解来拼接这些信息，离闭集远的点因为支集的局部有限性自动是光滑的，从而连续，并且不需要太多的信息，所以球可以取得大一些，离闭集近的点我们取比较小的开球，从而边界附近的连续性可以保证。</p>
+<p>下面我们详细解释这一步骤：</p>
+<p>首先对$M\backslash K$取开覆盖$\{B_x\}_{x\in M\backslash K}$，我们等会根据估计的需要来取半径的大小，取从属于这个覆盖的单位分解</p>
 
 </section>
 
