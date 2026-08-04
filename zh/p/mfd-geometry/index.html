@@ -641,8 +641,22 @@ $$\rho(x)\geq 1$$<p>
 <p><strong>注</strong>：这个命题的结论不能升级为光滑延拓，因为可能原本在$K$中就不光滑。</p>
 <p><strong>证明</strong>：我们先默认$M$上存在度量$d$使得$(M,d)$为度量空间。我们希望用已有的信息来延拓，也就是说闭集$K$外每个点找一个$K$中离它充分近的点，然后用这些点形成的覆盖的单位分解来拼接这些信息，离闭集远的点因为支集的局部有限性自动是光滑的，从而连续，并且不需要太多的信息，所以球可以取得大一些，离闭集近的点我们取比较小的开球，从而边界附近的连续性可以保证。</p>
 <p>下面我们详细解释这一步骤：</p>
-<p>首先对$M\backslash K$取开覆盖$\{B_x\}_{x\in M\backslash K}$，我们等会根据估计的需要来取半径的大小，取从属于这个覆盖的单位分解</p>
-
+<p>首先对$M\backslash K$取开覆盖$\{B_x\}_{x\in M\backslash K}$，我们等会根据估计的需要来取半径的大小，和上面一样，我们可以可数化这个覆盖并取从属于这个覆盖的单位分解$\{\rho_i\}$。对每个$x_i$我们都可以找一个$\overline{x_i}\in K$离$x_i$充分近，下面我们来估计边界的连续性，考虑
+</p>
+$$
+\begin{aligned}
+  |f(x_0)-\sum_i \rho_i(y)f(\overline{x_i})| &\leq \sum_i \rho_i(y)|f(x_0)-f(\overline{x_i})| 
+\end{aligned}
+$$<p>
+从而对边界点$x_0$附近的点$y\in B_{x_j}\cap M\backslash K$，由局部有限性知道$y$附近只有有限多个$\operatorname{supp} \rho_i$，对这些$\rho_i$，我们要控制$|f(x_0)-f(\overline{x_i})|$，而这根据连续性只需要控制$d(\overline{x},x_0)$，其中$\overline{x}$是$x$在$K$中的对应点。</p>
+<p>注意到我们现在有的未定信息：$B_x$的半径以及$x$和它的对应点$\overline{x}$之间的距离，因为我们有</p>
+$$
+\begin{aligned}
+  d(\overline{x},x_0) &\leq d(\overline{x},x) +d(x,x_0)  \\
+   &\leq  d(\overline{x},x) +d(x,y)+d(y,x_0) \\
+   &
+\end{aligned}
+$$
 </section>
 
 
