@@ -653,10 +653,15 @@ $$<p>
 $$
 \begin{aligned}
   d(\overline{x},x_0) &\leq d(\overline{x},x) +d(x,x_0)  \\
-   &\leq  d(\overline{x},x) +d(x,y)+d(y,x_0) \\
-   &
+   &\leq  d(\overline{x},x) +d(x,y)+d(y,x_0) 
 \end{aligned}
-$$
+$$<p>对第一项，由于离$K$远的地方的连续性是相当直接的，我们不需要精细的覆盖，而在边界附近则需要比较多的信息，所以我们考虑$d(\overline{x},x)$和$d(x,K)$是同阶的，注意到
+</p>
+$$d(x,K)\leq d(\overline{x},x)$$<p>由于$d(x,K)\leq 2d(x,K)$，我们可以找到这样的$\overline{x}\in K$满足</p>
+$$d(x,K)\leq d(\overline{x},x)\leq 2d(x,K)$$<p>由于$F$的连续性需要控制的参数是$d(y,x_0)$，所以我们最终要用$d(y,x_0)$来控制$d(\overline{x},x_0)$。为此我们考虑如下不等式：</p>
+$$d(x,K)\leq d(x,y)+d(y,K)\leq d(x,y)+d(y,x_0)$$<p>如果我们取$B_x$的半径为$\frac{1}{2}d(x,K)$，则立即得到</p>
+$$d(x,K)\leq 2d(y,x_0)$$$$d(\overline{x},x)\leq 4d(y,x_0)$$$$d(x,y)\leq d(y,x_0)$$<p>进而取$d(y,x_0)<\frac{\delta}{6}$则有</p>
+$$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$
 </section>
 
 
