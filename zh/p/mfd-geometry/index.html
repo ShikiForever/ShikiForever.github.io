@@ -574,7 +574,8 @@ $$g(t)=\frac{\varphi(t)}{\varphi(t)+\varphi(1-t)}$$<p>
 	
 ></p>
 <p>由此我们有如下引理：</p>
-<p><strong>引理1.3.1（鼓包函数或截断函数）</strong>：</p>
+<p><span id="lem-mfd-geometry-1imdmai" data-ref-type="lemma" data-ref-label="引理1.3.1" data-ref-name="鼓包函数或截断函数"></span>
+<strong>引理1.3.1（鼓包函数或截断函数）</strong>：</p>
 <ol>
 <li>存在光滑函数$h:\mathbb{R}\to \mathbb{R}$，使得
 
@@ -624,12 +625,14 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 <li>$U_x\cap A_j=\emptyset\quad|j-i| > 1$</li>
 </ul>
 <p>令$V_x=\varphi_x^{-1}(B_{\frac{1}{2}}(0))$，则$\{V_x\}_{x\in A_i}$是$A_i$的一个开覆盖，所以有有限子覆盖$\{V_{x_j^i}\}_{j=1}^{n_i}$。定义$f_x$为$f\circ \varphi_x$的零延拓，自动是光滑的，并且$\operatorname{supp}  f_x\subset U_x$。并且$\{U_{x^i_j}\}$是局部有限的，从而$f_{x_j^i}$的归一化就是我们要的单位分解。</p>
-<p><strong>推论1.3.4</strong>：设$A$是微分流形$M$的闭子集，如果$U$为$A$的开邻域，则存在光滑函数$\phi:M\to\mathbb{R}$使得$\phi|_A=1$且$\operatorname{supp} \phi\subset U$。</p>
+<p><span id="cor-mfd-geometry-1ra23hb" data-ref-type="corollary" data-ref-label="推论1.3.4" data-ref-name="推论1.3.4"></span>
+<strong>推论1.3.4</strong>：设$A$是微分流形$M$的闭子集，如果$U$为$A$的开邻域，则存在光滑函数$\phi:M\to\mathbb{R}$使得$\phi|_A=1$且$\operatorname{supp} \phi\subset U$。</p>
 <p><strong>证明</strong>：考虑开覆盖$\{U,M\backslash A\}$和从属于它的单位分解$\phi_U,\phi_{M\backslash A}$，从而$(\phi_U)|_A$=1，满足支集落在$U$中。</p>
 <p><strong>定义（逆紧函数）</strong>：称连续映射是逆紧的，如果紧集的原像是紧集。</p>
 <p><strong>注</strong>：流形之间的逆紧局部同胚是覆叠映射。</p>
 <p><strong>注</strong>：紧空间上的连续函数自动是逆紧的，所以我们下面关心非紧空间上是否存在逆紧函数。</p>
-<p><strong>命题1.3.5（逆紧函数的存在性）</strong>：非紧微分流形上总存在光滑的逆紧函数。</p>
+<p><span id="prop-mfd-geometry-gdh9p6" data-ref-type="proposition" data-ref-label="命题1.3.5" data-ref-name="逆紧函数的存在性"></span>
+<strong>命题1.3.5（逆紧函数的存在性）</strong>：非紧微分流形上总存在光滑的逆紧函数。</p>
 <p><strong>证明</strong>：由<a class="link" href="#lem-mfd-geometry-1we1j8y" >Lindelöf引理</a>知流形的地图册可以有可数子覆盖，记为$\{U_i\}$，并且由于流形是局部紧的，我们可以不妨设$\overline{U_i}$是紧的，设$\{g_i\}$是从属于它的广义单位分解，令$\rho:M\to\mathbb{R}$为
 </p>
 $$\rho(x)=\sum_iig_i(x)$$<p>
@@ -637,7 +640,8 @@ $$\rho(x)=\sum_iig_i(x)$$<p>
 $$\rho(x)\geq 1$$<p>
 只需证明$\rho^{-1}(-\infty,k]$是紧集，若对$i<k$有$g_i(x)=0$，则$\rho(x)\geq k$，则$\rho^{-1}(-\infty,k]\subset \bigcup_{i=1}^{k+1}\overline{U_i}$，从而$\rho^{-1}(-\infty,k]$是紧集。</p>
 <p><strong>注</strong>：若$\rho:M\to\mathbb{R}$是光滑逆紧函数，则$\rho^{-1}(-i,i)$是一列穷竭。</p>
-<p><strong>命题1.3.6（连续延拓）</strong>：设$K$是微分流形$M$中的闭集，$f:K\to\mathbb{R}^n$是连续映射，则存在连续映射$F:M\to\mathbb{R}^n$，使得$F|_K=f$，且$F(M)\subset\operatorname{conv} f(K)$</p>
+<p><span id="prop-mfd-geometry-1iwmywv" data-ref-type="proposition" data-ref-label="命题1.3.6" data-ref-name="连续延拓"></span>
+<strong>命题1.3.6（连续延拓）</strong>：设$K$是微分流形$M$中的闭集，$f:K\to\mathbb{R}^n$是连续映射，则存在连续映射$F:M\to\mathbb{R}^n$，使得$F|_K=f$，且$F(M)\subset\operatorname{conv} f(K)$</p>
 <p><strong>注</strong>：这个命题的结论不能升级为光滑延拓，因为可能原本在$K$中就不光滑。</p>
 <p><strong>证明</strong>：我们先默认$M$上存在度量$d$使得$(M,d)$为度量空间。我们希望用已有的信息来延拓，也就是说闭集$K$外每个点找一个$K$中离它充分近的点，然后用这些点形成的覆盖的单位分解来拼接这些信息，离闭集远的点因为支集的局部有限性自动是光滑的，从而连续，并且不需要太多的信息，所以球可以取得大一些，离闭集近的点我们取比较小的开球，从而边界附近的连续性可以保证。</p>
 <p>下面我们详细解释这一步骤：</p>
@@ -649,7 +653,8 @@ $$
 \end{aligned}
 $$<p>
 从而对边界点$x_0$附近的点$y\in B_{x_j}\cap M\backslash K$，由局部有限性知道$y$附近只有有限多个$\operatorname{supp} \rho_i$，对这些$\rho_i$，我们要控制$|f(x_0)-f(\overline{x_i})|$，而这根据连续性只需要控制$d(\overline{x},x_0)$，其中$\overline{x}$是$x$在$K$中的对应点。</p>
-<p>注意到我们现在有的未定信息：$B_x$的半径以及$x$和它的对应点$\overline{x}$之间的距离，因为我们有</p>
+<p><span id="rem-mfd-geometry-uedjh3-17" data-ref-type="remark" data-ref-label="注" data-ref-name="注"></span>
+注意到我们现在有的未定信息：$B_x$的半径以及$x$和它的对应点$\overline{x}$之间的距离，因为我们有</p>
 $$
 \begin{aligned}
   d(\overline{x},x_0) &\leq d(\overline{x},x) +d(x,x_0)  \\
@@ -661,12 +666,55 @@ $$d(x,K)\leq d(\overline{x},x)$$<p>由于$d(x,K)\leq 2d(x,K)$，我们可以找�
 $$d(x,K)\leq d(\overline{x},x)\leq 2d(x,K)$$<p>由于$F$的连续性需要控制的参数是$d(y,x_0)$，所以我们最终要用$d(y,x_0)$来控制$d(\overline{x},x_0)$。为此我们考虑如下不等式：</p>
 $$d(x,K)\leq d(x,y)+d(y,K)\leq d(x,y)+d(y,x_0)$$<p>如果我们取$B_x$的半径为$\frac{1}{2}d(x,K)$，则立即得到</p>
 $$d(x,K)\leq 2d(y,x_0)$$$$d(\overline{x},x)\leq 4d(y,x_0)$$$$d(x,y)\leq d(y,x_0)$$<p>进而取$d(y,x_0)<\frac{\delta}{6}$则有</p>
-$$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$<p>设$M,N$是光滑流形， $[M,N]_{C^\infty}$是$M$到$N$的光滑同伦类，$[M,N]$是通常意义上的连续同伦类，则有如下自然嵌入：
+$$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$<p>设$M,N$是光滑流形， $[M,N]_{C^\infty}$是$M$到$N$的全体光滑同伦类，$[M,N]$是通常意义上的全体连续同伦类，则有如下自然映射：
 </p>
 $$[M,N]_{C^\infty}\to[M,N]$$<p>
-下面我们希望说明这个嵌入是满射的，也即有如下两个命题成立：</p>
-<p><strong>命题1.3.9</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
-<p><strong>命题1.3.10</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
+下面我们希望说明这个自然映射是满射的，也即有如下两个命题成立：</p>
+<p><span id="prop-mfd-geometry-1dyinr1" data-ref-type="proposition" data-ref-label="命题1.3.9" data-ref-name="命题1.3.9"></span>
+<strong>命题1.3.9</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
+<p><span id="prop-mfd-geometry-1ubtlvz" data-ref-type="proposition" data-ref-label="命题1.3.10" data-ref-name="命题1.3.10"></span>
+<strong>命题1.3.10</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
+<p>为了把连续的对象改造成光滑的对象，我们需要先引入光滑逼近：</p>
+<p><span id="prop-mfd-geometry-19ykqjs" data-ref-type="proposition" data-ref-label="命题1.3.7" data-ref-name="光滑逼近"></span>
+<strong>命题1.3.7（光滑逼近）</strong>：设$f:M\to \mathbb{R}^k$为微分流形$M$上的连续映射，则任给$M$上的正连续函数$\varepsilon:M\to \mathbb{R}$，存在光滑映射$g:M\to \mathbb{R}^k$，使得
+</p>
+$$\|g(x)-f(x)\|\leq \varepsilon(x)$$<p><strong>证明</strong>：
+局部上我们用$f(x)$这个常值映射来代替，自动是光滑的，然后再用单位分解拼起来，要满足误差估计要求每个点的邻域取得足够小，使得$f$的变化被这一点的$\varepsilon$控制，而且$\varepsilon$的变化还不大。</p>
+<p>具体来说，对每个$x\in M$，都可以找到它的一个邻域$U_x$，使得对任意的$y\in U_x$都有$\|f(y)-f(x)\|\leq \frac{1}{2}\varepsilon(x)\leq \varepsilon(y)$。</p>
+<p>对$\{U_x\}_{x\in M}$可以找到从属于它的一个单位分解$\{\rho_i\}$，并且设$\operatorname{supp} \rho_i\subset U_{x_i}$。</p>
+<p>定义</p>
+$$g(x)=\sum_i \rho_i(x)f(x_i)$$<p>那么</p>
+$$\|g(x)-f(x)\|\leq\sum_i \rho_i(x)\|f(x_i)-f(x)\|=\sum_{\rho_i(x)\neq 0} \rho_i(x)\|f(x_i)-f(x)\|\leq \varepsilon(x)$$<p><span id="cor-mfd-geometry-1yoiplk" data-ref-type="corollary" data-ref-label="推论1.3.8" data-ref-name="局部光滑逼近"></span>
+<strong>推论1.3.8（局部光滑逼近）</strong>：设$f:M\to \mathbb{R}^n$为微分流形上的连续映射，$\varepsilon:M\to \mathbb{R}$为$M$上的正连续函数。如果$A$是$M$上的闭集，$U$是包含$A$的开集，则存在连续映射$h:M\to \mathbb{R}^k$：</p>
+<ol>
+<li>
+<p>\(\|h(x)-f(x)\|\leq \epsilon(x),\quad \forall x\in M;\)</p>
+</li>
+<li>
+<p>\(h\) 在 \(A\) 的某个开邻域中是光滑的，且若 \(f\) 在开集 \(V\) 中是光滑的，则 \(h\) 在 \(V\) 中也是光滑的；</p>
+</li>
+<li>
+<p>\(h\) 和 \(f\) 在 \(M\setminus U\) 上相等。</p>
+</li>
+</ol>
+<p>事实上，这个命题说明我们可以只在给定的开集上做光滑逼近，而其它地方保持不动。</p>
+<p><strong>证明</strong>：记号和<a class="link" href="#prop-mfd-geometry-19ykqjs" >命题1.3.7</a>保持一致，对开覆盖$\{U,M\backslash A\}$可以找到从属于它的单位分解$\rho_0,\rho_1$，我们考虑如下连续函数
+</p>
+$$h(x)=\rho_0(x)g(x)+\rho_1(x)f(x)$$<p>对$M\backslash U$中的点$x$，由于$\operatorname{supp} \rho_0 \subset U$，所以$h(x)=f(x)$。</p>
+<p>对$A\subset M\backslash \operatorname{supp} \rho_1$每个点$x$，$\rho_1(x)=0$，故$h(x)=g(x)$，从而$h$在$A$的开邻域$M\backslash \operatorname{supp} \rho_1$是光滑的。</p>
+<p>注意到$h$的光滑性完全由$f$决定，所以第二条也成立。</p>
+<p>下面我们继续<a class="link" href="#prop-mfd-geometry-1dyinr1" >命题1.3.9</a>的证明:</p>
+<p>由如下映射可知，$B_r(0)$与$\mathbb{R}^k$是微分同胚的：
+</p>
+$$h:B_1(0)\to\mathbb{R}^k,\qquad
+h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
+所以我们可以调整单位分解中的坐标卡使得像变为$\mathbb{R}^k$，并且由于$f$是连续的，对$f(x_0)$的坐标邻域$W$（打到$\mathbb{R}^k$），存在$x_0$的邻域$U$使得$f(U)\subset W$，从而我们可以对这些邻域$U$，不妨仍记作$\{U_\alpha\}$，像单位分解的证明那样操作：</p>
+<p>(1) $\varphi_x(U_x)=B_2(0)\cong \mathbb{R}^k$；</p>
+<p>(2) 存在 $\alpha(x)\in\Gamma$，使得 $U_x\subset U_{\alpha(x)}$；</p>
+<p>(3) $U_x\cap A_j=\varnothing$，$\forall\,|j-i|>1$。</p>
+<p>然后再局部有限化，就可以得到$\{U_i\}$和它的加细$\{V_i\}$：</p>
+<p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
+<p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 
 </section>
 
