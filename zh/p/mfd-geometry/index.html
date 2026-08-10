@@ -450,27 +450,10 @@ $$\phi_{m}(x)=f(x-m\pi)$$<p>
 <p>每个点的邻域至多与三个支集相交，因此该函数族的支集满足局部有限性。在任意一点处，非零函数至多只有两个，并且</p>
 $$
 \begin{aligned}
-\phi_{2m}(x)+\phi_{2m+2}(x)
+\phi_{m}(x)+\phi_{m+1}(x)
 &=f(x-m\pi)+f\bigl(x-(m+1)\pi\bigr)\\
 &=1+\frac{\cos(x-m\pi)+\cos\bigl(x-(m+1)\pi\bigr)}{2}\\
 &=1,
-\end{aligned}
-$$<p>
-</p>
-$$
-\begin{aligned}
-\phi_{2m-1}(x)+\phi_{2m+1}(x)
-&=f(x+m\pi)+f\bigl(x+(m+1)\pi\bigr)\\
-&=1+\frac{\cos(x+m\pi)+\cos\bigl(x+(m+1)\pi\bigr)}{2}\\
-&=1,
-\end{aligned}
-$$<p>
-</p>
-$$
-\begin{aligned}
-\phi_1(x)+\phi_0(x)
-&=f(x+\pi)+f(x)\\
-&=1.
 \end{aligned}
 $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单位分解。</p>
 <p><img src="/zh/p/mfd-geometry/clipboard-20260731-062351-005-1.zh.gif"
@@ -487,7 +470,7 @@ $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单�
 		data-flex-basis="373px"
 	
 ></p>
-<p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的函数，像图中这样叠起来，非常可惜的是我们这里构造的函数只有$C^1$的光滑性（这本质上是因为$\cos$是解析的，所以如果某个点处各阶导数都为$0$，则函数必须点点为$0$），所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$\varphi$，满足在原点处的各阶导数都为$0$，也就是：
+<p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的函数，像图中这样叠起来，从而构造一个单位分解，非常可惜的是我们这里构造的函数只有$C^1$的光滑性（这本质上是因为$\cos$是解析的，所以如果某个点处各阶导数都为$0$，则函数必须点点为$0$），所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$\varphi$，满足在原点处的各阶导数都为$0$，也就是：
 </p>
 $$\varphi(0)=\varphi'(0)=\cdots=\varphi^{(k)}(0)=\cdots=0$$<p>由泰勒展开我们知道：
 </p>
@@ -592,7 +575,8 @@ $$f(x)\in (0,1] \quad\forall \|x\|< 1;$$
 
 $$f(x)=1\quad \forall \|x\|\leq \frac{1}{2}$$</li>
 </ol>
-<p>进一步，我们希望说明微分流形上从属于某个开覆盖的（至多可数）光滑单位分解的存在性。思路是这样的：首先我们构造一列穷竭，对每个（紧）环都可以给每个点取一个充分小的坐标球使得整个坐标球$U_x$都落在某个$U_{\alpha(x)}$中，<strong>由于我们需要让最后的单位分解在每个点上求和为$1$，我们必须迫使每个点都有一个单位分解的元素大于$0$</strong>，为此，我们把坐标球缩小一点，缩小后的坐标球是紧环的一个开覆盖，所以必然有有限子覆盖，由此我们得到至多可数个小坐标球，小坐标球对应的原先的坐标球上可以构造一个鼓包函数，鼓包函数满足在小坐标球上恒为$1$，而支集落在大坐标球中，由于我们还可以控制大坐标球只和有限多个紧环相交，所以每个紧环中的点都有一个大坐标球只和有限多个紧环相交，自然也就只能和有限多个大坐标球相交，所以全体支集是局部有限的。</p>
+<p>进一步，我们希望说明微分流形上从属于某个开覆盖的（至多可数）光滑单位分解的存在性。</p>
+<!-- 思路是这样的：首先我们构造一列穷竭，对每个（紧）环都可以给每个点取一个充分小的坐标球使得整个坐标球$U_x$都落在某个$U_{\alpha(x)}$中，**由于我们需要让最后的单位分解在每个点上求和为$1$，我们必须迫使每个点都有一个单位分解的元素大于$0$**，为此，我们把坐标球缩小一点，缩小后的坐标球是紧环的一个开覆盖，所以必然有有限子覆盖，由此我们得到至多可数个小坐标球，小坐标球对应的原先的坐标球上可以构造一个鼓包函数，鼓包函数满足在小坐标球上恒为$1$，而支集落在大坐标球中，由于我们还可以控制大坐标球只和有限多个紧环相交，所以每个紧环中的点都有一个大坐标球只和有限多个紧环相交，自然也就只能和有限多个大坐标球相交，所以全体支集是局部有限的。 -->
 <p>对紧空间而言，我们很容易找单位分解，因为开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$一定有有限子覆盖$\{U_i\}_{i=1}^n$，对于连续、可度量化的情形，我们只需构造$f_i(x)=d(x,X\backslash U_i)$再归一化就可以了，对于光滑的情形，我们可以局部拉回鼓包函数、零延拓来替代距离函数。</p>
 <p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性把空间分解成可数个紧集的并，就像欧氏空间是$\sigma$-紧的，可以分解成$\bigcup_n \overline{B_n(0)}$一样，我们也可以对拓扑流形做这样的操作：</p>
 <p><strong>注</strong>：事实上连通流形上第二可数等价于$\sigma$-紧，等价于可度量化，等价于仿紧，所以直接用$\{B_n(x_0)\}_n$即可，下面我们给出第二可数推出“穷竭”的直接证明。</p>
@@ -611,8 +595,23 @@ $$\begin{aligned}
 </p>
 $$\overline{G_i}\subset G_{i+1}\quad \forall i\geq 1;$$<p>
 </p>
-$$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而且写的有点啰嗦，因为$\bigcup_{k\leq i}\overline{G_k}$其实就是$\overline{G_i}$。</p>
-<p><strong>证明</strong>：由于流形是局部紧Hausdorff的，对每个点$x$都可以找到一个预紧邻域$V_{x}$，从而$\{V_x\}$是空间的一个开覆盖。我们定义的微分流形是第二可数的，由Lindelöf引理，我们有可数子覆盖$\{V_{x_i}\}$。取$G_1=V_{x_1}$，则$G_1$预紧。假设$G_k$已经定义，$\overline{G_k}\subset \bigcup_i V_{x_i}$，从而可以找到$I_k$使得$\overline{G_k}\subset \bigcup_{i\leq I_k}V_{x_i}$。定义$G_{k+1}=\bigcup_{i\leq I_k}V_{x_i}$，则$G_{k+1}$是预紧的。</p>
+$$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而且写的有点啰嗦，因为$\bigcup_{k\leq i}\overline{G_k}$其实就是$\overline{G_i}$。
+<img src="/zh/p/mfd-geometry/clipboard-20260810-182437-488-1.zh.png"
+	width="1783"
+	height="763"
+	loading="lazy"
+	
+		alt="clipboard-20260810-182437-488-1"
+	
+    
+	
+		class="gallery-image" 
+		data-flex-grow="233"
+		data-flex-basis="560px"
+	
+></p>
+<p><strong>证明</strong>：由于流形是局部紧的，对每个点$x$都可以找到一个预紧邻域$V_{x}$，从而$\{V_x\}$是空间的一个开覆盖。我们定义的微分流形是第二可数的，由Lindelöf引理，我们有可数子覆盖$\{V_{x_i}\}$。</p>
+<p>取$G_1=V_{x_1}$，则$G_1$预紧。假设$G_k$已经定义，$\overline{G_k}\subset \bigcup_i V_{x_i}$，从而可以找到$I_k$使得$\overline{G_k}\subset \bigcup_{i\leq I_k}V_{x_i}$。定义$G_{k+1}=\bigcup_{i\leq I_k}V_{x_i}$，则$G_{k+1}$是预紧的。</p>
 <p><strong>注</strong>：书上这里漏了一步，没有要求$\{I_k\}_{k\in\mathbb{N}}$是严格单调递增的，这会使得$G_i$不一定能够覆盖全空间$M$。比如取空间$S^1\sqcup\mathbb{R}$，让$V_1=S^1$，$V_2,V_3,\dots$是$\mathbb{R}$的一个可数开覆盖，那么如果取$G_1=V_1$是一个预紧开集，$G_k=V_1$，则满足$\overline{G_i}\subset G_{i+1}$，但是$\bigcup_i G_i\neq M$。</p>
 <p><strong>注</strong>：如果我们保证空间的连通性，假设$I_k\nrightarrow \infty$，由于$I_k$单调递增（注意，书上甚至没有要求单调递增，所以这个也是预设之一），所以$I_k$有界，设$I_k\leq N=\max_j I_j$，那么$G_k=\bigcup_{i\leq I_k} V_{x_i}\subset\bigcup_{i\leq N} V_{x_i}$。所以对充分大的$k$，都有$G_k=\bigcup_{i\leq N}V_{x_i}$，这说明$G_k\subset\overline{G_{k+1}}\subset {G_{k+2}}$，从而$G_k=\overline{G_k}$，由空间的连通性得到$G_k=M$。</p>
 <p><span id="thm-existence-of-pou" data-ref-type="theorem" data-ref-label="定理1.3.3" data-ref-name="单位分解的存在性"></span>
@@ -669,7 +668,7 @@ $$d(x,K)\leq 2d(y,x_0)$$$$d(\overline{x},x)\leq 4d(y,x_0)$$$$d(x,y)\leq d(y,x_0)
 $$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$<p>设$M,N$是光滑流形， $[M,N]_{C^\infty}$是$M$到$N$的全体光滑同伦类，$[M,N]$是通常意义上的全体连续同伦类，则有如下自然映射：
 </p>
 $$[M,N]_{C^\infty}\to[M,N]$$<p>
-下面我们希望说明这个自然映射是满射的，也即有如下两个命题成立：</p>
+下面我们希望说明这个自然映射是双射，也就是说光滑映射之间的光滑同伦和拓扑同伦是一样的，也即有如下两个命题成立：</p>
 <p><span id="prop-mfd-geometry-1dyinr1" data-ref-type="proposition" data-ref-label="命题1.3.9" data-ref-name="命题1.3.9"></span>
 <strong>命题1.3.9</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
 <p><span id="prop-mfd-geometry-1ubtlvz" data-ref-type="proposition" data-ref-label="命题1.3.10" data-ref-name="命题1.3.10"></span>
@@ -704,7 +703,7 @@ $$h(x)=\rho_0(x)g(x)+\rho_1(x)f(x)$$<p>对$M\backslash U$中的点$x$，由于$\
 <p>对$A\subset M\backslash \operatorname{supp} \rho_1$每个点$x$，$\rho_1(x)=0$，故$h(x)=g(x)$，从而$h$在$A$的开邻域$M\backslash \operatorname{supp} \rho_1$是光滑的。</p>
 <p>注意到$h$的光滑性完全由$f$决定，所以第二条也成立。</p>
 <p>下面我们继续<a class="link" href="#prop-mfd-geometry-1dyinr1" >命题1.3.9</a>的证明:</p>
-<p><strong>命题1.3.9</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
+<p><strong>命题1.3.9（满射）</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
 <p>由如下映射可知，$B_r(0)$与$\mathbb{R}^k$是微分同胚的：
 </p>
 $$h:B_1(0)\to\mathbb{R}^k,\qquad
@@ -717,7 +716,7 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <hr>
-<p>为了证明存在一个光滑函数$g$和$f$同伦，我们需要构造一个一个同伦$H:M\times [0,1]\to N$，满足$H(x,0)=f(x),H(x,1)=g(x)$。</p>
+<p><strong>为了证明</strong>存在一个光滑函数$g$和$f$同伦，我们需要构造一个同伦$H:M\times [0,1]\to N$，满足$H(x,0)=f(x),H(x,1)=g(x)$。</p>
 <p>为此，我们要构造一列$g_i$，把$[0,1]$拆成可数个不交区间$[1-2^{-i},1-2^{-i-1}]$，一步一步同伦到这个$g$上，并且$g_i\to g$，保证构造的同伦在时间$1$附近是连续的，而这里的$g_i$用到我们前面的引理来局部光滑化，最后取极限得到一个光滑的函数$g$。</p>
 <p>每一步的同伦我们利用直线同伦$tg_i(x)+(1-t)g_{i-1}(x)$来构造，为此，我们必须保证这个线性同伦有意义，也就是$g_i(x)$和$g_{i-1}(x)$要落在同一个坐标卡上，而且这个坐标卡要打到欧氏空间的一个凸开集上。</p>
 <p>为此，我们需要控制$d(g_i(x),g_{i-1}(x))$充分小。</p>
@@ -768,6 +767,35 @@ tg_i(x) + (1-t)g_{i-1}(x), & x \in U_i, \\
 g_{i-1}(x), & x \in M \setminus U_i.
 \end{cases}
 $$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 1$附近的连续性。</p>
+<p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。
+<img src="/zh/p/mfd-geometry/clipboard-20260810-191508-381-1.zh.png"
+	width="1398"
+	height="1027"
+	loading="lazy"
+	
+		alt="clipboard-20260810-191508-381-1"
+	
+    
+	
+		class="gallery-image" 
+		data-flex-grow="136"
+		data-flex-basis="326px"
+	
+></p>
+<p><img src="/zh/p/mfd-geometry/clipboard-20260810-191523-578-1.zh.png"
+	width="1282"
+	height="958"
+	loading="lazy"
+	
+		alt="clipboard-20260810-191523-578-1"
+	
+    
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="321px"
+	
+></p>
 
 </section>
 
