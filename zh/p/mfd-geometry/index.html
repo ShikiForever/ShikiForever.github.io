@@ -723,7 +723,51 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>为此，我们需要控制$d(g_i(x),g_{i-1}(x))$充分小。</p>
 <hr>
 <p>下面我们来说明具体的构造细节：</p>
-<p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的覆盖</p>
+<p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作，由于流形是局部紧的，每个点$x$可以找到一个相对紧的邻域$U_x$，再对$f(x)$的坐标邻域$W_x$（不妨假设坐标映射的像是$\mathbb{R}^k$，否则可以缩小$W_x$使得像集为$B_r(0)$，再复合一个微分同胚就可以变成$\mathbb{R}^k$），由于$f$是连续的，我们可以取$U_x$的开子集，使得它的闭包的像包含于$W_x$，不妨仍设为$U_x$，使得$f(\overline{U_x})\subset W_x$。</p>
+<p>然后再像单位分解的存在性证明那样可以得到$M$的开覆盖$\{U_i\}$：</p>
+<p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
+<p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
+<p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足$g_i(\overline{U_j})\subset W_j$，</p>
+<p>考虑</p>
+$$\varepsilon_j=d(f(\overline{U_j}),N\backslash W_j)>0$$<p>从而只要$d(y,f(\overline{U_j}))<\varepsilon_j$就可以保证$y\in W_j$，从而我们只需构造$g_i$使得对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$就可以使得$g_i(x)\in W_j$了。</p>
+<p>而对紧集$\overline{U_j}$和局部有限的开覆盖$\{U_i\}$，我们知道只有有限多个$U_i$和$\overline{U_j}$有交，从而我们可以取</p>
+$$\eta_j=\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_j}\neq\emptyset\}$$<p>再取从属于$\{U_i\}$的（广义）单位分解$\{\rho_i\}$，定义</p>
+$$\varepsilon(x)=\sum_i\eta_i\rho_i(x)$$<p>对$x\in U_j$只有有限多个$U_i$和$U_j$相交，从而在$U_j$上$\varepsilon(x)$是光滑的，从而$\varepsilon(x)$是光滑的，从而是连续的。</p>
+<p>下面我们对$g_0=f$归纳地定义它的局部光滑化，为了保证局部光滑化的连续性，我们需要给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
+</p>
+$$\overline{V_i}\subset V_i'\subset \overline{V_i'}\subset U_i$$<p>对$g_{i-1}$和$\overline{V_i}\subset V_i'$，存在连续映射$g_i':U_i\to W_i$使得</p>
+<p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;（这里我们把$W_i$的坐标卡的线性结构和范数拉回来了，由于坐标卡是连续的，所以在紧集上一致连续，所以在紧集上只要两个点差的范数足够小，在$N$上的距离就能足够小）</p>
+<p>(2)&rsquo; $ g_{i}^{\prime} $ 和 $ g_{i-1} $ 在 $ U_{i} \setminus V_{i}^{\prime} $ 中相同;</p>
+<p>(3)&rsquo; $ g_{i}^{\prime} $ 在 $ K_{i} \cap U_{i} $ 的某开邻域中是光滑的.（因为$g_{i-1}$已经在$K_{i-1}$附近是光滑的，$K_i=K_{i-1}\cup \overline{V_i}$）</p>
+<p>进一步，我们可以定义
+</p>
+$$g_i(x)=\begin{cases}
+  g_i'(x) & x\in U_i \\
+  g_{i-1}(x) & x\in M-U_i
+\end{cases}$$<p>
+注意到这里因为我们在$\overline{V_i}$和$U_i$之间建立了缓冲区，所以在$\partial U_i$附近$g_i'$和$g_{i-1}$是一样的，所以$g_i$自动是连续的。</p>
+<p>为了证明$g_i(\overline{U_j})\subset W_j$，我们只需证明对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$，而对$x\in U_j$，我们有
+</p>
+$$\begin{aligned}
+  d(g_i(x),f(x)) &= d(g_i(x),g_0(x)) \\
+   &\leq \sum d(g_j(x),g_{j-1}(x)) \\
+   &\leq \sum 2^{-j}\varepsilon(x) \\
+   &\leq \varepsilon(x) <\frac{1}{2}\varepsilon_j
+\end{aligned}$$<p>
+从而$x\in \overline{U_j}$时有$d(g_i(x),f(x))\leq 
+\frac{1}{2}\varepsilon_j<\varepsilon_j$，从而$g_i(\overline{U_j})\subset W_j$。</p>
+<p>由于$K_i$紧，而$\{U_i\}$是局部有限的，所以对充分大的$j$都有$U_j\cap K_i=\empty$，从而$g_j$在$K_i$上关于$j$保持不变，从而可以定义
+</p>
+$$g(x)=\lim_{j \to \infty}g_j(x) $$<p>
+并且$g$是光滑的。</p>
+<p>定义同伦</p>
+$$
+H_i(x, t) = 
+\begin{cases} 
+tg_i(x) + (1-t)g_{i-1}(x), & x \in U_i, \\
+g_{i-1}(x), & x \in M \setminus U_i.
+\end{cases}
+$$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 1$附近的连续性。</p>
 
 </section>
 
