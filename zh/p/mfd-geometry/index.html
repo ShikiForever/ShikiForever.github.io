@@ -666,17 +666,26 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>为此，我们需要控制$d(g_i(x),g_{i-1}(x))$充分小。</p>
 <hr>
 <p>下面我们来说明具体的构造细节：</p>
-<p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作，由于流形是局部紧的，每个点$x$可以找到一个相对紧的邻域$U_x$，再对$f(x)$的坐标邻域$W_x$（不妨假设坐标映射的像是$\mathbb{R}^k$，否则可以缩小$W_x$使得像集为$B_r(0)$，再复合一个微分同胚就可以变成$\mathbb{R}^k$），由于$f$是连续的，我们可以取$U_x$的开子集，使得它的闭包的像包含于$W_x$，不妨仍设为$U_x$，使得$f(\overline{U_x})\subset W_x$。</p>
-<p>然后再像单位分解的存在性证明那样，拉回欧氏空间中的球，得到$M$的开覆盖$\{U_i\}$：</p>
+<p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作。</p>
+<p>由于流形是局部紧的，每个点$x$可以找到一个预紧的坐标邻域$U_x$，再对$f(x)$的坐标邻域$W_x$，由于$f$是连续的，我们可以取$U_x$中$x$的开邻域，使得它的像包含于$W_x$，再利用空间的局部紧性缩小这个邻域，不妨仍设为$U_x$，则可以使$f(\overline{U_x})\subset W_x$，以这里的$\{U_x\}_{x\in M}$为单位分解证明里的开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，我们可以重复单位分解证明里的步骤，得到$M$的局部有限开覆盖$\{U_i\}$（也就是单位分解证明里的$\{U_{x^i_j}\}$），使得：</p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足</p>
-$$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>考虑</p>
-$$\varepsilon_j=d(f(\overline{U_j}),N\backslash W_j)>0$$<p>从而只要$d(y,f(\overline{U_j}))<\varepsilon_j$就可以保证$y\in W_j$，从而我们只需构造$g_i$使得对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$就可以使得$g_i(x)\in W_j$了。</p>
-<p>而对紧集$\overline{U_j}$和局部有限的开覆盖$\{U_i\}$，我们知道只有有限多个$U_i$和$\overline{U_j}$有交，从而我们可以取（因为我们对所有$j$都要成立，所以下面取了$\min$）</p>
+$$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>（这样我们就能在$\overline{U_j}$上对所有$g_i$做加减法）</p>
+<p>考虑</p>
+$$\varepsilon_j=d(f(\overline{U_j}),N\backslash W_j)>0$$<p>从而只要$d(y,f(\overline{U_j}))<\varepsilon_j$就可以保证$y\in W_j$</p>
+<p>这是因为，</p>
+$$d(y,f(\overline{U_j}))<d(N\backslash W_j,f(\overline{U_j}))=\inf_{N\backslash W_j}d(x,f(\overline{U_j}))$$<p>从而存在$\varepsilon>0$使得</p>
+$$d(y,f(\overline{U_j}))+\varepsilon\leq \inf_{N\backslash W_j}d(x,f(\overline{U_j}))$$<p>也即对任意$x\in N\backslash W_j$都有</p>
+$$d(y,f(\overline{U_j}))+\varepsilon\leq d(x,f(\overline{U_j}))$$<p>若$y\in N\backslash W_j$，则$\varepsilon\leq 0$，矛盾。</p>
+<p><strong>注</strong>：这里上次讲的时候我糊弄过去了，紧集到闭集的距离不一定能取到，反例是在流形$B_1(0)\subset \mathbb{R}$中，$F=\{\frac{1}{n}\}_{n\geq 1}$，$K=\{-\frac{1}{2}\}$，则$d(K,F)=1/2$，而且取不到。</p>
+<p>从而我们只需构造$g_i$使得对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$就可以使得</p>
+$$g_i(x)\in W_j\quad\forall x\in \overline{U_j}$$<p>而对紧集$\overline{U_j}$和局部有限的开覆盖$\{U_i\}$，我们知道只有有限多个$U_i$和$\overline{U_j}$有交，从而我们可以取（因为我们对所有$j$都要成立，所以下面取了$\min$）</p>
 $$\eta_j=\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_j}\neq\emptyset\}$$<p>再取从属于$\{U_i\}$的单位分解$\{\rho_i\}$，定义</p>
-$$\varepsilon(x)=\sum_i\eta_i\rho_i(x)$$<p>对$x\in U_j$只有有限多个$U_i$和$U_j$相交，从而在$U_j$上$\varepsilon(x)$是光滑的，从而$\varepsilon(x)$是光滑的，从而是连续的。</p>
-<p>下面我们对$g_0=f$归纳地定义它的局部光滑化，为了保证多步局部光滑化的连续性，我们需要像在证明单位分解那样取大一点的坐标球，给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
+$$\varepsilon(x)=\sum_i\eta_i\rho_i(x)$$<p>对$x\in \overline{U_j}$只有有限多个$U_i$和$\overline{U_j}$相交，从而在$U_j$上$\varepsilon(x)$是光滑的，从而$\varepsilon(x)$是光滑的，从而是正连续的。</p>
+<p>定义</p>
+$$\overline{\varepsilon_i}=\min_{x\in \overline{U_i}}\varepsilon(x)$$<p>下面我们对$g_0=f$归纳地定义它的局部光滑化</p>
+<p>为了保证多步局部光滑化的连续性，我们需要像在证明单位分解那样取大一点的坐标球，给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
 </p>
 $$\overline{V_i}\subset V_i'\subset \overline{V_i'}\subset U_i$$<p>对$g_{i-1}$和$\overline{V_i}\subset V_i'$，存在连续映射$g_i':U_i\to W_i$使得</p>
 <p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;（这里我们把$W_i$的坐标卡的线性结构和范数拉回来了，由于坐标卡是连续的，所以在紧集上一致连续，所以在紧集上只要两个点差的范数足够小，在$N$上的距离就能足够小）</p>
@@ -694,7 +703,7 @@ $$g_i(x)=\begin{cases}
 $$\begin{aligned}
   d(g_i(x),f(x)) &= d(g_i(x),g_0(x)) \\
    &\leq \sum d(g_j(x),g_{j-1}(x)) \\
-   &\leq \sum 2^{-j}\varepsilon(x) \\
+   &\leq \sum 2^{-j}\overline{\varepsilon_j} \\
    &\leq \varepsilon(x) <\frac{1}{2}\varepsilon_j
 \end{aligned}$$<p>
 从而$x\in \overline{U_j}$时有$d(g_i(x),f(x))\leq 
