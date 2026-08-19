@@ -725,40 +725,13 @@ $$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 
 		data-flex-basis="424px"
 	
 ></p>
-<p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。
-<img src="/zh/p/mfd-geometry/clipboard-20260810-191508-381-1.zh.png"
-	width="1398"
-	height="1027"
-	loading="lazy"
-	
-		alt="clipboard-20260810-191508-381-1"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="136"
-		data-flex-basis="326px"
-	
-></p>
+<p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
 <p><strong>证明</strong>：由于$f_0$和$f_1$是拓扑同伦的，所以我们可以找到它们之间的同伦$G:M\times [1/3,2/3]\to N$，进一步我们把它延拓到$M\times \mathbb{R}$上，由于$t<1/3$和$t>2/3$的地方不需要改动就已经光滑了，所以我们取$M\times \mathbb{R}$的开覆盖$U=M\times(-\infty,1/3)\cup M\times (2/3,\infty)$和$V=M\times (0,1)$，如果$N= \mathbb{R}^k$，那么我们可以直接令$A=M\times [1/3,2/3],U=M\times (0,1)$使用局部光滑逼近得到光滑同伦，而对一般的微分流形$N$，我们取$\{U,V\}$的局部有限开加细$\{U_i\}$（跟单位分解的证明一样，$U_i$是欧氏空间拉回来的球），如果$U_i\subset U$，则函数不变，如果$U_i\subset V$，我们重新排列得到包含于$V$的所有$\{U_i\}$，对$G_0=G$逐步光滑化即可。</p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260810-191523-578-1.zh.png"
-	width="1282"
-	height="958"
-	loading="lazy"
-	
-		alt="clipboard-20260810-191523-578-1"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="133"
-		data-flex-basis="321px"
-	
-></p>
 <p><strong>定理1.3.11</strong>：紧致微分流形$M^n$均可嵌入到某个欧氏空间$\mathbb{R}^N$中。</p>
 <p><strong>证明</strong>：对紧致流形，我们可以像单位分解的证明那样取有限个坐标卡$(U_i,\varphi_i)$，$V_i=\varphi_i^{-1}(B_{1/2}(0))$是空间的开覆盖，取鼓包函数</p>
 $$f_i|V_i,\operatorname{supp} f_i\subset \varphi_i^{-1}(B_1(0))$$<p>
 由于$\varphi_i$是坐标卡，所以在$U_i$上是微分同胚，所以在$U_i$上自动是嵌入，$\varphi_i$的秩为$n$，我们希望把局部的嵌入变成全局的嵌入，所以我们可以考虑$(\varphi_1,\dots,\varphi_k)$，而坐标卡在$U_i$外没有定义，所以我们用截断函数做零延拓，得到$(f_1\varphi_1,\dots,f_k\varphi_k)$，在$V_i$上$f_i\varphi_i=\varphi_i$，所以$(f_1\varphi_1,\dots,f_k\varphi_k)$的秩是$n$，所以我们说明了$(f_1\varphi_1,\dots,f_k\varphi_k)$是浸入，为了让它成为单射，我们再补上$(f_1\varphi_1,\dots,f_k\varphi_k,f_1,\dots,f_k)$，此时若$x,y$处函数值相等，那么存在某个$i$使得$f_i(x)=f_i(y)=1$，从而$x,y\in V_i$且$\varphi_i(x)=\varphi_i(y)$，从而$x=y$，从而我们说明了这个映射是一个嵌入。</p>
+<p>由于我们加入$f_1,\dots,f_k$的目的是让$x,y$落在同一个$V_i$，所以我们也可以把它换成从属于$V_i$的广义单位分解$\{\rho_i\}$，这样得到某个$i$使得$\rho_i(x)=\rho_i(y)$，所以$x,y\in V_i$。</p>
 
 </section>
 
