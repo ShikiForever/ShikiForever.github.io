@@ -674,8 +674,13 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 $$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>（这样我们就能在$\overline{U_j}$上对所有$g_i$做加减法）</p>
 <p>考虑</p>
 $$\varepsilon_j=d(f(\overline{U_j}),N\backslash W_j)>0$$<p>从而只要$d(y,f(\overline{U_j}))<\varepsilon_j$就可以保证$y\in W_j$</p>
-<p>这是因为，</p>
-$$d(y,f(\overline{U_j}))<d(N\backslash W_j,f(\overline{U_j}))=\inf_{N\backslash W_j}d(x,f(\overline{U_j}))$$<p>从而存在$\varepsilon>0$使得</p>
+<p>这是因为，
+</p>
+$$\begin{aligned}
+  d(y,f(\overline{U_j}))
+ &<d(N\backslash W_j,f(\overline{U_j}))  \\
+   &=\inf_{N\backslash W_j}d(x,f(\overline{U_j}))
+\end{aligned}$$<p>从而存在$\varepsilon>0$使得</p>
 $$d(y,f(\overline{U_j}))+\varepsilon\leq \inf_{N\backslash W_j}d(x,f(\overline{U_j}))$$<p>也即对任意$x\in N\backslash W_j$都有</p>
 $$d(y,f(\overline{U_j}))+\varepsilon\leq d(x,f(\overline{U_j}))$$<p>若$y\in N\backslash W_j$，则$\varepsilon\leq 0$，矛盾。</p>
 <p><strong>注</strong>：这里上次讲的时候我糊弄过去了，紧集到闭集的距离不一定能取到，反例是在流形$B_1(0)\subset \mathbb{R}$中，$F=\{\frac{1}{n}\}_{n\geq 1}$，$K=\{-\frac{1}{2}\}$，则$d(K,F)=1/2$，而且取不到。</p>
