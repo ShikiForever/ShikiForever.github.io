@@ -668,7 +668,7 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>下面我们来说明具体的构造细节：</p>
 <p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作。</p>
 <p>由于流形是局部紧的，每个点$x$可以找到一个预紧的坐标邻域$U_x$，再对$f(x)$的坐标邻域$W_x$，由于$f$是连续的，我们可以取$U_x$中$x$的开邻域，使得它的像包含于$W_x$，再利用空间的局部紧性缩小这个邻域，不妨仍设为$U_x$，则可以使$f(\overline{U_x})\subset W_x$，以这里的$\{U_x\}_{x\in M}$为单位分解证明里的开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，我们可以重复单位分解证明里的步骤，得到$M$的局部有限开覆盖$\{U_i\}$（也就是单位分解证明里的$\{U_{x^i_j}\}$），使得：</p>
-<p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
+<p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射$\phi_i$下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足</p>
 $$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>（这样我们就能在$\overline{U_j}$上对所有$g_i$做加减法）</p>
@@ -687,39 +687,82 @@ $$\varepsilon(x)=\sum_i\eta_i\rho_i(x)$$<p>对$x\in \overline{U_j}$只有有限�
 $$\overline{\varepsilon_i}=\min_{x\in \overline{U_i}}\varepsilon(x)$$<p>下面我们对$g_0=f$归纳地定义它的局部光滑化</p>
 <p>为了保证多步局部光滑化的连续性，我们需要像在证明单位分解那样取大一点的坐标球，给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
 </p>
-$$\overline{V_i}\subset V_i'\subset \overline{V_i'}\subset U_i$$<p>对$g_{i-1}$和$\overline{V_i}\subset V_i'$，存在连续映射$g_i':U_i\to W_i$使得</p>
-<p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;（这里我们把$W_i$的坐标卡的线性结构和范数拉回来了，由于坐标卡是连续的，所以在紧集上一致连续，所以在紧集上只要两个点差的范数足够小，在$N$上的距离就能足够小）</p>
+$$\overline{V_i}\subset V_i'\subset \overline{V_i'}\subset U_i$$<p>我们希望定义连续函数$g_{i}:M\to N$，使得当 \(i\ge 1\) 时，</p>
+<ol>
+<li>
+<p>$d\bigl(g_i(x),g_{i-1}(x)\bigr)\le 2^{-i}\varepsilon(x),
+   \qquad \forall x\in M;$</p>
+</li>
+<li>
+<p>\(g_i\) 和 \(g_{i-1}\) 在 \(M\setminus U_i\) 中相等（也就是我们每次只在$U_i$中做修改，其他地方不动）；</p>
+</li>
+<li>
+<p>\(g_i\) 在
+$K_i=\overline{V}_1\cup\overline{V}_2\cup\cdots\cup\overline{V}_i$
+的某开邻域中是光滑的（可以预想，这样最终取极限就在所有$V_i$上光滑，从而全空间光滑）；</p>
+</li>
+<li>
+\[
+   g_i(\overline{U}_j)\subset W_j,
+   \qquad \forall j\ge 1.
+   \]</li>
+</ol>
+<p>假设我们已经定义好$g_{i-1}:M\to N$，由于$g_{i-1}(\overline{U_j})\subset W_j$，我们考虑$g_{i-1}|_{U_i}:U_i\to W_i$，复合上坐标卡把它变成打到$\mathbb{R}^k$的函数，即$\phi_j\circ g_{i-1}|_{U_i}:U_i\to \mathbb{R}^k$，对$\overline{V_i}\subset V_i'\subset M$，存在连续映射$\tilde{g_i}:U_i\to \mathbb{R}^k$使得</p>
+<p>(1) $\|\tilde{g}_i(x)-\phi_i\circ g_{i-1}|_{U_i}(x)\|\leq\delta_i$（由于$\phi_i^{-1}$是$ \mathbb{R}^k $到$W_i$的连续函数，所以$\phi_i^{-1}$在紧集$L_i=\phi_i\circ g_{i-1}(\overline{U_i})$上是一致连续的，从而我们可以找到这样的$\delta_i$，使得只要$y,y'\in L_i$满足$\|y-y'\|\leq\delta_i$，就有$d(\phi_i^{-1}(y),\phi_i^{-1}(y'))\leq \frac{\overline{\varepsilon_i}}{2^i}$）；</p>
+<p>(2) $\tilde{g_i}$在$\overline{V_i}$的某个开邻域中是光滑的，又因为$\phi_j\circ g_{i-1}|_{U_i}$已经在$K_{i-1}\cap U_i$在$U_i$中的一个开邻域上是光滑的了，所以$\tilde{g_i}$在$(K_{i-1}\cap U_i)\cup \overline{V_i}=K_i\cap U_i$的一个开邻域上是光滑的；</p>
+<p>(3) $\tilde{g_i}$和$\phi_i\circ g_{i-1}|_{U_i}$在$U_i\backslash V_i'$上相等。</p>
+<p>从而对连续函数$g_i'=\phi_i^{-1}\circ \tilde{g_i}:U_i\to W_i$有：</p>
+<p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;</p>
 <p>(2)&rsquo; $ g_{i}^{\prime} $ 和 $ g_{i-1} $ 在 $ U_{i} \setminus V_{i}^{\prime} $ 中相同;</p>
-<p>(3)&rsquo; $ g_{i}^{\prime} $ 在 $ K_{i} \cap U_{i} $ 的某开邻域中是光滑的.（因为$g_{i-1}$已经在$K_{i-1}$附近是光滑的，$K_i=K_{i-1}\cup \overline{V_i}$）</p>
+<p>(3)&rsquo; $ g_{i}^{\prime} $ 在 $ K_{i} \cap U_{i} $ 的某开邻域中是光滑的.</p>
 <p>进一步，我们可以定义
 </p>
 $$g_i(x)=\begin{cases}
   g_i'(x) & x\in U_i \\
   g_{i-1}(x) & x\in M-U_i
 \end{cases}$$<p>
-注意到这里因为我们在$\overline{V_i}$和$U_i$之间建立了缓冲区，所以在$\partial U_i$附近$g_i'$和$g_{i-1}$是一样的，所以$g_i$自动是连续的。</p>
-<p>为了证明$g_i(\overline{U_j})\subset W_j$，我们只需证明对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$，而对$x\in U_j$，我们有
+注意到这里因为我们在$\overline{V_i}$和$U_i$之间建立了缓冲区，所以在$\partial U_i$附近$g_i'$和$g_{i-1}$是一样的，也即对$\partial U_i\subset (\overline{V_i'})^c$上的点有$g_i'=g_{i-1}$，所以$g_i$自动是连续的。</p>
+<p>并且，我们可以验证$g_i$满足的四条性质，</p>
+<p>第一条：
+对$x\in M-U_i$无需验证，对$x\in U_i$有
+</p>
+$$d(g_i(x),g_{i-1}(x))= d(g_i'(x),g_{i-1}(x))\leq 2^{-i}\overline{\varepsilon_i}\leq 2^{-i}\varepsilon(x)$$<p>第二条由定义立即得到</p>
+<p>第三条：
+由于$g_i'$在 <strong>$K_i\cap U_i$于$U_i$中的某个开邻域</strong> 光滑，所以对$K_i\cap U_i$中的每个点，都可以找到坐标邻域，使得$g_i'$在坐标表达下是光滑的；</p>
+<p>而对$K_i\cap\partial U_i$中的点附近（也就是开集$(\overline{V_i'})^c$），由于此时$g_i=g_{i-1}$，所以也可以找到坐标邻域使得它的表达是光滑的；</p>
+<p>对$K_i- \overline{U_i}\subset M-\overline{U_i}$上的点，同理。</p>
+<p>第四条：</p>
+<p>为了证明$g_i(\overline{U_j})\subset W_j$，我们只需证明对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$，而对$x\in \overline{U_j}$，我们有
 </p>
 $$\begin{aligned}
   d(g_i(x),f(x)) &= d(g_i(x),g_0(x)) \\
-   &\leq \sum d(g_j(x),g_{j-1}(x)) \\
-   &\leq \sum 2^{-j}\overline{\varepsilon_j} \\
-   &\leq \varepsilon(x) <\frac{1}{2}\varepsilon_j
-\end{aligned}$$<p>
-从而$x\in \overline{U_j}$时有$d(g_i(x),f(x))\leq 
+   &\leq \sum_{k=1}^i d(g_k(x),g_{k-1}(x)) \\
+   &\leq \sum_{k=1}^i 2^{-k}\varepsilon(x) \\
+   &\leq \varepsilon(x) \leq\frac{1}{2}\varepsilon_j
+\end{aligned}$$<p>这里最后一步是因为$\varepsilon(x)=\sum \eta_k\rho_k(x)$，而$x\in \overline{U_j}$，$\overline{U_j}$只和有限多个$U_i$有交集，从而</p>
+$$\varepsilon(x)=\sum\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_k}\neq\empty\}\rho_k(x)\leq \sum\frac{1}{2}\varepsilon_j\rho_k(x)=\frac{1}{2}\varepsilon_j$$<p>从而$x\in \overline{U_j}$时有$d(g_i(x),f(x))\leq 
 \frac{1}{2}\varepsilon_j<\varepsilon_j$，从而$g_i(\overline{U_j})\subset W_j$。</p>
-<p>由于$K_i$紧，而$\{U_i\}$是局部有限的，所以对充分大的$j$都有$U_j\cap K_i=\empty$，从而$g_j$在$K_i$上关于$j$保持不变，从而可以定义
+<p>每个$x\in M$都属于某个$K_i$，由于$K_i$紧，而$\{U_i\}$是局部有限的，所以对充分大的$j$都有$U_j\cap K_i=\empty$，从而$g_j$在$K_i$上关于$j$保持不变，从而可以定义
 </p>
 $$g(x)=\lim_{j \to \infty}g_j(x) $$<p>
-并且$g$是光滑的。</p>
-<p>定义同伦</p>
+并且$g$是光滑的，这是因为对充分大的$j$，$g=g_j$在$K_j\supset K_i \ni x$的一个开邻域上是光滑的。</p>
+<p>对$x\in U_i$，我们有$g_j(x)\in W_i$，所以可以定义同伦</p>
 $$
 H_i(x, t) = 
 \begin{cases} 
-tg_i(x) + (1-t)g_{i-1}(x), & x \in U_i, \\
+\phi_i^{-1}(t\phi_i\circ g_i(x) + (1-t)\phi_i\circ g_{i-1}(x)), & x \in U_i, \\
 g_{i-1}(x), & x \in M \setminus U_i.
 \end{cases}
-$$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 1$附近的连续性，也就是对每个$x$，我们证明$H$在$x\times 1$附近的连续性，也就是我们要找一个邻域$U_x\times (t_0,1]$使得在这个邻域上$d(H_i,H)<\varepsilon$，我们不妨设$U_x$是预紧的，从而对$j$充分大都有$U_j\cap \overline{U_x}=\empty$，所以对充分大的$j$，在$U_x$都有$H_j=g_{j-1}=g$，从而$H$在$x\times 1$附近是连续的。</p>
+$$<p>要验证它的连续性，只需要验证边界附近的连续性，而在边界附近我们知道$g_i=g_{i-1}$，所以自动是连续的。</p>
+\[
+H(x,t)=
+\begin{cases}
+H_{i+1}\left(x,\,2^{i+1}\left(t+\frac{1}{2^i}-1\right)\right),
+& 1-\frac{1}{2^i}\le t\le 1-\frac{1}{2^{i+1}},\quad i=0,1,\cdots,\\[6pt]
+g(x),
+& t=1.
+\end{cases}
+\]<p>我们只需要证明$H$在$M\times 1$附近的连续性，也就是对每个$x$，我们证明$H$在$x\times 1$附近的连续性，也就是我们要找一个邻域$U_x\times (t_0,1]$使得在这个邻域上$d(H_i,H)<\varepsilon$，我们不妨设$U_x$是预紧的，从而对$j$充分大都有$U_j\cap \overline{U_x}=\empty$，所以对充分大的$j$，在$U_x\times[1-\frac{1}{2^i},1]$都有$H_j(\cdot,t)=g_{j-1}(\cdot)=g(\cdot)$，从而$H$在$x\times 1$附近是连续的。</p>
 <p><img src="/zh/p/mfd-geometry/clipboard-20260819-152622-982-1.zh.png"
 	width="2268"
 	height="1283"
