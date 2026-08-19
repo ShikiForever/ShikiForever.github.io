@@ -647,11 +647,12 @@ $$h(x)=\rho_0(x)g(x)+\rho_1(x)f(x)$$<p>对$M\backslash U$中的点$x$，由于$\
 <p>注意到$h$的光滑性完全由$f$决定，所以第二条也成立。</p>
 <p>下面我们继续<a class="link" href="#prop-mfd-geometry-1dyinr1" >命题1.3.9</a>的证明:</p>
 <p><strong>命题1.3.9（满射）</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
-<p>由如下映射可知，$B_r(0)$与$\mathbb{R}^k$是微分同胚的：
+<p><strong>注：</strong>
+由如下映射可知，$B_r(0)$与$\mathbb{R}^k$是微分同胚的：
 </p>
 $$h:B_1(0)\to\mathbb{R}^k,\qquad
 h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
-所以我们可以调整单位分解中的坐标卡使得像变为$\mathbb{R}^k$，并且由于$f$是连续的，对$f(x_0)$的坐标邻域$W$（打到$\mathbb{R}^k$），存在$x_0$的邻域$U$使得$f(U)\subset W$，从而我们可以对这些邻域$U$，不妨仍记作$\{U_\alpha\}$，像单位分解的证明那样操作：</p>
+所以我们总可以调整单位分解中的坐标卡使得像变为$\mathbb{R}^k$，并且由于$f$是连续的，对$f(x_0)$的坐标邻域$W$（打到$\mathbb{R}^k$），存在$x_0$的邻域$U$使得$f(U)\subset W$，从而我们可以对这些邻域$U$，不妨仍记作$\{U_\alpha\}$，像单位分解的证明那样操作：</p>
 <p>(1) $\varphi_x(U_x)=B_2(0)\cong \mathbb{R}^k$；</p>
 <p>(2) 存在 $\alpha(x)\in\Gamma$，使得 $U_x\subset U_{\alpha(x)}$；</p>
 <p>(3) $U_x\cap A_j=\varnothing$，$\forall\,|j-i|>1$。</p>
@@ -660,22 +661,22 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <hr>
 <p><strong>为了证明</strong>存在一个光滑函数$g$和$f$同伦，我们需要构造一个同伦$H:M\times [0,1]\to N$，满足$H(x,0)=f(x),H(x,1)=g(x)$。</p>
-<p>为此，我们要构造一列$g_i$，把$[0,1]$拆成可数个不交区间$[1-2^{-i},1-2^{-i-1}]$，一步一步同伦到这个$g$上，并且$g_i\to g$，保证构造的同伦在时间$1$附近是连续的，而这里的$g_i$用到我们前面的引理来局部光滑化，最后取极限得到一个光滑的函数$g$。</p>
+<p>为此，我们要用局部光滑逼近构造一列$g_i$，把$[0,1]$拆成可数个不交区间$[1-2^{-i},1-2^{-i-1}]$，一步一步同伦到这个$g$上，并且$g_i\to g$，保证构造的同伦在时间$1$附近是连续的。</p>
 <p>每一步的同伦我们利用直线同伦$tg_i(x)+(1-t)g_{i-1}(x)$来构造，为此，我们必须保证这个线性同伦有意义，也就是$g_i(x)$和$g_{i-1}(x)$要落在同一个坐标卡上，而且这个坐标卡要打到欧氏空间的一个凸开集上。</p>
 <p>为此，我们需要控制$d(g_i(x),g_{i-1}(x))$充分小。</p>
 <hr>
 <p>下面我们来说明具体的构造细节：</p>
 <p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作，由于流形是局部紧的，每个点$x$可以找到一个相对紧的邻域$U_x$，再对$f(x)$的坐标邻域$W_x$（不妨假设坐标映射的像是$\mathbb{R}^k$，否则可以缩小$W_x$使得像集为$B_r(0)$，再复合一个微分同胚就可以变成$\mathbb{R}^k$），由于$f$是连续的，我们可以取$U_x$的开子集，使得它的闭包的像包含于$W_x$，不妨仍设为$U_x$，使得$f(\overline{U_x})\subset W_x$。</p>
-<p>然后再像单位分解的存在性证明那样可以得到$M$的开覆盖$\{U_i\}$：</p>
+<p>然后再像单位分解的存在性证明那样，拉回欧氏空间中的球，得到$M$的开覆盖$\{U_i\}$：</p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
-<p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足$g_i(\overline{U_j})\subset W_j$，</p>
-<p>考虑</p>
+<p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足</p>
+$$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>考虑</p>
 $$\varepsilon_j=d(f(\overline{U_j}),N\backslash W_j)>0$$<p>从而只要$d(y,f(\overline{U_j}))<\varepsilon_j$就可以保证$y\in W_j$，从而我们只需构造$g_i$使得对$x\in \overline{U_j}$有$d(g_i(x),f(x))<\varepsilon_j$就可以使得$g_i(x)\in W_j$了。</p>
-<p>而对紧集$\overline{U_j}$和局部有限的开覆盖$\{U_i\}$，我们知道只有有限多个$U_i$和$\overline{U_j}$有交，从而我们可以取</p>
-$$\eta_j=\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_j}\neq\emptyset\}$$<p>再取从属于$\{U_i\}$的（广义）单位分解$\{\rho_i\}$，定义</p>
+<p>而对紧集$\overline{U_j}$和局部有限的开覆盖$\{U_i\}$，我们知道只有有限多个$U_i$和$\overline{U_j}$有交，从而我们可以取（因为我们对所有$j$都要成立，所以下面取了$\min$）</p>
+$$\eta_j=\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_j}\neq\emptyset\}$$<p>再取从属于$\{U_i\}$的单位分解$\{\rho_i\}$，定义</p>
 $$\varepsilon(x)=\sum_i\eta_i\rho_i(x)$$<p>对$x\in U_j$只有有限多个$U_i$和$U_j$相交，从而在$U_j$上$\varepsilon(x)$是光滑的，从而$\varepsilon(x)$是光滑的，从而是连续的。</p>
-<p>下面我们对$g_0=f$归纳地定义它的局部光滑化，为了保证局部光滑化的连续性，我们需要给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
+<p>下面我们对$g_0=f$归纳地定义它的局部光滑化，为了保证多步局部光滑化的连续性，我们需要像在证明单位分解那样取大一点的坐标球，给$\overline{V_i}$取一个缓冲区，也就是取开集$V_i'$使得
 </p>
 $$\overline{V_i}\subset V_i'\subset \overline{V_i'}\subset U_i$$<p>对$g_{i-1}$和$\overline{V_i}\subset V_i'$，存在连续映射$g_i':U_i\to W_i$使得</p>
 <p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;（这里我们把$W_i$的坐标卡的线性结构和范数拉回来了，由于坐标卡是连续的，所以在紧集上一致连续，所以在紧集上只要两个点差的范数足够小，在$N$上的距离就能足够小）</p>
@@ -709,7 +710,21 @@ H_i(x, t) =
 tg_i(x) + (1-t)g_{i-1}(x), & x \in U_i, \\
 g_{i-1}(x), & x \in M \setminus U_i.
 \end{cases}
-$$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 1$附近的连续性。</p>
+$$<p>这样复合一个线性变换上去，我们只需要证明$H$在$M\times 1$附近的连续性，也就是对每个$x$，我们证明$H$在$x\times 1$附近的连续性，也就是我们要找一个邻域$U_x\times (t_0,1]$使得在这个邻域上$d(H_i,H)<\varepsilon$，我们不妨设$U_x$是预紧的，从而对$j$充分大都有$U_j\cap \overline{U_x}=\empty$，所以对充分大的$j$，在$U_x$都有$H_j=g_{j-1}=g$，从而$H$在$x\times 1$附近是连续的。</p>
+<p><img src="/zh/p/mfd-geometry/clipboard-20260819-152622-982-1.zh.png"
+	width="2268"
+	height="1283"
+	loading="lazy"
+	
+		alt="AI绘制的H的构造"
+	
+    
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="424px"
+	
+></p>
 <p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。
 <img src="/zh/p/mfd-geometry/clipboard-20260810-191508-381-1.zh.png"
 	width="1398"
