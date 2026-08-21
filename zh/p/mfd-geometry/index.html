@@ -600,16 +600,69 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <hr>
+<p><strong>8.22补充</strong>：总体上看，我们的证明依赖于局部光滑逼近，我们对整个$f$做操作，根据局部光滑逼近的要求，我们需要找需要修改的区域，因为连续函数可以做到处处不光滑，所以我们要对整个空间取一个开覆盖$U_i$，为了方便归纳，我们先假设这是一个可数的覆盖，再在里面取一个闭集$A_i$，保证$A_i$还是空间的一个覆盖。</p>
+<p>我们要保证修改之后的函数和原来同伦，最直观的同伦就是直线同伦，为了使用直线同伦，我们要保证修改前后的函数落在同一个凸集里面，而流形上没有凸的概念，所以我们要确保函数修改后落在给定的坐标卡$W_j$上，而这个坐标卡$W_j$微分同胚于$\mathbb{R}^k$上的凸开集（而实际上所有的凸开集都微分同胚于开球，开球又微分同胚于全空间，所以可以不妨假设就是$\mathbb{R}^k$）：</p>
+<p>由于我们假设了流形上面有度量，我们就可以取函数的值域和这个给定的凸开集外的距离，保证修改后的函数误差不超过这个距离：</p>
+<figure>
+  <img src="clipboard-20260822-001235-594-1.zh.png" alt="clipboard-20260822-001235-594-1.zh">
+  <figcaption>局部光滑逼近</figcaption>
+</figure>
+<p>而这导致了一个问题，是这样取光滑逼近可能会导致全局函数变得不连续：</p>
+<figure>
+  <img src="clipboard-20260822-010532-549-1.zh.png" alt="clipboard-20260822-010532-549-1.zh">
+  <figcaption>缓冲区</figcaption>
+</figure>
+<p>为了保证不出现图上的情况，我们取一个缓冲区$V_j'$，只在这个缓冲区内做修改，而根据局部光滑逼近，在$U_j\backslash V_j'$上是不变的。</p>
+<p>我们可能会考虑，开覆盖重叠的地方可能发生了多次修改，根据我们刚才的要求，修改之后必须始终落在我们给定的坐标卡，所以我们要对这多次修改的误差取一个最小值：</p>
+$$\eta_j=\frac{1}{2}\min\{\varepsilon_i:U_i\cap\overline{U_j}\neq\emptyset\}$$<p>要使得这个最小值有意义，我们在一开始限定$\overline{U_j}$是紧集，且$U_i$是局部有限的，这样最小值一定能取到。</p>
+<p>一个点附近有多个$U_j$，所以在某种意义上我们还得取$\eta_j$的最小值，</p>
+<p>我们先用书上的方法：$\eta_j$是对应于$U_j$的，所以我们可以取一个从属于$U_j$的单位分解$\rho_j$，然后把这些局部误差数据拼起来，得到全局的误差函数
+</p>
+$$\varepsilon(x)=\sum_j\eta_j\rho_j(x)$$<p>
+然后可以在每个$\overline{U_j}$上取最小值$\overline{\varepsilon_j}$，用这个值来替代$\eta_j$的最小值。</p>
+<p>至此，我们已经明确了要构造的$g_i$是什么样的，按书上的记号$g_i'$是$g_{i-1}$的局部光滑逼近，</p>
+<p>首先，为了$g_i(\overline{U_j})\subset W_j$，我们要让修改前后的误差足够小：</p>
+<p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;</p>
+<p>而前面改的地方的误差至少要在$\varepsilon(x)$：</p>
+<p>(1) $d(g_i(x),g_{i-1}(x))\leqslant 2^{-i} \varepsilon(x)$</p>
+<p>我们只在缓冲区内修改：</p>
+<p>(2)&rsquo; $ g_{i}^{\prime} $ 和 $ g_{i-1} $ 在 $ U_{i} \setminus V_{i}^{\prime} $ 中相同;</p>
+<p>(2) \(g_i\) 和 \(g_{i-1}\) 在 \(M\setminus U_i\) 中相等</p>
+<p>局部光滑逼近：</p>
+<p>(3)&rsquo; $ g_{i}^{\prime} $ 在 $ K_{i} \cap U_{i} $ 的某开邻域中是光滑的.</p>
+<p>(3) \(g_i\) 在
+$K_i=\overline{V}_1\cup\overline{V}_2\cup\cdots\cup\overline{V}_i$
+的某开邻域中是光滑的</p>
+<p>(4) $g_i(\overline{U_j})\subset W_j$</p>
+<p>按照我们的要求，$g_{i}$和$g_{i-1}$自然是同伦的，对应的同伦映射记为$H_i$，定义</p>
+$$g=\lim_{n\to\infty}g_n$$<p>，那么我们可以构造$f$和$g$之间的同伦：</p>
+\[
+H(x,t)=
+\begin{cases}
+H_{i+1}\left(x,\,2^{i+1}\left(t+\frac{1}{2^i}-1\right)\right),
+& 1-\frac{1}{2^i}\le t\le 1-\frac{1}{2^{i+1}},\quad i=0,1,\cdots,\\[6pt]
+g(x),
+& t=1.
+\end{cases}
+\]<p>很显然我们只需要证明$t=1$的连续性：&hellip;</p>
+<hr>
+<p>Q:为什么我们不直接对整个$f:M\to N$定义它只修改$U_j$上的值的局部光滑逼近？</p>
+<p>A:因为$f$不是$\mathbb{R}^k$值的函数，我们只能限制到$U_j$上，让它打到坐标邻域上才能用局部光滑逼近。</p>
+<hr>
 <p><strong>为了证明</strong>存在一个光滑函数$g$和$f$同伦，我们需要构造一个同伦$H:M\times [0,1]\to N$，满足$H(x,0)=f(x),H(x,1)=g(x)$。</p>
 <p>为此，我们要用局部光滑逼近构造一列$g_i$，把$[0,1]$拆成可数个不交区间$[1-2^{-i},1-2^{-i-1}]$，一步一步同伦到这个$g$上，并且$g_i\to g$，保证构造的同伦在时间$1$附近是连续的。</p>
-<p>每一步的同伦我们利用直线同伦$tg_i(x)+(1-t)g_{i-1}(x)$来构造，为此，我们必须保证这个线性同伦有意义，也就是$g_i(x)$和$g_{i-1}(x)$要落在同一个坐标卡上，而且这个坐标卡要打到欧氏空间的一个凸开集上。</p>
-<p>为此，我们需要控制$d(g_i(x),g_{i-1}(x))$充分小。</p>
 <hr>
-<p>下面我们来说明具体的构造细节：</p>
+<p>具体的<strong>构造细节</strong>：</p>
+<figure>
+  <img src="clipboard-20260822-003448-006-1.zh.png" alt="clipboard-20260822-003448-006-1.zh">
+  <figcaption>控制多次光滑逼近的区域始终落在$W_j$</figcaption>
+</figure>
+<p><strong>构造覆盖</strong>：</p>
 <p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作。</p>
 <p>由于流形是局部紧的，每个点$x$可以找到一个预紧的坐标邻域$U_x$，再对$f(x)$的坐标邻域$W_x$，由于$f$是连续的，我们可以取$U_x$中$x$的开邻域，使得它的像包含于$W_x$，再利用空间的局部紧性缩小这个邻域，不妨仍设为$U_x$，则可以使$f(\overline{U_x})\subset W_x$，以这里的$\{U_x\}_{x\in M}$为单位分解证明里的开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，我们可以重复单位分解证明里的步骤，得到$M$的局部有限开覆盖$\{U_i\}$（也就是单位分解证明里的$\{U_{x^i_j}\}$），使得：</p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射$\phi_i$下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
+<p><strong>保证直线同伦有意义</strong>：</p>
 <p>因为我们要用直线同伦，我们希望构造的函数$g_i$满足</p>
 $$g_i(\overline{U_j})\subset W_j\quad\forall j$$<p>（这样我们就能在$\overline{U_j}$上对所有$g_i$做加减法）</p>
 <p>考虑</p>
@@ -648,14 +701,14 @@ $K_i=\overline{V}_1\cup\overline{V}_2\cup\cdots\cup\overline{V}_i$
 的某开邻域中是光滑的（可以预想，这样最终取极限就在所有$V_i$上光滑，从而全空间光滑）；</p>
 </li>
 <li>
-\[
-   g_i(\overline{U}_j)\subset W_j,
-   \qquad \forall j\ge 1.
-   \]</li>
+<p>$g_i(\overline{U}_j)\subset W_j,\quad \forall j\ge 1.$</p>
+</li>
 </ol>
 <p>假设我们已经定义好$g_{i-1}:M\to N$，由于$g_{i-1}(\overline{U_j})\subset W_j$，我们考虑$g_{i-1}|_{U_i}:U_i\to W_i$，复合上坐标卡把它变成打到$\mathbb{R}^k$的函数，即$\phi_j\circ g_{i-1}|_{U_i}:U_i\to \mathbb{R}^k$，对$\overline{V_i}\subset V_i'\subset M$，存在连续映射$\tilde{g_i}:U_i\to \mathbb{R}^k$使得</p>
-<p>(1) $\|\tilde{g}_i(x)-\phi_i\circ g_{i-1}|_{U_i}(x)\|\leq\delta_i$（由于$\phi_i^{-1}$是$ \mathbb{R}^k $到$W_i$的连续函数，所以$\phi_i^{-1}$在紧集$L_i=\phi_i\circ g_{i-1}(\overline{U_i})$上是一致连续的，从而我们可以找到这样的$\delta_i$，使得只要$y,y'\in L_i$满足$\|y-y'\|\leq\delta_i$，就有$d(\phi_i^{-1}(y),\phi_i^{-1}(y'))\leq \frac{\overline{\varepsilon_i}}{2^i}$）；</p>
-<p>(2) $\tilde{g_i}$在$\overline{V_i}$的某个开邻域中是光滑的，又因为$\phi_j\circ g_{i-1}|_{U_i}$已经在$K_{i-1}\cap U_i$在$U_i$中的一个开邻域上是光滑的了，所以$\tilde{g_i}$在$(K_{i-1}\cap U_i)\cup \overline{V_i}=K_i\cap U_i$的一个开邻域上是光滑的；</p>
+<p>(1) $\|\tilde{g}_i(x)-\phi_i\circ g_{i-1}|_{U_i}(x)\|\leq\delta_i$</p>
+<p>（由于$\phi_i^{-1}: \mathbb{R}^k \to W_i\in C$，所以$\phi_i^{-1}$在紧集$L_i=\phi_i\circ g_{i-1}(\overline{U_i})$上是一致连续的，从而我们可以找到这样的$\delta_i$，使得只要$y,y'\in L_i$满足$\|y-y'\|\leq\delta_i$，就有$d(\phi_i^{-1}(y),\phi_i^{-1}(y'))\leq \frac{\overline{\varepsilon_i}}{2^i}$）；</p>
+<p>(2) $\tilde{g_i}$在$=K_i\cap U_i$的一个开邻域上是光滑的</p>
+<p>$\tilde{g_i}$在$\overline{V_i}$的某个开邻域中是光滑的，又因为$\phi_j\circ g_{i-1}|_{U_i}$已经在$K_{i-1}\cap U_i$在$U_i$中的一个开邻域上是光滑的了，所以$\tilde{g_i}$在$(K_{i-1}\cap U_i)\cup \overline{V_i}=K_i\cap U_i$的一个开邻域上是光滑的；</p>
 <p>(3) $\tilde{g_i}$和$\phi_i\circ g_{i-1}|_{U_i}$在$U_i\backslash V_i'$上相等。</p>
 <p>从而对连续函数$g_i'=\phi_i^{-1}\circ \tilde{g_i}:U_i\to W_i$有：</p>
 <p>(1)&rsquo; $ d\left(g_{i}^{\prime}(x), g_{i-1}(x)\right) \leqslant 2^{-i} \bar{\varepsilon}_{i}, \forall x \in U_{i} $;</p>
