@@ -281,7 +281,65 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#单位分解的定义">单位分解的定义</a></li>
+    <li><a href="#单位分解的例子">单位分解的例子</a></li>
+    <li><a href="#单位分解存在性证明">单位分解存在性证明</a>
+      <ol>
+        <li><a href="#鼓包函数">鼓包函数</a></li>
+        <li><a href="#lindelöf引理">Lindelöf引理</a></li>
+        <li><a href="#穷竭的存在性">穷竭的存在性</a></li>
+        <li><a href="#单位分解存在性">单位分解存在性</a></li>
+      </ol>
+    </li>
+    <li><a href="#单位分解的应用">单位分解的应用</a>
+      <ol>
+        <li><a href="#光滑版本的urysohn引理">光滑版本的Urysohn引理</a></li>
+        <li><a href="#逆紧函数">逆紧函数</a></li>
+        <li><a href="#连续延拓">连续延拓</a></li>
+        <li><a href="#光滑同伦类与拓扑同伦类">光滑同伦类与拓扑同伦类</a>
+          <ol>
+            <li><a href="#光滑逼近与局部光滑逼近">光滑逼近与局部光滑逼近</a></li>
+            <li><a href="#满射证明">满射证明</a></li>
+            <li><a href="#单射证明">单射证明</a></li>
+          </ol>
+        </li>
+        <li><a href="#紧致微分流形的嵌入定理">紧致微分流形的嵌入定理</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -345,6 +403,48 @@
 </header>
 
     
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#单位分解的定义">单位分解的定义</a></li>
+    <li><a href="#单位分解的例子">单位分解的例子</a></li>
+    <li><a href="#单位分解存在性证明">单位分解存在性证明</a>
+      <ol>
+        <li><a href="#鼓包函数">鼓包函数</a></li>
+        <li><a href="#lindelöf引理">Lindelöf引理</a></li>
+        <li><a href="#穷竭的存在性">穷竭的存在性</a></li>
+        <li><a href="#单位分解存在性">单位分解存在性</a></li>
+      </ol>
+    </li>
+    <li><a href="#单位分解的应用">单位分解的应用</a>
+      <ol>
+        <li><a href="#光滑版本的urysohn引理">光滑版本的Urysohn引理</a></li>
+        <li><a href="#逆紧函数">逆紧函数</a></li>
+        <li><a href="#连续延拓">连续延拓</a></li>
+        <li><a href="#光滑同伦类与拓扑同伦类">光滑同伦类与拓扑同伦类</a>
+          <ol>
+            <li><a href="#光滑逼近与局部光滑逼近">光滑逼近与局部光滑逼近</a></li>
+            <li><a href="#满射证明">满射证明</a></li>
+            <li><a href="#单射证明">单射证明</a></li>
+          </ol>
+        </li>
+        <li><a href="#紧致微分流形的嵌入定理">紧致微分流形的嵌入定理</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
 
     <section class="article-content">
     
@@ -352,7 +452,8 @@
     <p><del>说实话写了这么多不知道会不会有点啰嗦，但是我尽力把我的直觉和理解转换成文字了，哪里有错误希望大家多多指正！也希望大家多提问题互相帮助，我参加的讨论班比较少，对于比较好的讨论班没什么概念，希望大家对怎么讲比较好、更希望听什么提出意见喵</del></p>
 <h1 id="单位分解">单位分解
 </h1><p>我们知道坐标卡可以用来局部拉回欧氏空间的一些概念（比如内积），但是一般来说不同的坐标卡之间拉回的概念是不兼容的，为此，我们要引入单位分解，用来把局部的对象拼接为整体的对象。</p>
-<p><strong>定义（单位分解）</strong>:给定一个微分流形$M$和它的一个开覆盖$\{U_\alpha\}_{\alpha\in \Gamma}$，如果存在（至多可数个）$(g_i:M\to \mathbb{R})\in C^\infty(M)$使得</p>
+<h2 id="单位分解的定义">单位分解的定义
+</h2><p><strong>定义（单位分解）</strong>:给定一个微分流形$M$和它的一个开覆盖$\{U_\alpha\}_{\alpha\in \Gamma}$，如果存在（至多可数个）$(g_i:M\to \mathbb{R})\in C^\infty(M)$使得</p>
 <ul>
 <li>$0\leq g_i(x)\leq 1\quad \forall x\in M$</li>
 <li>对任意的$i$，都存在$\alpha(i)\in\Gamma$使得$\operatorname{supp} g_i\subset U_{\alpha(i)}$</li>
@@ -377,7 +478,8 @@ $$<p>
 <p><strong>注</strong>：为什么我们要求从属于某个开覆盖，一来是因为我们希望把局部的信息拼接起来，二来是不需要从属于某个开覆盖的单位分解非常容易找，比如常数函数$1$就满足上面的所有条件。</p>
 <p><strong>注</strong>：局部有限性使得第四点的和式点点有定义。</p>
 <p><strong>注</strong>：第三点不能改成点点有限，因为光滑性是局部定义的，而不是点点定义的，每个点上只有有限个$g_i$不为$0$不能确保第四点中的和式局部上是有限和，这导致我们无法判断和式的光滑性，更不用谈把一些局部概念光滑地拼接到一起了。</p>
-<p><strong>例</strong>：
+<h2 id="单位分解的例子">单位分解的例子
+</h2><p><strong>例</strong>：
 令</p>
 $$f:\mathbb{R}\to\mathbb{R},f(x)=
 \begin{cases}
@@ -402,7 +504,9 @@ $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单�
   <img src="clipboard-20260731-062351-005-1.zh.gif" alt="partition of unity">
   <figcaption>partition of unity</figcaption>
 </figure>
-<p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的鼓包函数，像图中这样叠起来，从而构造一个单位分解，非常可惜的是我们这里构造的函数只有$C^1$的光滑性（这本质上是因为$\cos$是解析的，所以如果某个点处各阶导数都为$0$，则函数必须点点为$0$），所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$\varphi$，满足在原点处的各阶导数都为$0$，也就是：
+<h2 id="单位分解存在性证明">单位分解存在性证明
+</h2><h3 id="鼓包函数">鼓包函数
+</h3><p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的鼓包函数，像图中这样叠起来，从而构造一个单位分解，非常可惜的是我们这里构造的函数只有$C^1$的光滑性（这本质上是因为$\cos$是解析的，所以如果某个点处各阶导数都为$0$，则函数必须点点为$0$），所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$\varphi$，满足在原点处的各阶导数都为$0$，也就是：
 </p>
 $$\varphi(0)=\varphi'(0)=\cdots=\varphi^{(k)}(0)=\cdots=0$$<p>由泰勒展开我们知道：
 </p>
@@ -472,7 +576,8 @@ $$f(x)=1\quad \forall \|x\|\leq \frac{1}{2}$$</li>
 <p>对紧空间而言，我们很容易找单位分解，因为开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$一定有有限子覆盖$\{U_i\}_{i=1}^n$，对于连续、可度量化的情形，我们只需构造$f_i(x)=d(x,X\backslash U_i)$再归一化就可以了，对于光滑的情形，我们可以局部拉回鼓包函数、零延拓来替代距离函数。</p>
 <p>对于一般的空间，我们希望沿用上面的思路，所以我们先利用第二可数性把空间分解成可数个紧集的并，就像欧氏空间是$\sigma$-紧的，可以分解成$\bigcup_n \overline{B_n(0)}$一样，我们也可以对拓扑流形做这样的操作：</p>
 <p><strong>注</strong>：事实上连通流形上第二可数等价于$\sigma$-紧，等价于可度量化，等价于仿紧，所以直接用$\{B_n(x_0)\}_n$即可，下面我们给出第二可数推出“穷竭”的直接证明。</p>
-<p><span id="lem-mfd-geometry-1we1j8y" data-ref-type="lemma" data-ref-label="Lindelöf引理" data-ref-name="Lindelöf引理"></span>
+<h3 id="lindelöf引理">Lindelöf引理
+</h3><p><span id="lem-mfd-geometry-1we1j8y" data-ref-type="lemma" data-ref-label="Lindelöf引理" data-ref-name="Lindelöf引理"></span>
 <strong>引理（Lindelöf）</strong>：设$X$为第二可数空间，$B$为它的可数拓扑基，$\{U_\alpha\}_{\alpha\in \Gamma}$为$X$的一个开覆盖，则$\{U_\alpha\}$必有可数子覆盖。</p>
 <p><strong>证明</strong>：设$B_\alpha=\{\beta\in B\mid \beta\subset U_\alpha\}$，$B'=\bigcup_{\alpha\in\Gamma}B_\alpha$
 </p>
@@ -482,7 +587,8 @@ $$\begin{aligned}
    &= \bigcup_{\beta\in B'}\beta
 \end{aligned}$$<p>
 由于每个$\beta\in B'$都落在某一个$U_{\alpha(\beta)}$，所以$X=\bigcup_{\beta\in B'}U_{\alpha(\beta)}$。又因为$B'\subset B$是一个可数集，所以$\{U_\alpha\}_{\alpha\in\Gamma}$有可数子覆盖$\{U_{\alpha(\beta)}\}_{\beta\in B'}$。</p>
-<p><span id="lem-existence-of-exhaustion" data-ref-type="lemma" data-ref-label="引理1.3.2" data-ref-name="穷竭"></span>
+<h3 id="穷竭的存在性">穷竭的存在性
+</h3><p><span id="lem-existence-of-exhaustion" data-ref-type="lemma" data-ref-label="引理1.3.2" data-ref-name="穷竭"></span>
 <strong>引理1.3.2（穷竭）</strong>：对于任何微分流形，均存在一列预紧（即闭包紧）开集$\{G_i\}$，且
 </p>
 $$\overline{G_i}\subset G_{i+1}\quad \forall i\geq 1;$$<p>
@@ -496,7 +602,8 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 <p>取$G_1=V_{x_1}$，则$G_1$预紧。假设$G_k$已经定义，$\overline{G_k}\subset \bigcup_i V_{x_i}$，从而可以找到$I_k$使得$\overline{G_k}\subset \bigcup_{i\leq I_k}V_{x_i}$。定义$G_{k+1}=\bigcup_{i\leq I_k}V_{x_i}$，则$G_{k+1}$是预紧的。</p>
 <p><strong>注</strong>：书上这里漏了一步，没有要求$\{I_k\}_{k\in\mathbb{N}}$是严格单调递增的，这会使得$G_i$不一定能够覆盖全空间$M$。比如取空间$S^1\sqcup\mathbb{R}$，让$V_1=S^1$，$V_2,V_3,\dots$是$\mathbb{R}$的一个可数开覆盖，那么如果取$G_1=V_1$是一个预紧开集，$G_k=V_1$，则满足$\overline{G_i}\subset G_{i+1}$，但是$\bigcup_i G_i\neq M$。</p>
 <p><strong>注</strong>：如果我们保证空间的连通性，假设$I_k\nrightarrow \infty$，由于$I_k$单调递增（注意，书上甚至没有要求单调递增，所以这个也是预设之一），所以$I_k$有界，设$I_k\leq N=\max_j I_j$，那么$G_k=\bigcup_{i\leq I_k} V_{x_i}\subset\bigcup_{i\leq N} V_{x_i}$。所以对充分大的$k$，都有$G_k=\bigcup_{i\leq N}V_{x_i}$，这说明$G_k\subset\overline{G_{k+1}}\subset {G_{k+2}}$，从而$G_k=\overline{G_k}$，由空间的连通性得到$G_k=M$。</p>
-<p><span id="thm-existence-of-pou" data-ref-type="theorem" data-ref-label="定理1.3.3" data-ref-name="单位分解的存在性"></span>
+<h3 id="单位分解存在性">单位分解存在性
+</h3><p><span id="thm-existence-of-pou" data-ref-type="theorem" data-ref-label="定理1.3.3" data-ref-name="单位分解的存在性"></span>
 <strong>定理1.3.3（单位分解的存在性）</strong>：对于微分流形$M$的任何开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，均存在从属于它的单位分解。</p>
 <p><strong>证明</strong>：由前面的<a class="link" href="#lem-existence-of-exhaustion" >引理1.3.2</a>，我们可以找一个开集列$\{G_i\}$，现在定义紧集$A_i=\overline{G_i}\backslash{G_{i-1}}$。</p>
 <p>每个点$x\in A_i$附近我们可以找一个坐标邻域$(U_x,\varphi_x)$，使得</p>
@@ -506,10 +613,13 @@ $$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而�
 <li>$U_x\cap A_j=\emptyset\quad|j-i| > 1$</li>
 </ul>
 <p>令$V_x=\varphi_x^{-1}(B_{\frac{1}{2}}(0))$，则$\{V_x\}_{x\in A_i}$是$A_i$的一个开覆盖，所以有有限子覆盖$\{V_{x_j^i}\}_{j=1}^{n_i}$。定义$f_x$为$f\circ \varphi_x$的零延拓，自动是光滑的，并且$\operatorname{supp}  f_x\subset U_x$。并且$\{U_{x^i_j}\}$是局部有限的，从而$f_{x_j^i}$的归一化就是我们要的单位分解。</p>
-<p><span id="cor-mfd-geometry-1ra23hb" data-ref-type="corollary" data-ref-label="推论1.3.4" data-ref-name="推论1.3.4"></span>
+<h2 id="单位分解的应用">单位分解的应用
+</h2><h3 id="光滑版本的urysohn引理">光滑版本的Urysohn引理
+</h3><p><span id="cor-mfd-geometry-1ra23hb" data-ref-type="corollary" data-ref-label="推论1.3.4" data-ref-name="推论1.3.4"></span>
 <strong>推论1.3.4</strong>：设$A$是微分流形$M$的闭子集，如果$U$为$A$的开邻域，则存在光滑函数$\phi:M\to\mathbb{R}$使得$\phi|_A=1$且$\operatorname{supp} \phi\subset U$。</p>
 <p><strong>证明</strong>：考虑开覆盖$\{U,M\backslash A\}$和从属于它的单位分解$\phi_U,\phi_{M\backslash A}$，从而$(\phi_U)|_A$=1，满足支集落在$U$中。</p>
-<p><strong>定义（逆紧函数）</strong>：称连续映射是逆紧的，如果紧集的原像是紧集。</p>
+<h3 id="逆紧函数">逆紧函数
+</h3><p><strong>定义（逆紧函数）</strong>：称连续映射是逆紧的，如果紧集的原像是紧集。</p>
 <p><strong>8.16补充1</strong>：之前讲课讲到后面有点晕了，忘记讲逆紧映射的动机和好处了，一方面，逆紧映射刻画了欧氏空间中$x\to\infty$则$f(x)\to\infty$这个性质，因为如果$|f(x)|\leq M$，那么因为逆紧就有$|x|\leq N$，所以这个时候$x$不可能趋于无穷，所以$x$趋于无穷的时候函数至少有一个子列是趋于无穷的。</p>
 <p><strong>8.16补充2</strong>：好处除了下面写的跟覆叠映射有关之外，实际上局部紧Hausdorff空间之间的proper映射还自动是闭映射（利用局部紧空间的子空间闭当且仅当和任意紧集的交集都是紧的），回顾我们之前的浸入定理，在函数是proper的时候，正向和反向都是连续的，所以只要是单射，就可以确保函数是同胚，从而是嵌入。</p>
 <p><strong>注</strong>：流形之间的逆紧局部同胚是覆叠映射。</p>
@@ -523,7 +633,8 @@ $$\rho(x)=\sum_iig_i(x)$$<p>
 $$\rho(x)\geq 1$$<p>
 只需证明$\rho^{-1}(-\infty,k]$是紧集，若对$i<k$有$g_i(x)=0$，则$\rho(x)\geq k$，则$\rho^{-1}(-\infty,k]\subset \bigcup_{i=1}^{k+1}\overline{U_i}$，从而$\rho^{-1}(-\infty,k]$是紧集。</p>
 <p><strong>注</strong>：若$\rho:M\to\mathbb{R}$是光滑逆紧函数，则$\rho^{-1}(-i,i)$是一列穷竭。</p>
-<p><span id="prop-mfd-geometry-1iwmywv" data-ref-type="proposition" data-ref-label="命题1.3.6" data-ref-name="连续延拓"></span>
+<h3 id="连续延拓">连续延拓
+</h3><p><span id="prop-mfd-geometry-1iwmywv" data-ref-type="proposition" data-ref-label="命题1.3.6" data-ref-name="连续延拓"></span>
 <strong>命题1.3.6（连续延拓）</strong>：设$K$是微分流形$M$中的闭集，$f:K\to\mathbb{R}^n$是连续映射，则存在连续映射$F:M\to\mathbb{R}^n$，使得$F|_K=f$，且$F(M)\subset\operatorname{conv} f(K)$</p>
 <p><strong>注</strong>：这个命题的结论不能升级为光滑延拓，因为可能原本在$K$中就不光滑。</p>
 <p><strong>证明</strong>：我们先默认$M$上存在度量$d$使得$(M,d)$为度量空间。我们希望用已有的信息来延拓，也就是说闭集$K$外每个点找一个$K$中离它充分近的点，然后用这些点形成的覆盖的单位分解来拼接这些信息，离闭集远的点因为支集的局部有限性自动是光滑的，从而连续，并且不需要太多的信息，所以球可以取得大一些，离闭集近的点我们取比较小的开球，从而边界附近的连续性可以保证。</p>
@@ -549,7 +660,8 @@ $$d(x,K)\leq d(\overline{x},x)$$<p>由于$d(x,K)\leq 2d(x,K)$，我们可以找�
 $$d(x,K)\leq d(\overline{x},x)\leq 2d(x,K)$$<p>由于$F$的连续性需要控制的参数是$d(y,x_0)$，所以我们最终要用$d(y,x_0)$来控制$d(\overline{x},x_0)$。为此我们考虑如下不等式：</p>
 $$d(x,K)\leq d(x,y)+d(y,K)\leq d(x,y)+d(y,x_0)$$<p>如果我们取$B_x$的半径为$\frac{1}{2}d(x,K)$，则立即得到</p>
 $$d(x,K)\leq 2d(y,x_0)$$$$d(\overline{x},x)\leq 4d(y,x_0)$$$$d(x,y)\leq d(y,x_0)$$<p>进而取$d(y,x_0)<\frac{\delta}{6}$则有</p>
-$$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$<p>设$M,N$是光滑流形， $[M,N]_{C^\infty}$是$M$到$N$的全体光滑同伦类，$[M,N]$是通常意义上的全体连续同伦类，则有如下自然映射：
+$$d(\overline{x},x_0)\leq 6d(y,x_0)<\delta$$<h3 id="光滑同伦类与拓扑同伦类">光滑同伦类与拓扑同伦类
+</h3><p>设$M,N$是光滑流形， $[M,N]_{C^\infty}$是$M$到$N$的全体光滑同伦类，$[M,N]$是通常意义上的全体连续同伦类，则有如下自然映射：
 </p>
 $$[M,N]_{C^\infty}\to[M,N]$$<p>
 下面我们希望说明这个自然映射是双射，也就是说光滑映射之间的光滑同伦和拓扑同伦是一样的，也即有如下两个命题成立：</p>
@@ -557,7 +669,8 @@ $$[M,N]_{C^\infty}\to[M,N]$$<p>
 <strong>命题1.3.9</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
 <p><span id="prop-mfd-geometry-1ubtlvz" data-ref-type="proposition" data-ref-label="命题1.3.10" data-ref-name="命题1.3.10"></span>
 <strong>命题1.3.10</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
-<p>为了把连续的对象改造成光滑的对象，我们需要先引入光滑逼近：</p>
+<h4 id="光滑逼近与局部光滑逼近">光滑逼近与局部光滑逼近
+</h4><p>为了把连续的对象改造成光滑的对象，我们需要先引入光滑逼近：</p>
 <p><span id="prop-mfd-geometry-19ykqjs" data-ref-type="proposition" data-ref-label="命题1.3.7" data-ref-name="光滑逼近"></span>
 <strong>命题1.3.7（光滑逼近）</strong>：设$f:M\to \mathbb{R}^k$为微分流形$M$上的连续映射，则任给$M$上的正连续函数$\varepsilon:M\to \mathbb{R}$，存在光滑映射$g:M\to \mathbb{R}^k$，使得
 </p>
@@ -586,9 +699,11 @@ $$\|g(x)-f(x)\|\leq\sum_i \rho_i(x)\|f(x_i)-f(x)\|=\sum_{\rho_i(x)\neq 0} \rho_i
 $$h(x)=\rho_0(x)g(x)+\rho_1(x)f(x)$$<p>对$M\backslash U$中的点$x$，由于$\operatorname{supp} \rho_0 \subset U$，所以$h(x)=f(x)$。</p>
 <p>对$A\subset M\backslash \operatorname{supp} \rho_1$每个点$x$，$\rho_1(x)=0$，故$h(x)=g(x)$，从而$h$在$A$的开邻域$M\backslash \operatorname{supp} \rho_1$是光滑的。</p>
 <p>注意到$h$的光滑性完全由$f$决定，所以第二条也成立。</p>
-<p>下面我们继续<a class="link" href="#prop-mfd-geometry-1dyinr1" >命题1.3.9</a>的证明:</p>
+<h4 id="满射证明">满射证明
+</h4><p>下面我们继续<a class="link" href="#prop-mfd-geometry-1dyinr1" >命题1.3.9</a>的证明:</p>
 <p><strong>命题1.3.9（满射）</strong>：设$f:M\to N$是连续映射，则存在同伦于$f$的光滑映射$g$。</p>
-<p><strong>注：</strong>
+<h5 id="坐标卡调整">坐标卡调整
+</h5><p><strong>注：</strong>
 由如下映射可知，$B_r(0)$与$\mathbb{R}^k$是微分同胚的：
 </p>
 $$h:B_1(0)\to\mathbb{R}^k,\qquad
@@ -601,7 +716,8 @@ h(x)=\frac{x}{1-\lVert x\rVert^2}.$$<p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射下的像是 $\mathbb{R}^k$；</p>
 <p>(2) 存在缩小的坐标邻域 $V_i$，使得 $\overline{V}_i\subset U_i$，且 $\{V_i\}$ 仍为 $M$ 的开覆盖。</p>
 <hr>
-<p><strong>8.22补充</strong>：总体上看，我们的证明依赖于局部光滑逼近，我们对整个$f$做操作，根据局部光滑逼近的要求，我们需要找需要修改的区域，因为连续函数可以做到处处不光滑，所以我们要对整个空间取一个开覆盖$U_i$，为了方便归纳，我们先假设这是一个可数的覆盖，再在里面取一个闭集$A_i$，保证$A_i$还是空间的一个覆盖。</p>
+<h5 id="满射证明思路">满射证明思路
+</h5><p><strong>8.22补充</strong>：总体上看，我们的证明依赖于局部光滑逼近，我们对整个$f$做操作，根据局部光滑逼近的要求，我们需要找需要修改的区域，因为连续函数可以做到处处不光滑，所以我们要对整个空间取一个开覆盖$U_i$，为了方便归纳，我们先假设这是一个可数的覆盖，再在里面取一个闭集$A_i$，保证$A_i$还是空间的一个覆盖。</p>
 <p>我们要保证修改之后的函数和原来同伦，最直观的同伦就是直线同伦，为了使用直线同伦，我们要保证修改前后的函数落在同一个凸集里面，而流形上没有凸的概念，所以我们要确保函数修改后落在给定的坐标卡$W_j$上，而这个坐标卡$W_j$微分同胚于$\mathbb{R}^k$上的凸开集（而实际上所有的凸开集都微分同胚于开球，开球又微分同胚于全空间，所以可以不妨假设就是$\mathbb{R}^k$）：</p>
 <p>由于我们假设了流形上面有度量，我们就可以取函数的值域和这个给定的凸开集外的距离，保证修改后的函数误差不超过这个距离：</p>
 <figure>
@@ -657,8 +773,8 @@ g(x),
 <p><strong>为了证明</strong>存在一个光滑函数$g$和$f$同伦，我们需要构造一个同伦$H:M\times [0,1]\to N$，满足$H(x,0)=f(x),H(x,1)=g(x)$。</p>
 <p>为此，我们要用局部光滑逼近构造一列$g_i$，把$[0,1]$拆成可数个不交区间$[1-2^{-i},1-2^{-i-1}]$，一步一步同伦到这个$g$上，并且$g_i\to g$，保证构造的同伦在时间$1$附近是连续的。</p>
 <hr>
-<p>具体的<strong>构造细节</strong>：</p>
-<p><strong>构造覆盖</strong>：</p>
+<h5 id="课本上的满射证明细节补充">课本上的满射证明细节补充
+</h5><p><strong>构造覆盖</strong>：</p>
 <p>因为我们要一步一步地局部同伦、光滑化，所以我们先要取流形上一个比较好的可数覆盖来逐步操作。</p>
 <p>由于流形是局部紧的，每个点$x$可以找到一个预紧的坐标邻域$U_x$，再对$f(x)$的坐标邻域$W_x$，由于$f$是连续的，我们可以取$U_x$中$x$的开邻域，使得它的像包含于$W_x$，再利用空间的局部紧性缩小这个邻域，不妨仍设为$U_x$，则可以使$f(\overline{U_x})\subset W_x$，以这里的$\{U_x\}_{x\in M}$为单位分解证明里的开覆盖$\{U_\alpha\}_{\alpha\in\Gamma}$，我们可以重复单位分解证明里的步骤，得到$M$的局部有限开覆盖$\{U_i\}$（也就是单位分解证明里的$\{U_{x^i_j}\}$），使得：</p>
 <p>(1) $\overline{U}_i$ 均为紧集，且 $f(\overline{U}_i)$ 包含于 $N$ 的坐标邻域 $W_i$ 中，$W_i$ 在坐标映射$\phi_i$下的像是 $\mathbb{R}^k$；</p>
@@ -767,9 +883,11 @@ g(x),
   <img src="clipboard-20260819-152622-982-1.zh.png" alt="AI绘制的 H 的构造">
   <figcaption>AI绘制的 $H$ 的构造</figcaption>
 </figure>
-<p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
+<h4 id="单射证明">单射证明
+</h4><p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
 <p><strong>证明</strong>：由于$f_0$和$f_1$是拓扑同伦的，所以我们可以找到它们之间的同伦$G:M\times [1/3,2/3]\to N$，进一步我们把它延拓到$M\times \mathbb{R}$上，由于$t<1/3$和$t>2/3$的地方不需要改动就已经光滑了，所以我们取$M\times \mathbb{R}$的开覆盖$U=M\times(-\infty,1/3)\cup M\times (2/3,\infty)$和$V=M\times (0,1)$，如果$N= \mathbb{R}^k$，那么我们可以直接令$A=M\times [1/3,2/3],U=M\times (0,1)$使用局部光滑逼近得到光滑同伦，而对一般的微分流形$N$，我们取$\{U,V\}$的局部有限开加细$\{U_i\}$（跟单位分解的证明一样，$U_i$是欧氏空间拉回来的球），如果$U_i\subset U$，则函数不变，如果$U_i\subset V$，我们重新排列得到包含于$V$的所有$\{U_i\}$，对$G_0=G$逐步光滑化即可。</p>
-<p><strong>定理1.3.11</strong>：紧致微分流形$M^n$均可嵌入到某个欧氏空间$\mathbb{R}^N$中。</p>
+<h3 id="紧致微分流形的嵌入定理">紧致微分流形的嵌入定理
+</h3><p><strong>定理1.3.11</strong>：紧致微分流形$M^n$均可嵌入到某个欧氏空间$\mathbb{R}^N$中。</p>
 <p><strong>证明</strong>：对紧致流形，我们可以像单位分解的证明那样取有限个坐标卡$(U_i,\varphi_i)$，$V_i=\varphi_i^{-1}(B_{1/2}(0))$是空间的开覆盖，取鼓包函数</p>
 $$f_i|V_i,\operatorname{supp} f_i\subset \varphi_i^{-1}(B_1(0))$$<p>
 由于$\varphi_i$是坐标卡，所以在$U_i$上是微分同胚，所以在$U_i$上自动是嵌入，$\varphi_i$的秩为$n$，我们希望把局部的嵌入变成全局的嵌入，所以我们可以考虑$(\varphi_1,\dots,\varphi_k)$，而坐标卡在$U_i$外没有定义，所以我们用截断函数做零延拓，得到$(f_1\varphi_1,\dots,f_k\varphi_k)$，在$V_i$上$f_i\varphi_i=\varphi_i$，所以$(f_1\varphi_1,\dots,f_k\varphi_k)$的秩是$n$，所以我们说明了$(f_1\varphi_1,\dots,f_k\varphi_k)$是浸入，为了让它成为单射，我们再补上$(f_1\varphi_1,\dots,f_k\varphi_k,f_1,\dots,f_k)$，此时若$x,y$处函数值相等，那么存在某个$i$使得$f_i(x)=f_i(y)=1$，从而$x,y\in V_i$且$\varphi_i(x)=\varphi_i(y)$，从而$x=y$，从而我们说明了这个映射是一个嵌入。</p>
