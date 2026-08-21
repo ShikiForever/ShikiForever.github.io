@@ -397,20 +397,10 @@ $$
 &=1,
 \end{aligned}
 $$<p>从而，函数族 $\lbrace\phi_i\rbrace_{i\in\mathbb Z}$ 构成一个单位分解。</p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260731-062351-005-1.zh.gif"
-	width="1400"
-	height="900"
-	loading="lazy"
-	
-		alt="partition of unity"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="155"
-		data-flex-basis="373px"
-	
-></p>
+<figure>
+  <img src="clipboard-20260731-062351-005-1.zh.gif" alt="partition of unity">
+  <figcaption>partition of unity</figcaption>
+</figure>
 <p>对于一般的微分流形，我们也希望在每个小邻域上找一个长得像$\frac{1+\cos x}{2}$的鼓包函数，像图中这样叠起来，从而构造一个单位分解，非常可惜的是我们这里构造的函数只有$C^1$的光滑性（这本质上是因为$\cos$是解析的，所以如果某个点处各阶导数都为$0$，则函数必须点点为$0$），所以我们需要重新构造，在差一个平移和对称的意义下，我们希望找一个光滑函数$\varphi$，满足在原点处的各阶导数都为$0$，也就是：
 </p>
 $$\varphi(0)=\varphi'(0)=\cdots=\varphi^{(k)}(0)=\cdots=0$$<p>由泰勒展开我们知道：
@@ -441,62 +431,22 @@ $$g(t)=\frac{\varphi(t)}{\varphi(t)+\varphi(1-t)}$$<p>
 <p>做一个平移和压缩得到$g_1(t)=g(2t+2)$，再关于$y$轴做对称$h(t)=g_1(-|t|)$</p>
 <p><strong>注</strong>：这里$t=0$附近$h\equiv 1$，所以自动光滑。</p>
 <p><strong>注</strong>：课本上少了个负号，这是错的。</p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260801-000206-914-1.zh.png"
-	width="2317"
-	height="1309"
-	loading="lazy"
-	
-		alt="g(t)"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="424px"
-	
-></p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260801-000244-324-1.zh.png"
-	width="2317"
-	height="1309"
-	loading="lazy"
-	
-		alt="g_1(t)"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="424px"
-	
-></p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260801-000213-728-1.zh.png"
-	width="2317"
-	height="1309"
-	loading="lazy"
-	
-		alt="h(t)"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="177"
-		data-flex-basis="424px"
-	
-></p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260801-000140-316-1.zh.png"
-	width="1948"
-	height="1544"
-	loading="lazy"
-	
-		alt="f(x)"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="126"
-		data-flex-basis="302px"
-	
-></p>
+<figure>
+  <img src="clipboard-20260801-000206-914-1.zh.png" alt="g(t)">
+  <figcaption>$g(t)$</figcaption>
+</figure>
+<figure>
+  <img src="clipboard-20260801-000244-324-1.zh.png" alt="g_1(t)">
+  <figcaption>$g_1(t)$</figcaption>
+</figure>
+<figure>
+  <img src="clipboard-20260801-000213-728-1.zh.png" alt="h(t)">
+  <figcaption>$h(t)$</figcaption>
+</figure>
+<figure>
+  <img src="clipboard-20260801-000140-316-1.zh.png" alt="f(x)">
+  <figcaption>$f(x)$</figcaption>
+</figure>
 <p>由此我们有如下引理：</p>
 <p><span id="lem-mfd-geometry-1imdmai" data-ref-type="lemma" data-ref-label="引理1.3.1" data-ref-name="鼓包函数或截断函数"></span>
 <strong>引理1.3.1（鼓包函数或截断函数）</strong>：</p>
@@ -536,21 +486,11 @@ $$\begin{aligned}
 </p>
 $$\overline{G_i}\subset G_{i+1}\quad \forall i\geq 1;$$<p>
 </p>
-$$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而且写的有点啰嗦，因为$\bigcup_{k\leq i}\overline{G_k}$其实就是$\overline{G_i}$。
-<img src="/zh/p/mfd-geometry/clipboard-20260810-182437-488-1.zh.png"
-	width="1783"
-	height="763"
-	loading="lazy"
-	
-		alt="clipboard-20260810-182437-488-1"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="233"
-		data-flex-basis="560px"
-	
-></p>
+$$\bigcup_i G_i=M.$$<p><strong>注</strong>：课本这里下标写错了，而且写的有点啰嗦，因为$\bigcup_{k\leq i}\overline{G_k}$其实就是$\overline{G_i}$。</p>
+<figure>
+  <img src="clipboard-20260810-182437-488-1.zh.png" alt="clipboard-20260810-182437-488-1">
+  <figcaption>红框圈出来的地方是有点问题的</figcaption>
+</figure>
 <p><strong>证明</strong>：由于流形是局部紧的，对每个点$x$都可以找到一个预紧邻域$V_{x}$，从而$\{V_x\}$是空间的一个开覆盖。我们定义的微分流形是第二可数的，由Lindelöf引理，我们有可数子覆盖$\{V_{x_i}\}$。</p>
 <p>取$G_1=V_{x_1}$，则$G_1$预紧。假设$G_k$已经定义，$\overline{G_k}\subset \bigcup_i V_{x_i}$，从而可以找到$I_k$使得$\overline{G_k}\subset \bigcup_{i\leq I_k}V_{x_i}$。定义$G_{k+1}=\bigcup_{i\leq I_k}V_{x_i}$，则$G_{k+1}$是预紧的。</p>
 <p><strong>注</strong>：书上这里漏了一步，没有要求$\{I_k\}_{k\in\mathbb{N}}$是严格单调递增的，这会使得$G_i$不一定能够覆盖全空间$M$。比如取空间$S^1\sqcup\mathbb{R}$，让$V_1=S^1$，$V_2,V_3,\dots$是$\mathbb{R}$的一个可数开覆盖，那么如果取$G_1=V_1$是一个预紧开集，$G_k=V_1$，则满足$\overline{G_i}\subset G_{i+1}$，但是$\bigcup_i G_i\neq M$。</p>
@@ -769,20 +709,10 @@ g(x),
 & t=1.
 \end{cases}
 \]<p>我们只需要证明$H$在$M\times 1$附近的连续性，也就是对每个$x$，我们证明$H$在$x\times 1$附近的连续性，也就是我们要找一个邻域$U_x\times (t_0,1]$使得在这个邻域上$d(H_i,H)<\varepsilon$，我们不妨设$U_x$是预紧的，从而对$j$充分大都有$U_j\cap \overline{U_x}=\empty$，所以对充分大的$j$，在$U_x\times[1-\frac{1}{2^i},1]$都有$H_j(\cdot,t)=g_{j-1}(\cdot)=g(\cdot)$，从而$H$在$x\times 1$附近是连续的。</p>
-<p><img src="/zh/p/mfd-geometry/clipboard-20260819-152622-982-1.zh.png"
-	width="2268"
-	height="1283"
-	loading="lazy"
-	
-		alt="AI绘制的H的构造"
-	
-    
-	
-		class="gallery-image" 
-		data-flex-grow="176"
-		data-flex-basis="424px"
-	
-></p>
+<figure>
+  <img src="clipboard-20260819-152622-982-1.zh.png" alt="AI绘制的 H 的构造">
+  <figcaption>AI绘制的 $H$ 的构造</figcaption>
+</figure>
 <p><strong>命题1.3.10（单射）</strong>：设$f_0,f_1$是微分流形之间同伦的光滑映射，则存在光滑映射$H:M\times \mathbb{R}\to N$，使得$t\leq 0$时$H(x,t)=f_0(x)$，$t\geq 1$时$H(x,t)=f_1(t)$。</p>
 <p><strong>证明</strong>：由于$f_0$和$f_1$是拓扑同伦的，所以我们可以找到它们之间的同伦$G:M\times [1/3,2/3]\to N$，进一步我们把它延拓到$M\times \mathbb{R}$上，由于$t<1/3$和$t>2/3$的地方不需要改动就已经光滑了，所以我们取$M\times \mathbb{R}$的开覆盖$U=M\times(-\infty,1/3)\cup M\times (2/3,\infty)$和$V=M\times (0,1)$，如果$N= \mathbb{R}^k$，那么我们可以直接令$A=M\times [1/3,2/3],U=M\times (0,1)$使用局部光滑逼近得到光滑同伦，而对一般的微分流形$N$，我们取$\{U,V\}$的局部有限开加细$\{U_i\}$（跟单位分解的证明一样，$U_i$是欧氏空间拉回来的球），如果$U_i\subset U$，则函数不变，如果$U_i\subset V$，我们重新排列得到包含于$V$的所有$\{U_i\}$，对$G_0=G$逐步光滑化即可。</p>
 <p><strong>定理1.3.11</strong>：紧致微分流形$M^n$均可嵌入到某个欧氏空间$\mathbb{R}^N$中。</p>
