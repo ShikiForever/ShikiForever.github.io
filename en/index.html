@@ -409,22 +409,15 @@
         
 <script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-<div id="persistent-music-player" aria-label="Music player">
-<meting-js
-    server="netease"
-    type="playlist"
-    id="18292166792"
-    fixed="true"
-    autoplay="false"
-    loop="all"
-    order="list"
-    preload="auto"
-    volume="0.7"
-    mutex="true">
-</meting-js>
-</div>
-<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" defer></script>
-<script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js" defer></script><div
+<div
+    id="persistent-music-player"
+    data-music-player
+    data-music-server="netease"
+    data-music-type="playlist"
+    data-music-id="18292166792"
+    aria-label="Music player"
+></div>
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" defer></script><script src="/js/music-player.min.b8b65b10dd0aa30dd253a3a7c23394bddf33ebee0761aa222d1b31d4d5393c8d.js" defer></script><script src="/js/music-preferences.min.bda1fa0fe6059eb10e30fdc739492aaffa8d28ce16196386ec904ff5eca20477.js" defer></script><div
     id="display-settings-root"
     class="display-settings"
     data-copy-success="LaTeX formula copied"
