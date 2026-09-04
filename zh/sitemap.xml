@@ -15,19 +15,6 @@
                 href="https://shikiforever.github.io/en/"
                 />
   </url><url>
-    <loc>https://shikiforever.github.io/zh/categories/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/categories/"
-                />
-  </url><url>
     <loc>https://shikiforever.github.io/zh/page/</loc>
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
     <xhtml:link
@@ -40,31 +27,6 @@
                 hreflang="zh"
                 href="https://shikiforever.github.io/en/page/"
                 />
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/post/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/tags/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/tags/"
-                />
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/categories/xjtu/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/tags/xjtu/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
@@ -79,15 +41,6 @@
                 href="https://shikiforever.github.io/en/about/"
                 />
   </url><url>
-    <loc>https://shikiforever.github.io/zh/p/xjtu-github/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/p/mfd-geometry/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://shikiforever.github.io/zh/log/</loc>
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
     <xhtml:link
@@ -101,9 +54,6 @@
                 href="https://shikiforever.github.io/en/log/"
                 />
   </url><url>
-    <loc>https://shikiforever.github.io/zh/categories/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2026-07-30T00:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://shikiforever.github.io/zh/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -115,6 +65,32 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://shikiforever.github.io/en/archives/"
+                />
+  </url><url>
+    <loc>https://shikiforever.github.io/zh/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://shikiforever.github.io/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/categories/"
+                />
+  </url><url>
+    <loc>https://shikiforever.github.io/zh/post/</loc>
+  </url><url>
+    <loc>https://shikiforever.github.io/zh/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://shikiforever.github.io/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://shikiforever.github.io/en/tags/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/%E9%93%BE%E6%8E%A5/</loc>
