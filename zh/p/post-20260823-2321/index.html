@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="切空间与切映射">
+<title>流形与几何 1.4</title>
+
+
+<link rel="canonical" href="https://shikiforever.github.io/zh/p/post-20260823-2321/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.08a1bd160028f27343ab2f000d81e010b5108c5582004965f51dc072247245e0.css"><meta property='og:title' content="流形与几何 1.4">
+<meta property='og:description' content="切空间与切映射">
+<meta property='og:url' content='https://shikiforever.github.io/zh/p/post-20260823-2321/'>
+<meta property='og:site_name' content='织式就是力量'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2026-08-23T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-08-23T00:00:00&#43;08:00'/>
+<meta name="twitter:title" content="流形与几何 1.4">
+<meta name="twitter:description" content="切空间与切映射">
+    <link rel="shortcut icon" href="/img/kato-megumi-avatar.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/zh/">
+                    <img src="/img/yamada-avatar.gif" 
+                        width="512"
+                        height="512"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/zh/">织式就是力量</a></h1>
+            <h2 class="site-description">写一些关于数学和计算机的笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/ShikiForever'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://music.163.com/#/user/home?id=550189751'
+                        
+                        title="Netease-music"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-netease-music"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 4c-2.93 1.346 -5 5.046 -5 8.492c0 4.508 4 7.508 8 7.508c4 0 8 -3 8 -7c0 -3.513 -3.5 -5.513 -6 -5.513c-2.5 0 -5 1.513 -5 4.513c0 2 1.5 3 3 3c1.5 0 3 -1 3 -3c0 -3.513 -2 -4.508 -2 -6.515c0 -3.504 3.5 -2.603 4 -1.502" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/zh/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/%E5%85%B3%E4%BA%8E/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/%E9%93%BE%E6%8E%A5/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/log/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6h.01"/>
+  <path d="M4 12h.01"/>
+  <path d="M4 18h.01"/>
+  <path d="M8 6h2"/>
+  <path d="M8 12h2"/>
+  <path d="M8 18h2"/>
+  <path d="M14 6h6"/>
+  <path d="M14 12h6"/>
+  <path d="M14 18h6"/>
+</svg>
+
+
+                
+                <span>日志</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    <li id="i18n-switch">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                            
+                                
+                                
+                                    
+                                        
+                                    
+                                
+                                <option value="/zh/p/post-20260823-2321/" selected>简体中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                <option value="/en/" >English</option>
+                            
+                        </select>
+                    </li>
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#切向量的定义">切向量的定义</a>
+      <ol>
+        <li><a href="#导子定义切空间">导子定义切空间</a></li>
+        <li><a href="#等价类定义切空间">等价类定义切空间</a></li>
+        <li><a href="#更几何的定义方式曲线的切向量">更几何的定义方式——曲线的切向量</a></li>
+        <li><a href="#诱导微分结构的兼容性正则子流形结构定理的必要性">诱导微分结构的兼容性（正则子流形结构定理的必要性）</a></li>
+      </ol>
+    </li>
+    <li><a href="#一些切空间的例子">一些切空间的例子</a>
+      <ol>
+        <li><a href="#欧氏空间及其正则子流形">欧氏空间及其正则子流形</a></li>
+        <li><a href="#sn作为欧氏空间的正则子流形">S^n作为欧氏空间的正则子流形</a></li>
+      </ol>
+    </li>
+    <li><a href="#横截相交">横截相交</a>
+      <ol>
+        <li><a href="#横截相交的定义">横截相交的定义</a></li>
+        <li><a href="#正则子流形的等价条件">正则子流形的等价条件</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/zh/categories/%E6%95%B0%E5%AD%A6/" style="background-color: hsl(300, 60%, 84%); color: hsl(300, 60%, 15%);">
+                数学
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/zh/p/post-20260823-2321/">流形与几何 1.4</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            切空间与切映射
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-08-23T00:00:00&#43;08:00'>2026年8月23日星期日</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#切向量的定义">切向量的定义</a>
+      <ol>
+        <li><a href="#导子定义切空间">导子定义切空间</a></li>
+        <li><a href="#等价类定义切空间">等价类定义切空间</a></li>
+        <li><a href="#更几何的定义方式曲线的切向量">更几何的定义方式——曲线的切向量</a></li>
+        <li><a href="#诱导微分结构的兼容性正则子流形结构定理的必要性">诱导微分结构的兼容性（正则子流形结构定理的必要性）</a></li>
+      </ol>
+    </li>
+    <li><a href="#一些切空间的例子">一些切空间的例子</a>
+      <ol>
+        <li><a href="#欧氏空间及其正则子流形">欧氏空间及其正则子流形</a></li>
+        <li><a href="#sn作为欧氏空间的正则子流形">S^n作为欧氏空间的正则子流形</a></li>
+      </ol>
+    </li>
+    <li><a href="#横截相交">横截相交</a>
+      <ol>
+        <li><a href="#横截相交的定义">横截相交的定义</a></li>
+        <li><a href="#正则子流形的等价条件">正则子流形的等价条件</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h1 id="切向量与切空间">切向量与切空间
+</h1><h2 id="切向量的定义">切向量的定义
+</h2><h3 id="导子定义切空间">导子定义切空间
+</h3><p><strong>定义(切向量)</strong>： 记 $C^\infty(M)$ 为微分流形 $M$ 上光滑函数的全体组成的向量空间. 设 $p \in M$, 如果线性算子 $X: C^\infty(M) \to \mathbb{R}$ 满足如下导子性质
+</p>
+$$ X(fg) = f(p)X(g) + g(p)X(f), \quad \forall\, f,g \in C^\infty(M), $$<p>
+则称 $X$ 为 $M$ 在 $p$ 处的切向量. $p$ 处切向量的全体组成的向量空间称为 $p$ 处的切空间, 记为 $T_pM$.</p>
+<p><strong>注</strong>：由$X(1)=X(1\cdot 1)=X(1)1+1X(1)=2X(1)$知$X(1)=0$，从而$X(Const.)=0$</p>
+<hr>
+<p><span id="lem-post-20260823-2321-1ocht02" data-ref-type="lemma" data-ref-label="引理1.4.1" data-ref-name="引理1.4.1"></span>
+<strong>引理 1.4.1</strong>： 设 $f, g \in C^\infty(M)$, 如果在 $p$ 的一个开邻域中 $f = g$, 则任给 $X \in T_pM$, 均有 $X(f) = X(g)$.</p>
+<p><strong>证明</strong>：利用这个开邻域的鼓包函数，把$f|U-g|U=0|U$延拓到全空间即可。</p>
+<hr>
+<p>设 $(U,\varphi)$ 为 $p$ 附近的局部坐标系, $\{x^i\}_{i=1}^n$ 为坐标函数, 我们在 $p$ 处定义 $n$ 个切向量 $\left.\frac{\partial}{\partial x^i}\right|_p (1 \leqslant i \leqslant n)$ 如下: 任给 $f \in C^\infty(M)$, 令
+</p>
+$$ \left.\frac{\partial}{\partial x^i}\right|_p (f) = \frac{\partial (f \circ \varphi^{-1})}{\partial x^i}(\varphi(p)). $$$$ \left.\frac{\partial}{\partial x^i}\right|_p (fg) = \frac{\partial ((fg) \circ \varphi^{-1})}{\partial x^i}(\varphi(p))=\frac{\partial (f\circ \varphi^{-1}\cdot g\circ \varphi^{-1} )}{\partial x^i}(\varphi(p)) $$$$ \left.\frac{\partial}{\partial x^i}\right|_p (af+bg) = \frac{\partial ((af+bg) \circ \varphi^{-1})}{\partial x^i}(\varphi(p))=\frac{\partial (af\circ \varphi^{-1}+ bg\circ \varphi^{-1} )}{\partial x^i}(\varphi(p)) $$<p>利用求导的Leibniz法则，线性性以及$\varphi$为同胚，得到$\frac{\partial}{\partial x^i}|_p$是一个切向量。</p>
+<p>由于坐标卡是微分同胚，所以坐标卡的每个分量也可以看作是微分流形上的光滑函数，从而我们有</p>
+$$\frac{\partial}{\partial x^i}|_p(\varphi^j)=\delta_{i}^j$$<p>
+由这个式子我们知道$\frac{\partial}{\partial x^i}|_p$是线性无关的，进一步，我们希望证明它们构成切空间的一组基：</p>
+<p>如果我们把切向量$X$当作方向导数的推广，我们有这样的链式法则：
+</p>
+$$\frac{\partial}{\partial v}=\frac{\partial y}{\partial v}\frac{\partial}{\partial y}$$<p>
+推广一下，我们应该有：
+</p>
+$$X=X(x^i)\frac{\partial}{\partial x^i}|_p$$<p>或者，</p>
+<p>事实上，如果$X=a^i \frac{\partial}{\partial x^i}|_p$</p>
+<p>那么两边作用于$x^j$，则有$a^j=X(x^j)$。</p>
+<p>证明这个式子的关键是把任意的函数用坐标函数某种意义上线性表出，我们可以考虑用泰勒公式，而带$o$项的不方便计算，我们考虑积分余项的：</p>
+<p>任给 $q\in U$，记 $x=\varphi(q)$，$a=\varphi(p)$。当 $f\in C^\infty(M)$ 时，由微积分基本定理可得
+</p>
+\[
+\begin{aligned}
+f(q)
+&=f\circ\varphi^{-1}(x)\\
+&=f\circ\varphi^{-1}(a)
++\int_0^1\frac{d}{dt}
+\left[f\circ\varphi^{-1}(a+t(x-a))\right]dt\\
+&=f\circ\varphi^{-1}(a)
++\sum_{i=1}^{n}(x^i-a^i)g_i(x).
+\end{aligned}
+\]<p>由于$x=\varphi(q)$，</p>
+<p>所以有</p>
+$$f=f(p)+g_j\circ\varphi\cdot(\varphi^j-\varphi^j(p))$$<p>两边用$X$作用，得到我们想要的式子。</p>
+<hr>
+<h3 id="等价类定义切空间">等价类定义切空间
+</h3><p>另一种定义切空间的方式：</p>
+<p>设$a,b\in \mathbb{R}^n$，$(U,\varphi),(V,\psi)$是$p$点附近的局部坐标系。我们可以定义如下的等价关系：
+</p>
+$$(a,\varphi)\sim(b,\psi)$$<p>
+如果
+</p>
+$$a=J(\varphi\circ \psi^{-1})(\psi(p))\cdot b$$<p>
+从而我们可以定义$[(a,\varphi)]$为一个切向量，全体切向量构成的空间称为切空间，记为$T_pM$。下面我们证明这是一个线性空间：</p>
+$$[(a,\varphi)]+[(b,\psi)]:=[(J(\psi\circ\varphi^{-1})(\varphi(p))a+b,\psi)]$$<p>首先证明这个加法和代表元的选取无关：</p>
+<p>设
+</p>
+\[
+(a_1,\varphi_1)\sim(a_2,\varphi_2).
+\]<p>那么
+</p>
+\[
+a_1=J(\varphi_1\circ\varphi_2^{-1})(\varphi_2(p))a_2.
+\]<p>从而
+</p>
+\[
+\begin{aligned}
+[(a_1,\varphi_1)]+[(b,\psi)]
+&=
+\left[
+\left(
+J(\psi\circ\varphi_1^{-1})(\varphi_1(p))a_1+b,\psi
+\right)
+\right]
+\\
+&=
+\left[
+\left(
+J(\psi\circ\varphi_1^{-1})(\varphi_1(p))
+J(\varphi_1\circ\varphi_2^{-1})(\varphi_2(p))a_2+b,
+\psi
+\right)
+\right]
+\\
+&=
+\left[
+\left(
+J(\psi\circ\varphi_1^{-1}\circ\varphi_1\circ\varphi_2^{-1})(\varphi_2(p))a_2+b,
+\psi
+\right)
+\right]
+\\
+&=
+\left[
+\left(
+J(\psi\circ\varphi_2^{-1})(\varphi_2(p))a_2+b,\psi
+\right)
+\right]
+\\
+&=
+[(a_2,\varphi_2)]+[(b,\psi)].
+\end{aligned}
+\]<p>从而说明了这个加法关于第一个加法元的代表元选择无关。</p>
+<p>再证加法交换律：</p>
+<p>即
+</p>
+\[
+(J(\psi\circ\varphi^{-1})(\varphi(p))a+b,\psi)
+\sim
+(J(\varphi\circ\psi^{-1})(\psi(p))b+a,\varphi).
+\]<p>而左边等价于
+</p>
+\[
+\left(J(\varphi\circ\psi^{-1})(\psi(p))c,\varphi\right),
+\]<p>其中</p>
+\[
+c=J(\psi\circ\varphi^{-1})(\varphi(p))a+b
+\]<p>此即为右边。$\square$</p>
+<p>加法结合律是显然的，单位元为$[(0,\varphi)]$，其中$\varphi$是$p$点附近的任意坐标卡。</p>
+<hr>
+<p>再定义数乘：</p>
+\[
+\alpha[(a,\varphi)] := [(\alpha a,\varphi)] .
+\]<p>下面证明良定义性：</p>
+\[
+[(a,\varphi)]\sim[(b,\psi)]
+\]<p>那么</p>
+\[
+a=J(\varphi\circ\psi^{-1})(\psi(p))b
+\]<p>那么</p>
+\[
+\alpha a
+=J(\varphi\circ\psi^{-1})(\psi(p))\alpha b
+\]\[
+\Rightarrow (\alpha a,\varphi)\sim(\alpha b,\psi)
+\]<p>从而定义良定义。</p>
+<p>懒得写了。</p>
+<hr>
+<p>最后我们证明这两种定义方式的等价性。</p>
+<p>设 $X\in T_pM$为导子。</p>
+<p>在坐标卡 $(U_p,\varphi)$ 下，
+</p>
+\[
+X=\sum_{i=1}^{n}X(x^i)\frac{\partial}{\partial x^i}\bigg|_p
+\]<p>自然映射
+</p>
+\[
+X\longmapsto [((X(x^1),\cdots,X(x^n))^T,\varphi)]
+\]<p>显然是线性映射。</p>
+<p>由于等价类定义的切空间显然是 $n$ 维的。</p>
+<p>因为对于坐标卡 $\varphi$：
+</p>
+\[
+\{[(a,\varphi)] : a\in\mathbb{R}^n\}=T_pM
+\]<p>若
+</p>
+\[
+[((X(x^1),\cdots,X(x^n))^T,\varphi)]=[(0,\varphi)]
+\]<p>则</p>
+\[
+X(x^i)=0,\quad \forall i=1,2,\cdots,n.
+\]<p>则</p>
+\[
+X=0.
+\]<p>从而为单射。</p>
+<p>从而这个自然映射为线性同构。</p>
+<hr>
+<p><strong>注</strong>：等价类的定义虽然比较繁琐，但不依赖于流形的光滑性，所以证明了一般的微分流形$M$都有$\dim M$维的切空间，并且在特定的坐标卡下，以</p>
+$$\frac{\partial}{\partial x^i}|_p \quad i=1,2,...,n$$<p>为标准基。</p>
+<hr>
+<p><strong>注</strong>：这个自然映射不依赖于坐标卡$\varphi$的选取：设$x^1,...,x^n$是坐标卡$\varphi$的$n$个分量，$y^1,...,y^n$是坐标卡$\psi$的$n$个分量，那么我们证明</p>
+$$((X(x^1),\dots,X(x^n))^T,\varphi)\sim ((X(y^1),\dots,X(y^n))^T,\psi)$$<p>这是因为
+</p>
+$$\begin{aligned}
+  X(y^i) &= X(x^j) \frac{\partial (\psi\circ\varphi^{-1})^i}{\partial x^j} 
+\end{aligned}$$<p>从而</p>
+$$(X(y^1),\dots,X(y^n))^T=J(\psi\circ\varphi^{-1})(\varphi(p))(X(x^1),\dots,X(x^n))^T$$<p>从而</p>
+$$((X(x^1),\dots,X(x^n))^T,\varphi)\sim ((X(y^1),\dots,X(y^n))^T,\psi).$$<hr>
+<h3 id="更几何的定义方式曲线的切向量">更几何的定义方式——曲线的切向量
+</h3><p><strong>定义（光滑曲线）</strong>：设 $p \in M$, 一条经过 $p$ 的<strong>光滑曲线</strong>为光滑映射 $\tau: (a,b) \to M$, 使得 $\sigma(t_0) = p$. 定义 $\sigma'(t_0) \in T_p M$ 如下
+</p>
+\[
+\sigma'(t_0)(f) = \left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=t_0} [f \circ \sigma(t)], \quad \forall f \in C^\infty(M).
+\]<p>
+容易验证 $\sigma'(t_0)$ 为 $p$ 处的切向量, 也记为 $\dot{\sigma}(t_0)$ 或 $\frac{\mathrm{d}\sigma}{\mathrm{d}t}(t_0)$.</p>
+<p><strong>注</strong>：注意到$\frac{d}{dt}|_{t_0}$是流形$ \mathbb{R} $上$t_0$这个点的切向量，作用于定义在$t_0$附近的光滑函数，$\sigma$是从$t_0$附近到$M$的光滑映射，所以我们可以定义推前$\sigma_*:T_{t_0} \mathbb{R} \to T_{\sigma(t_0)}M$，把$t_0$附近的切向量推成$\sigma(t_0)$附近的切向量：
+</p>
+$$(\sigma_{*}\frac{d}{dt}|_{t_0})(f):=\frac{d}{dt}|_{t_0}(f\circ \sigma)$$<p>我们称两条经过$p\in M$的光滑曲线$\sigma_1,\sigma_2$是等价的，如果对任意$f\in C^{\infty}(M)$，都有
+</p>
+$$\sigma_1'(t_0)(f)=\sigma_2'(t_0)(f)$$<p>事实上，如果对$p$附近的某个局部坐标系$\varphi$的每个分量都有这个式子成立，</p>
+<p>则由于
+</p>
+\[
+\begin{aligned}
+f(q)
+&=f\circ\varphi^{-1}(x)\\
+&=f\circ\varphi^{-1}(a)
++\int_0^1\frac{d}{dt}
+\left[f\circ\varphi^{-1}(a+t(x-a))\right]dt\\
+&=f\circ\varphi^{-1}(a)
++\sum_{i=1}^{n}(x^i-a^i)g_i(x).
+\end{aligned}
+\]<p>两边用$\sigma_j'(t_0)$作用，得到同样的结果，所以两条曲线是等价的，所以实际上只需要找一个局部坐标系，验证它的每个分量都满足上面的条件就可以了。</p>
+<p><strong>命题</strong>：如果两条曲线 $\sigma_1, \sigma_2$ 满足
+</p>
+\[
+\left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\left[x^i\circ\sigma_1(t)-x^i\circ\sigma_2(t)\right]=0,\quad 1\leqslant i\leqslant n,
+\]<p>
+则 $\sigma_1$ 和 $\sigma_2$ 等价。</p>
+<p>曲线的一个等价类就称为 $p$ 处的一个切向量，切空间定义为所有等价类构成的集合。</p>
+<p>下面定义曲线等价类之间的加法。</p>
+<p>设 $p\in M$，$\varphi$ 是 $p$ 点附近的坐标卡，
+$[\gamma_1]=[\sigma_1],[\gamma_2]=[\sigma_2]\in T_pM$。</p>
+<p>$\forall f\in C^\infty(M)$，
+</p>
+\[
+\gamma_1(t_0)=\gamma_2(t_0)=\sigma_1(t_0)=\sigma_2(t_0)=p
+\]<p>定义
+</p>
+\[
+([\gamma_1]+[\gamma_2])(f):=
+[(\varphi\circ\gamma_1)'(t_0)+(\varphi\circ\gamma_2)'(t_0)]
+(f\circ\varphi^{-1})
+\]<p>从而
+</p>
+\[
+\begin{aligned}
+([\gamma_1]+[\gamma_2])(f)
+&=[(\varphi\circ\gamma_1)'(t_0)+(\varphi\circ\gamma_2)'(t_0)]
+\cdot\nabla(f\circ\varphi^{-1})\\
+&=(\varphi\circ\gamma_1)'(t_0)\cdot\nabla(f\circ\varphi^{-1})
++(\varphi\circ\gamma_2)'(t_0)\cdot\nabla(f\circ\varphi^{-1})\\
+&=(\varphi\circ\gamma_1)'(t_0)(f\circ\varphi^{-1})
++(\varphi\circ\gamma_2)'(t_0)(f\circ\varphi^{-1})\\
+&=\frac{d}{dt}\bigg|_{t=t_0}
+(f\circ\varphi^{-1}\circ\varphi\circ\gamma_1)(t)
++\frac{d}{dt}\bigg|_{t=t_0}
+(f\circ\varphi^{-1}\circ\varphi\circ\gamma_2)(t)\\
+&=\frac{d}{dt}\bigg|_{t=t_0}(f\circ\gamma_1)(t)
++\frac{d}{dt}\bigg|_{t=t_0}(f\circ\gamma_2)(t)\\
+&=\gamma_1'(t_0)(f)+\gamma_2'(t_0)(f)\\
+&=\sigma_1'(t_0)(f)+\sigma_2'(t_0)(f)\\
+&=([\sigma_1]+[\sigma_2])(f).
+\end{aligned}
+\]<p>从而加法定义是良定义的。</p>
+<p>根据倒数几行的陈述，我们知道这个定义与坐标卡的选取也是无关的。</p>
+<p>下面我们证明在光滑意义下，这个定义和一开始的导子定义是等价的：</p>
+<p>也就是对于$p$点的一个导子切向量$X$，我们要找一个对应的曲线等价类：</p>
+<p>取$p$点附近的局部坐标系$\varphi$，不妨设它把坐标邻域打到 $\mathbb{R}^n$，设$X$在局部坐标下表达为$a\in \mathbb{R}^n$，从而定义$\sigma=\varphi^{-1}(at)$，其中$t\in (-1,1)$，$\sigma$是$M$上的一条光滑曲线，并且$[\sigma](f)=\frac{d [f\circ \varphi^{-1}(at)]}{d t}(0)=D(f\circ\varphi^{-1})\cdot a$。</p>
+<p>再计算一下$X(f)=a\cdot (\frac{\partial}{\partial x^i}|_p(f))=[\sigma](f)$。</p>
+<p>从而$X(f)=[\sigma](f)$。</p>
+<p>并且很显然这个映射是线性的，在给定的坐标系下，每一个曲线等价类$[\sigma]$都对应一个欧氏空间中的切向量$\dot{\sigma}(0)$，从而又可以对应一个导子切向量，这个导子切向量打过去就是这个曲线等价类，从而是满射，由于是有限维线性空间之间的线性映射，所以是双射。</p>
+<h3 id="诱导微分结构的兼容性正则子流形结构定理的必要性">诱导微分结构的兼容性（正则子流形结构定理的必要性）
+</h3><p>设 \(M^m\) 是 \(N^n\) 的正则 \(C^\infty\) 子流形，我们说明 \(N\) 在 \(M\) 上诱导的坐标卡与
+\(M\) 上原有的微分结构是兼容的。</p>
+<p>设 \(i:M\to N\) 是包含映射。由于 \(i\) 是嵌入，
+对于 \(p\in M\subseteq N\)，存在 \(p\) 点附近的坐标卡 <del>\((V,\psi)\)</del> 和
+\(i(p)\) 附近的坐标卡 \((U_0,\varphi)\)，使得
+</p>
+\[
+\varphi\circ i\circ\psi^{-1}:\psi(V)\to\varphi(U_0)
+\]<p>
+是标准嵌入。（不妨设 \(V\subseteq U_0\)，否则让 \(V\cap U_0\) 为新的 \(V\)，
+\(V\cap U_0\) 仍然为 \(M\) 中的开集，（实际上是 \(i^{-1}(V)\cap U_0\)）因为
+\(M\) 与 \(i(M)\) 同胚），</p>
+<p>（在 \(M\) 上诱导坐标卡的想法是考虑 \((U_0\cap i(M),\varphi)\)，
+但是 \(\varphi(U_0\cap i(M))\) 不一定是欧氏空间中的开集，因为
+\(M\) 对应函数于 \(N\) 的维数不一定相同，所以我们退而求其次，
+希望把 \(U_0\cap i(M)\) 打到 \(\mathbb R^m\times 0\) 上的开集），</p>
+<p>又因为</p>
+\[
+i(V)\subseteq U_0\cap i(M)
+\]<p>我们考虑缩小 \(U_0\)来保证\(\varphi(U\cap i(M))\)是$ \mathbb{R}^m\times 0 $中的开集。</p>
+<p>我们希望最后
+</p>
+\[
+\varphi(U)\cap(\mathbb R^m\times0)=\varphi(U\cap i(M)).
+\]<p>为了让左边包含于右边，我们需要让$y=\varphi(x)\in \varphi(U)\cap(\mathbb R^m\times0)$的$x$落在$i(M)$中，而这只需要$x$落在$i(V)$中。</p>
+<p>由于
+</p>
+\[
+\varphi(i(V))=\varphi\circ i\circ\psi^{-1}\circ\psi(V)=\psi(V)\times0
+\]<p>
+故 \(\varphi(i(V))\) 为 \(\mathbb R^m\times0\) 的开集。</p>
+<p>从而
+</p>
+\[
+\varphi(i(V))=\widetilde U\cap(\mathbb R^m\times0)，
+\]<p>
+其中 \(\widetilde U\subseteq\mathbb R^n\) 为开集。</p>
+<p>令 \(U_1=U_0\cap\varphi^{-1}(\widetilde U)\)。</p>
+<p>而对于 \(x\in U_1\cap i(M)\)，无法保证 \(\varphi(x)\in\mathbb R^m\times0\)。</p>
+<p>故我们进一步缩小 \(U_1\)，s.t. \(x\in i(V)\)。</p>
+<p>由于 \(M\) 是 \(N\) 的正则子流形，故 \(i(V)\) 在 \(i(M)\) 中开，
+故存在 \(N\) 中的开集 \(W\)，s.t.
+</p>
+\[
+i(V)=i(M)\cap W.
+\]<p>令
+</p>
+\[
+U=U_1\cap W.
+\]<p>下面证明：
+</p>
+\[
+\varphi(U)\cap(\mathbb R^m\times0)=\varphi(U\cap i(M)).
+\]<p>\(\subseteq\)：设 \(y\in\varphi(U)\cap(\mathbb R^m\times0)\)。
+则存在 \(x\in U\)，s.t. \(\varphi(x)=y\)。</p>
+<p>由于
+</p>
+\[
+\varphi(x)\in\varphi(U)\cap(\mathbb R^m\times0)
+\subseteq\widetilde U\cap(\mathbb R^m\times0)
+=\varphi(i(V))
+\]<p>
+又由于 \(\varphi\) 是双射，故 \(x\in i(V)\subseteq i(M)\)，
+从而 \(y\in\varphi(U\cap i(M))\)。</p>
+<p>\(\supseteq\)：设 \(y\in\varphi(U\cap i(M))\)。</p>
+<p>则存在 \(x\in U\cap i(M)\)，s.t. \(y=\varphi(x)\)。</p>
+<p>只需证 \(\varphi(x)\in\mathbb R^m\times0\)。</p>
+<p>只需证 \(x\in i(V)\)。</p>
+<p>而 \(x\in U\subseteq W\)，
+\(x\in i(M)\)，
+</p>
+\[
+\Rightarrow x\in i(V)=i(M)\cap W.
+\]<p>从而我们说明了对$i(M)$上的每个点$p$都可以找到它在$N$中的一个坐标邻域$(U,\varphi)$使得$(U\cap i(M),\pi\circ \varphi)$是$p$在$i(M)$的一个坐标卡（与欧氏空间 $\mathbb{R}^m$中的一个开子集同胚的意义下）。</p>
+<p>在 \(U\cap V\cap i(M)\) 上考虑 \((\pi\circ\varphi)\circ(\pi\circ\psi)^{-1}\)
+</p>
+\[
+= \pi\circ\varphi\circ\psi^{-1}\circ\pi^{-1}
+\]<p>由于 \(\pi\) 可以看作 \(\mathbb{R}^m\times 0\) 到 \(\mathbb{R}^m\) 的微分同胚。
+且 \(\varphi\circ\psi^{-1}\) 是一个微分同胚，故 \((\pi\circ\varphi)\circ(\pi\circ\psi)^{-1}\) 是一个微分同胚。</p>
+<p>从而 \(i(M)\) 在这些 \(\{(U\cap i(M),\pi\circ\varphi)\}\) 下是一个微分流形</p>
+<p>再把它们移植回 \(M\)，得到 \(\{(i^{-1}(U\cap i(M)),\pi\circ\varphi\circ i)\}=\{(i^{-1}(U),\pi\circ\varphi\circ i)\}\) 为 \(M\) 的一个地图册.</p>
+<p>下面我们说明其与 \(M\) 上的坐标卡的兼容性.
+设 \((\widetilde V,\widetilde\psi)\) 为 \(M\) 上原有的坐标卡.</p>
+<p>由于 \(\pi\circ\varphi\circ i\circ\widetilde\psi^{-1}\) 是恒等映射.</p>
+<p>由前面的步骤知 \(i( V)\subset U\). 故 \(\pi\circ\varphi\circ i\circ\psi^{-1}=id|_{\psi( V)}\).</p>
+<p>从而 \(\pi\circ\varphi\circ i\circ\widetilde\psi^{-1}
+=\pi\circ\varphi\circ i\circ\psi^{-1}\circ\psi\circ\widetilde\psi^{-1}
+=\psi\circ\widetilde\psi^{-1}\) 为微分同胚。</p>
+<p>所以实际上，我们是从正则子流形上诱导出的微分结构与其原本的微分结构的兼容性这个角度重新审视了一下正则子流形的结构定理，也就是说，正则子流形的结构定理中的<strong>结构</strong>二字指的其实是<strong>微分结构</strong>。</p>
+<p>反过来，如果$M$是$N$的子拓扑空间，那么$i:M\to i(M)$为同胚，并且$M$中每个点$p$都有$N$中的坐标邻域$(U,\varphi)$使得$\varphi(U\cap i(M))=\varphi(U)\cap (\mathbb{R}^m\times 0)$，那么根据前面的推导，我们知道$(i^{-1}(U),\pi\circ \varphi\circ i)$是$M$上的坐标卡，并且与原来的微分结构兼容，类似地，$(U\cap i(M),\pi\circ\varphi)$是$i(M)$上的坐标卡，那么</p>
+$$(\pi\circ \varphi)\circ i\circ (\pi\circ\varphi\circ i)^{-1}=id$$<p>所以$i$为浸入。</p>
+<p><del>战斗爽！</del></p>
+<h2 id="一些切空间的例子">一些切空间的例子
+</h2><h3 id="欧氏空间及其正则子流形">欧氏空间及其正则子流形
+</h3><p><strong>例（欧氏空间及其正则子流形的切空间）</strong>：对欧氏空间 $\mathbb{R}^n$，$\mathrm{id}: \mathbb{R}^n \to \mathbb{R}^n$ 为坐标卡。</p>
+<p>$p \in \mathbb{R}^n$ , $T_p \mathbb{R}^n = \mathrm{span} \{ \left. \frac{\partial}{\partial x^i} \right|_p \}_{i=1}^n$.</p>
+$$\left. \frac{\partial}{\partial x^i} \right|_p (f) = \frac{\partial (f \circ \mathrm{id}^{-1})}{\partial x^i} (\mathrm{id}(p)) = \frac{\partial f}{\partial x^i}(p).$$<p>在这个坐标系下，可以把 $T_p \mathbb{R}^n$ 与 $\mathbb{R}^n$ 等同起来。</p>
+<p>在不引入切映射的前提下，我们有一种比较自然的方式，把$\mathbb{R}^n$的正则子流形$M$的切空间$T_pM$看成$T_p \mathbb{R}^n$的线性子空间。</p>
+<p>对$M$上的一条光滑曲线$\sigma:(-1,1)\to M$，自然地有 $\mathbb{R}^n$上的一条光滑曲线$i\circ \sigma:(-1,1)\to i(M)$（因为是正则子流形，所以$i$为浸入，自然有光滑性）。</p>
+<p>所以我们有自然映射</p>
+$$[\sigma]\mapsto [i\circ \sigma]$$<p>若$x^i$为$i(M)$上的坐标函数，那么自然地$x^i\circ i$就是$M$上的坐标函数（前面已经说明过了曲线等价类定义切向量与坐标系的选取是无关的，所以我们可以随意选取坐标系）</p>
+<p>所以如果$\sigma_1\sim\sigma_2$，那么一定有</p>
+\[
+\left.\frac{\mathrm{d}}{\mathrm{d}t}\right|_{t=0}\left[x^i\circ i \circ\sigma_1(t)-x^i\circ i \circ\sigma_2(t)\right]=0,\quad 1\leqslant i\leqslant n,
+\]<p>而这恰好就是$i\circ\sigma_1\sim i\circ \sigma_2$的定义。</p>
+<p>要说明这是一个线性同构，我们只需要说明$[i^{-1}\circ \tau]$的良定义性，其中$\tau$是 $i(M)$中的一条光滑曲线，而这就是正则子流形发挥作用的地方，因为$i$是同胚，所以首先$i^{-1}\circ \tau$是连续的，再证明光滑性，也就是要证$i^{-1}\circ \tau:(-1,1)\to M$的光滑性，局部上，由于$\tau$是光滑的，所以有
+</p>
+$$\pi\circ\varphi\circ \tau$$<p>是光滑的，其中$\varphi$是坐标卡，从而
+</p>
+$$(\pi\circ \varphi\circ i) \circ (i^{-1}\circ \tau)$$<p>
+也是光滑的，也即
+$i^{-1}\circ \tau$是光滑的。</p>
+<p>首先注意到$f\in C^{\infty}(i(M))$当且仅当$f\circ i\in C^{\infty}(M)$，这是因为$(f\circ i)\circ (\pi\circ\varphi\circ i)^{-1}=f\circ \varphi^{-1}\circ \pi^{-1}$是光滑映射。</p>
+<p>所以只需要证明对所有的$f\circ i$都满足某个性质，就可以证明整个$C^{\infty}(M)$都满足这个性质，其中$f\in C^{\infty}(i(M))$。</p>
+$$\begin{aligned}
+  ([i\circ \tau_1]+[i\circ \tau_2])(f) 
+   &= (i\circ \tau_1)'(t_0)(f)+(i\circ \tau_2)'(t_0)(f) \\
+   &= \frac{d}{dt}\bigg|_{t=t_0}(f\circ(i\circ \tau_1))(t)+\frac{d}{dt}\bigg|_{t=t_0}(f\circ(i\circ \tau_2))(t)\\
+   &= \frac{d}{dt}\bigg|_{t=t_0}((f\circ i)\circ \tau_1)(t)+\frac{d}{dt}\bigg|_{t=t_0}((f\circ i)\circ \tau_2)(t)\\
+   &= \tau_1'(t_0)(f\circ i)+\tau_2'(t_0)(f\circ i) \\
+   &= ([\tau_1]+[\tau_2])(f\circ i) 
+\end{aligned}$$<p>在这个自然映射下$[\tau_1]+[\tau_2]=[\varphi^{-1}(at)]+[\varphi^{-1}(bt)]=[\varphi^{-1}((a+b)t)]$的原像是$[i^{-1}\circ \varphi^{-1}((a+b)t)]=[i^{-1}\circ \varphi^{-1}(at)]+[i^{-1}\circ \varphi^{-1}(bt)]$（注意到$\varphi\circ i$）是坐标卡，类似地可以说明保持数乘。</p>
+<hr>
+<p>利用导子也可以完成这一事实的说明，对$v\in T_p M$可以定义$\tilde v\in T_p \mathbb{R}^n$满足：</p>
+$$\tilde v(f)=v(f|_M)=v(f\circ i)$$<p>关键是证明这个自然映射的单射性：</p>
+<p>如果对任意$f\in C^{\infty}( \mathbb{R}^n )$都有$\tilde v_1(f)=\tilde v_2(f)$，则$v_1(f|_M)=v_1(f|_M)$，利用正则子流形结构定理和鼓包函数，总可以把$C^{\infty}(M)$上的局部光滑函数光滑延拓（在法向的坐标上保持不变，即$H(x_1^n)=h(x_1^m)$）到 $\mathbb{R}^n$上，从而对 $C^{\infty}( M )$中的所有函数$g$都有$v_1(g)=v_2(g)$，从而$v_1=v_2$。</p>
+<h3 id="sn作为欧氏空间的正则子流形">S^n作为欧氏空间的正则子流形
+</h3><p>\(S^n\subseteq\mathbb{R}^{n+1}.\)</p>
+<p>切空间：设 \(\sigma:(-1,1)\to S^n\) 为光滑曲线，
+</p>
+\[
+\sigma(0)=p\in S^n
+\]\[
+[\sigma]\mapsto[i\circ\sigma].
+\]\[
+i\circ\sigma:(-1,1)\to\mathbb{R}^n\quad\text{光滑}.
+\]\[
+i\circ\sigma(t)=(x^1(t),\cdots,x^{n+1}(t)).
+\]\[
+v=(i\circ\sigma)'(0)=\sum_{i=1}^{n+1}x^{i}(0)\frac{\partial}{\partial x^i}\bigg|_p\in T_p\mathbb{R}^{n+1}
+\cong\mathbb{R}^{n+1}
+\]\[
+\|i\circ\sigma(t)\|=1.
+\]\[
+\Rightarrow\sum_{i=1}^{n+1}\dot{x}^i(0)x^i(0)=0
+\]\[
+\Rightarrow v\cdot i(p)=0
+\]\[
+\Rightarrow T_pS^n\subseteq(i(p))^\perp
+\]<p>由于两边的维数相同，故$T_pS^n=(i(p))^\perp$</p>
+<p>(1) 对 \(id:M\to M\).</p>
+<p>\(id_{*p}=id_{T_pM}\).</p>
+<p>设 \(X\in T_pM.\) \(\forall f\in C^\infty(M),\)</p>
+\[
+id_{*p}(X)(f)=X(f\circ id)=X(f)
+\]\[
+=id_{T_pM}(X)(f).
+\]\[
+\Rightarrow id_{*p}=id_{T_pM}.
+\]<p>(2). \(f:M\to N.\quad g:N\to S.\) 光滑.</p>
+<p>设 \(X\in T_pM.\quad \forall h\in C^\infty(S),\) 有</p>
+\[
+(g\circ f)_{*p}(X)(h)
+\]\[
+=X(h\circ g\circ f)
+\]\[
+=f_{*p}(X)(h\circ g)
+\]\[
+=g_{*f(p)}\circ f_{*p}(X)(h).
+\]<p>故</p>
+\[
+(g\circ f)_{*p}=g_{*f(p)}\circ f_{*p}.
+\]<p>或</p>
+\[
+d(g\circ f)(p)=dg(f(p))\circ df(p).
+\]<p>(3). 设 \(\sigma(t_0)=p.\quad \sigma\) 为光滑曲线.</p>
+\[
+\sigma'(t_0)(f)=\left.\frac{d}{dt}\right|_{t=t_0}(f\circ\sigma)(t)
+\]\[
+=\sigma_{*t_0}\left(\frac{\partial}{\partial t}\right)(f)
+\]<p>故</p>
+\[
+\sigma'(t_0)=\sigma_{*t_0}\left(\frac{\partial}{\partial t}\right).
+\]<p>从而 \(f\) 把 \(X\) 拉到 \(T_{f(p)}N\)</p>
+<p>这也等于先复合偏导 \(\sigma'(t_0)\to X\) 曲线</p>
+<p>因此可以得到切映射的另一理解方式。</p>
+<p>若 \(X=\sigma'(t_0)\)，则</p>
+\[
+f_{*p}(X)=f_{*p}(\sigma'(t_0))
+\]\[
+=f_{*p}\left(\sigma_{*t_0}\left(\frac{\partial}{\partial t}\right)\right)
+\]\[
+=(f\circ\sigma)_{*t_0}\left(\frac{\partial}{\partial t}\right)
+\]\[
+=(f\circ\sigma)'(t_0).
+\]<p>把欧氏空间一样，函数有矩阵表示，先取一组基。</p>
+<p>设 \((U,\varphi),(V,\psi)\) 为 \(p\) 和 \(f(p)=q\) 附近的坐标邻域，</p>
+<p>坐标函数分别为 \(x^1,\cdots,x^m,\ y^1,\cdots,y^n\).</p>
+<p>\(T_pM\) 和 \(T_qN\) 中分别有基 \(\left\{\frac{\partial}{\partial x^i}\right\}\) 和 \(\left\{\frac{\partial}{\partial y^j}\right\}\).</p>
+\[
+f_{*p}\left(\frac{\partial}{\partial x^i}\Big|_p\right)\in T_{f(p)}N.
+\]<p>故</p>
+\[
+f_{*p}\left(\frac{\partial}{\partial x^i}\Big|_p\right)
+=\sum_{j=1}^n
+f_{*p}\left(\frac{\partial}{\partial x^i}\Big|_p\right)
+\left(\frac{\partial}{\partial y^j}\Big|_q\right)
+\frac{\partial}{\partial y^j}\Big|_q
+\]\[
+=\sum_{j=1}^n
+\frac{\partial f_j}{\partial x^i}(x(p))
+\frac{\partial}{\partial y^j}\Big|_q.
+\]<p>故 \(df_p\cdot
+\left(\frac{\partial}{\partial x^i}\Big|_p\right)\) 与
+\(\left(\frac{\partial}{\partial x^1}\Big|_p,\cdots,
+\frac{\partial}{\partial x^m}\Big|_p\right)\)</p>
+<p>即</p>
+\[
+\left(
+f_{*p}\left(\frac{\partial}{\partial x^1}\Big|_p\right),
+\cdots,
+f_{*p}\left(\frac{\partial}{\partial x^m}\Big|_p\right)
+\right)_{1\times m}
+\]$$
+=(\frac{\partial}{\partial y^1}\Big|_q,\cdots,
+\frac{\partial}{\partial y^n}\Big|_q
+)_{1\times n}
+J(\psi\circ f\circ\varphi^{-1})(\varphi(p)).
+$$<p>故
+</p>
+\[
+\operatorname{rank}f_p
+=\operatorname{rank}J(\psi\circ f\circ\varphi^{-1})(\varphi(p))
+=\operatorname{rank}f_{*p}
+\]<p><strong>例（正则子流形的切空间）</strong>：
+$f:M\to N$，设常秩，则$S=f^{-1}(q)$ 是正则子流形，并且可以计算得到$T_pS=\ker f_{*p}=\ker df(p)$</p>
+<p>实际上，如果我们取$M=\mathbb{R}^m,N=\mathbb{R}^n$，那么根据泰勒展开：
+</p>
+$$f(x)=f(0)+f'(0)x+o(|x|)$$<p>$S$可以用方程$f(x)=0$表示，切空间就是它的一阶近似，所以我们舍弃高阶项得到切空间的另一定义方式：</p>
+$$0=f(0)+f'(0)x$$<p>如果$f(0)=0$，那么切空间就可以看成$\ker f'(0)=\ker df(0)$。</p>
+<p>实际上，正则子流形的结构定理换一种说法就是在说明正则子流形局部上可以用一些独立的方程表示，我们知道，$M\subset N$是正则子流形当且仅当每个点$p\in M$附近都存在$N$的坐标卡$(U,\varphi)$，使得</p>
+$$\varphi(U\cap i(M))=\varphi(U)\cap(\mathbb{R}^m\times 0)$$<p>这就是说，$M$上每个点都有$N$中的坐标邻域$U$，在$U$上点落在$M$中当且仅当后$n-m$个坐标等于$0$，也就是等价于</p>
+$$x^{m+1}=0,\dots,x^n=0$$<p>而这就是方程表示（因为$\varphi$是微分同胚，所以这些方程自然是独立的）。</p>
+<p>把这些方程取出来构造一个打到$\mathbb{R}^{n-m}$的函数，可以说明它是淹没，从而$0$是这个映射的正则值，从而正则子流形局部上总可以看成某个函数的正则值的原像。</p>
+<p>还有一个等价定义是用上面的$\mathbb{R}^m\times 0$中的$m$个参数构造$\mathbb{R}^m$中的开集到$U\cap i(M)$的嵌入映射，也就是说这$m$个量就是参数化的参数。</p>
+<h2 id="横截相交">横截相交
+</h2><p>我们知道，若$Q\subset N$是$k$维正则子流形，那么上面每个点都存在$N$中的坐标邻域$(U,\varphi)$，使得$Q\cap U$就是方程</p>
+$$g(x)=0$$<p>的解，也即$Q\cap U=g^{-1}(0)$，其中</p>
+$$g:U\to \mathbb{R}^{n-k}$$<p>是淹没。</p>
+<p>实际上，我们只需要定义</p>
+$$g=(\varphi^{k+1},\dots,\varphi^{n})$$<p>即可。</p>
+<p>由于$\varphi$是微分同胚，所以$g$一定是淹没，并且相当于隐函数定理中待解的方程的角色。</p>
+<p>我们现在考虑光滑映射$f:M\to N$，我们要问$f^{-1}(Q)$是否为正则子流形，实际上是在考虑$M\cap Q$（正则子流形与流形的交集）在什么情况下仍然是正则子流形，因为如果$f$是包含映射，那么$f^{-1}(Q)=M\cap Q$。</p>
+<p>也就是我们在考虑集合
+</p>
+$$f^{-1}(Q)=\{x\in M :f(x)\in Q\}$$<p>
+什么时候是正则子流形，</p>
+<p>而根据正则子流形的结构定理，我们知道正则性是局部的问题，所以我们可以我们可以在$N\cap U$上考虑问题，这个时候，$f^{-1}(Q)$局部上就是
+</p>
+$$\{x\in M :g(f(x))=0\}$$<p>具体而言，对每个点$p\in f^{-1}(Q)$，$q=f(p)\in Q$，由于$Q$是$N$的正则子流形，所以存在$q$的邻域$U$，使得</p>
+$$Q\cap U=g^{-1}(0)$$<p>，其中$g$如上定义，是一个淹没。实际上我们可以证明每个点附近都可以写成某个淹没的正则值的原像和正则子流形是等价的。由于$f$是连续的，</p>
+$$f^{-1}(U)\supset f^{-1}(Q\cap U)=f^{-1}(Q)\cap f^{-1}(U)$$<p>是$p$的一个开邻域，由于$Q\cap U=g^{-1}(0)$，故</p>
+$$f^{-1}(Q)\cap f^{-1}(U)=f^{-1}(g^{-1}(0))=(g\circ f)^{-1}(0)$$<p>由我们刚才说的等价性，要使得$f^{-1}(Q)$是一个正则子流形，我们只需要让$0$是$g\circ f$的正则值，也就是对每个$\tilde p\in (g\circ f)^{-1}(0)$，都要满足$g\circ f$在$\tilde p$点满秩，也即要求$g_{*f(\tilde p)}\circ f_{*\tilde p}$是满射，我们已经知道$g_{* f(\tilde p)}$是满射，所以只需要要求$f_{*\tilde p}$是满射。</p>
+<p>所以我们要求$f_{*\tilde p}$能够打满$g_{*f(\tilde p)}$的核空间的补空间，也就是说希望</p>
+$$f_{*\tilde p}(T_{\tilde p} M)+\ker  g_{*f(\tilde p)}=f_{*\tilde p}(T_{\tilde p}M)+T_q Q=T_qN$$<p>总结一下就是只要对每个$\tilde p\in (g\circ f)^{-1}(0)$，都有</p>
+$$f_{*\tilde p}(T_{\tilde p}M)+T_q Q=T_qN$$<p>即可。</p>
+<p>从而只要对每个$p\in f^{-1}(Q)$都有</p>
+$$f_{* p}(T_{ p}M)+T_q Q=T_qN$$<p>
+则$f^{-1}(Q)$就是一个正则子流形。</p>
+<p>而这就是横截相交的定义：</p>
+<h3 id="横截相交的定义">横截相交的定义
+</h3><p><strong>定义 1.4.3 (横截相交)</strong>： 设 $f: M \rightarrow N$ 为微分流形之间的光滑映射, $Q$ 为 $N$ 的正则子流形. 如果对满足条件 $p \in M, f(p)=q \in Q$ 的所有点 $p$, 均有
+</p>
+$$f_{* p}\left(T_{p} M\right)+T_{q} Q=T_{q} N$$<p>
+则称 $f$ 和 $Q$ <strong>横截相交（intersects transversally）</strong>, 有时记为 $f \pitchfork Q$. 当 $f(M) \cap Q=\varnothing$ 时, 也规定 $f$ 和 $Q$ 横截相交。</p>
+<h3 id="正则子流形的等价条件">正则子流形的等价条件
+</h3><p>我们补充说明一下正则子流形的几种等价条件：</p>
+<p><strong>定理</strong>：设$f:M\to N$为光滑映射，$M,N$为微分流形，则如下命题等价：</p>
+<p>(1) $M$是$N$的正则子流形，即$f$为单嵌入；</p>
+<p>(2) 对每个$p\in M$，存在$f(p)$在$N$中的坐标邻域$(U,\varphi)$，使得</p>
+$$\varphi(U\cap f(M))=\varphi(U)\cap (\mathbb{R}^m\times 0).$$<p>(3) 对每个$p\in M$，存在$f(p)$在$N$中的邻域$U$和淹没$g:U\to \mathbb{R}^{n-m}$，使得</p>
+$$f(M)\cap U=g^{-1}(0)$$<p>(4) 对每个$p\in M$，$q=f(p)\in N$，都存在$\mathbb{R}^m$中的开集$V$，$q$在 $N$中的邻域$U$，以及嵌入$h:V\to f(M)\cap U$。</p>
+<p>其中(2)$\Rightarrow$(3)我们已经说明过了，我们接下来说明(3)$\Rightarrow$(2)：</p>
+<p>对每个 \(p\in M\)，存在 \(f(p)\) 在 \(X\) 中的邻域 \(U_p\)，使得 \(g:U_p\to\mathbb{R}^{n-m}\).</p>
+\[
+f(M)\cap U_p=g^{-1}(0)
+\]<p>不妨设 \((U_p,\varphi_p)\) 为 \(p\) 点的坐标邻域，否则可以缩小 \(U_p\).</p>
+<p>由于 \(g\) 是淹没，故 \(D(g\circ\varphi_p^{-1})\) 秩 \(n-m\).</p>
+<p>从而 \(D(g\circ\varphi_p^{-1})\) 存在 \(n-m\) 阶子式不为 \(0\).</p>
+<p>记 \(g\circ\varphi_p^{-1}\) 对应分量为 \((g\circ\varphi_p^{-1})^{m+1},\cdots,(g\circ\varphi_p^{-1})^n\)</p>
+<p>不妨设
+</p>
+\[
+\left(\frac{\partial(g\circ\varphi_p^{-1})^i}{\partial x^j}\right)_{m+1\leq i,j\leq n}
+\]<p>
+可逆。</p>
+<p>定义 \(h:\varphi_p(U_p)\to\mathbb{R}^n\)，其中 \(h=(x^1,\cdots,x^m,g\circ\varphi_p^{-1})\).</p>
+<p>则
+</p>
+\[
+Dh=
+\begin{pmatrix}
+I_{m\times m}&0\\
+*&\left(\frac{\partial(g\circ\varphi_p^{-1})^i}{\partial x^j}\right)_{m+1\leq i,j\leq n}
+\end{pmatrix}
+\]<p>
+可逆。</p>
+<p>从而存在 \(0=\varphi_p(p)\) 的邻域 \(U\subseteq\varphi_p(U_p)\).</p>
+<p>\(0\) 的邻域 \(V\subseteq\mathbb{R}^n\).</p>
+<p>s.t. \(h|_U:U\to V\) 为微分同胚。</p>
+<p>设 \(\varphi=h|_U\).</p>
+<p>则 \(\varphi\circ\varphi_p:\varphi_p^{-1}(U)\to V\) 为 \(p\) 点的坐标卡。</p>
+<p>下面证明：
+</p>
+\[
+\varphi\circ\varphi_p\left(\varphi_p^{-1}(U)\cap fM\right)=\varphi(U)\cap\mathbb{R}^m\times0.
+\]<p>若 \(s\in\varphi_p^{-1}(U)\cap f(M)\)</p>
+<p>则 \((\varphi\circ\varphi_p)^i(s)=g^i(s)=0,\quad m+1\leq i\leq n\).</p>
+\[
+\Rightarrow 左边含于右边.
+\]<p>反过来，若 \(\varphi(U)\) 中后 \(n-m\) 个分量为 \(0\)，则由 \(g\) 的定义知一定在左边。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/zh/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+        
+            <a href="/zh/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const elementsToRender = [".main-article", ".widget--toc"];
+
+        elementsToRender.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                renderMathInElement(element, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    ignoredClasses: ["gist"]
+                });
+            }
+        });
+    });
+</script>
+    
+</article>
+
+
+    
+
+    
+
+     
+    
+        
+        <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 织式就是力量
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
+<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+<div
+    id="persistent-music-player"
+    data-music-player
+    data-music-server="netease"
+    data-music-type="playlist"
+    data-music-id="18292166792"
+    aria-label="音乐播放器"
+></div>
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" defer></script><script src="/js/music-player.min.b8b65b10dd0aa30dd253a3a7c23394bddf33ebee0761aa222d1b31d4d5393c8d.js" defer></script><script src="/js/music-preferences.min.bda1fa0fe6059eb10e30fdc739492aaffa8d28ce16196386ec904ff5eca20477.js" defer></script><div
+    id="display-settings-root"
+    class="display-settings"
+    data-copy-success="LaTeX 公式已复制"
+    data-copy-failed="复制失败，请检查浏览器权限"
+    data-sakura-on="樱花飘落已开启"
+    data-sakura-off="樱花飘落已关闭"
+    data-formula-on="点击文章公式即可复制 LaTeX"
+    data-formula-off="公式复制已关闭"
+    data-reference-on="引用悬浮预览已开启"
+    data-reference-off="引用悬浮预览已关闭"
+>
+    <button
+        id="display-settings-toggle"
+        class="display-settings__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="display-settings-panel"
+        aria-label="显示设置"
+        title="显示设置"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 8.5 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.1 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.1 8.5a1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.5 4.1a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.1a1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 8.5c.12.4.34.75.66 1 .3.25.7.39 1.1.4h.1a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.76 1.1z" />
+        </svg>
+    </button>
+
+    <section id="display-settings-panel" class="display-settings__panel" aria-labelledby="display-settings-title" hidden>
+        <header class="display-settings__header">
+            <div>
+                <h2 id="display-settings-title">显示设置</h2>
+                <p>按照你的喜好调整阅读体验</p>
+            </div>
+            <button id="display-settings-close" class="display-settings__close" type="button" aria-label="关闭设置">×</button>
+        </header>
+
+        <div class="display-settings__group">
+            <h3>视觉特效</h3>
+            <p>为页面增添季节氛围</p>
+            <div class="display-settings__choices" role="radiogroup" aria-label="视觉特效">
+                <label>
+                    <input type="radio" name="display-effect" value="off">
+                    <span>⊘ 关闭</span>
+                </label>
+                <label>
+                    <input type="radio" name="display-effect" value="sakura" checked>
+                    <span>✿ 樱花</span>
+                </label>
+            </div>
+            <p id="display-settings-motion-note" class="display-settings__note" hidden>
+                系统已开启“减少动态效果”，樱花动画暂不播放。
+            </p>
+        </div>
+
+        <div class="display-settings__group display-settings__formula">
+            <div>
+                <h3>公式复制</h3>
+                <p>点击正文中的公式，复制带定界符的 LaTeX</p>
+            </div>
+            <label class="display-settings__switch">
+                <input id="formula-copy-toggle" type="checkbox" checked>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">启用公式复制</span>
+            </label>
+        </div>
+
+        <div class="display-settings__group display-settings__reference">
+            <div>
+                <h3>引用悬浮预览</h3>
+                <p>鼠标停在引用蓝字上时显示定理或概念内容</p>
+            </div>
+            <label class="display-settings__switch">
+                <input id="reference-preview-toggle" type="checkbox" checked>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">启用引用悬浮预览</span>
+            </label>
+        </div>
+    </section>
+</div>
+
+<canvas id="sakura-effect-canvas" class="sakura-effect" aria-hidden="true" hidden></canvas>
+<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.e80c29c499051bc7a4185e453c27c5d9199dd222f232e2c9854f70366cd402c8.js" defer></script><script src="/js/reference-preview.min.0c173c042b782283f01b8fa3d8fcb04abfe9b2217e8776c28e9b1bd642f9ccec.js" defer></script><script src="/js/persistent-navigation.min.059eab47c0b1ae77199869bae6c68ce6c006b80685fc07200c0f71aeaf735712.js" defer></script>
+
+
+    </body>
+</html>
