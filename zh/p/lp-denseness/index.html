@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="证明一下具有紧支集的光滑函数在L2中稠密">
-<title>具有紧支集的光滑函数在L2中稠密</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="证明一下具有紧支集的光滑函数在L^p中稠密">
+<title>具有紧支集的光滑函数在L^p中稠密</title>
 
 
-<link rel="canonical" href="https://shikiforever.github.io/zh/p/l2-denseness/">
+<link rel="canonical" href="https://shikiforever.github.io/zh/p/lp-denseness/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.08a1bd160028f27343ab2f000d81e010b5108c5582004965f51dc072247245e0.css"><meta property='og:title' content="具有紧支集的光滑函数在L2中稠密">
-<meta property='og:description' content="证明一下具有紧支集的光滑函数在L2中稠密">
-<meta property='og:url' content='https://shikiforever.github.io/zh/p/l2-denseness/'>
+<link rel="stylesheet" href="/scss/style.min.08a1bd160028f27343ab2f000d81e010b5108c5582004965f51dc072247245e0.css"><meta property='og:title' content="具有紧支集的光滑函数在L^p中稠密">
+<meta property='og:description' content="证明一下具有紧支集的光滑函数在L^p中稠密">
+<meta property='og:url' content='https://shikiforever.github.io/zh/p/lp-denseness/'>
 <meta property='og:site_name' content='织式就是力量'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2026-10-11T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-10-11T00:00:00&#43;08:00'/>
-<meta name="twitter:title" content="具有紧支集的光滑函数在L2中稠密">
-<meta name="twitter:description" content="证明一下具有紧支集的光滑函数在L2中稠密">
+<meta name="twitter:title" content="具有紧支集的光滑函数在L^p中稠密">
+<meta name="twitter:description" content="证明一下具有紧支集的光滑函数在L^p中稠密">
     <link rel="shortcut icon" href="/img/kato-megumi-avatar.png" />
 
     </head>
@@ -243,7 +243,7 @@
                                         
                                     
                                 
-                                <option value="/zh/p/l2-denseness/" selected>简体中文</option>
+                                <option value="/zh/p/lp-denseness/" selected>简体中文</option>
                             
                                 
                                 
@@ -303,12 +303,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/zh/p/l2-denseness/">具有紧支集的光滑函数在L2中稠密</a>
+            <a href="/zh/p/lp-denseness/">具有紧支集的光滑函数在L^p中稠密</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            证明一下具有紧支集的光滑函数在L2中稠密
+            证明一下具有紧支集的光滑函数在L^p中稠密
         </h3>
         
     </div>
@@ -349,7 +349,7 @@
     <section class="article-content">
     
     
-    <p>证明：\(C_c^\infty(\Omega)\) 在 \(L^2(\Omega)\) 中稠密，其中 \(\Omega\subseteq\mathbb R^n\) 开。</p>
+    <p>证明：\(C_c^\infty(\Omega)\) 在 \(L^p(\Omega)\) 中稠密（$1\leq p<\infty$），其中 \(\Omega\subseteq\mathbb R^n\) 开。</p>
 <p>①先证明 \(C_c^\infty(\Omega)\) 在 \((C_c(\Omega),\|\cdot\|_\infty)\) 中稠密。</p>
 <p>对 \(f\in (C_c(\Omega),\|\cdot\|_\infty)\)，取标准磨光核 \(\rho_\varepsilon\in C_c^\infty(\Omega)\)。</p>
 <p>1）先证 \(\rho_\varepsilon*f\in C_c^\infty(\Omega)\)。</p>
@@ -377,11 +377,11 @@
 \rho_\varepsilon(y)\|f(x-y)-f(x)\|_\infty\,dy<\eta.
 \end{aligned}
 \]<p>（只要 \(\varepsilon\) 充分小）</p>
-<p>②\(\forall f\in L^2(\Omega)\)，\(\exists g\in C_c(\Omega)\)，
+<p>②\(\forall f\in L^p(\Omega)\)，\(\exists g\in C_c(\Omega)\)，
 s.t.
 </p>
 \[
-\|f-g\|_{L^2(\Omega)}<\frac{\varepsilon}{2}.
+\|f-g\|_{L^p(\Omega)}<\frac{\varepsilon}{2}.
 \]<p>对 \(g\in C_c(\Omega)\)，\(\exists h\in C_c^\infty(\Omega)\)，</p>
 <p>s.t.
 </p>
@@ -390,14 +390,14 @@ s.t.
 \frac{\varepsilon}{2[m(K)+1]}.
 \]\[
 \begin{aligned}
-\|h-g\|_{L^2(\Omega)}^2
-&=\int_\Omega |h(x)-g(x)|^2\,dx\\
-&=\int_K|h(x)-g(x)|^2\,dx\\
-&\leq m(K)\|h-g\|_\infty\\
+\|h-g\|_{L^p(\Omega)}^2
+&=\int_\Omega |h(x)-g(x)|^p\,dx\\
+&=\int_K|h(x)-g(x)|^p\,dx\\
+&\leq m(K)\|h-g\|_\infty^p\\
 &<\frac{\varepsilon}{2}.
 \end{aligned}
 \]\[
-\Rightarrow \|h-f\|_{L^2}<\varepsilon.
+\Rightarrow \|h-f\|_{L^p}<\varepsilon.
 \]
 </section>
 
