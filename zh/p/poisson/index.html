@@ -280,7 +280,43 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#可以看作权重">$K$可以看作权重</a></li>
+    <li><a href="#光滑性">光滑性</a></li>
+    <li><a href="#调和">调和</a></li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -344,16 +380,37 @@
 </header>
 
     
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#可以看作权重">$K$可以看作权重</a></li>
+    <li><a href="#光滑性">光滑性</a></li>
+    <li><a href="#调和">调和</a></li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
 
     <section class="article-content">
     
     
     <p>纯AI无人工。</p>
-<p>计算 $K(x,y)=\dfrac{2x_n}{n\alpha(n)}\dfrac{1}{|x-y|^n}$ 在 $y\in\partial\mathbb{R}_+^n$ 上的积分：</p>
+<h2 id="可以看作权重">$K$可以看作权重
+</h2><p>计算 $K(x,y)=\dfrac{2x_n}{n\alpha(n)}\dfrac{1}{|x-y|^n}$ 在 $y\in\partial\mathbb{R}_+^n$ 上的积分：</p>
 $$
 \begin{align*}
-&\frac{2x_n}{n\alpha(n)}\int_{\partial\mathbb{R}_+^n}\frac{1}{|x-y|^n}\,dV\\
-&=\frac{2x_n}{n\alpha(n)}\int_{y_n=0}\frac{1}{|x-y|^n}\,dV.
+&\frac{2x_n}{n\alpha(n)}\int_{\partial\mathbb{R}_+^n}\frac{1}{|x-y|^n}\,dS\\
+&=\frac{2x_n}{n\alpha(n)}\int_{y_n=0}\frac{1}{|x-y|^n}\,dS.
 \end{align*}
 $$<p>参数化 $(y_1,\ldots,y_{n-1})\mapsto(y_1,\ldots,y_{n-1},0)$</p>
 $$
@@ -440,8 +497,71 @@ $$
 \boxed{
 \int_{\partial\mathbb{R}_+^n}
 \frac{2x_n}{n\alpha(n)}
-\frac{1}{|x-y|^n}\,dV=1.
+\frac{1}{|x-y|^n}\,dS=1.
 }
+$$<h2 id="光滑性">光滑性
+</h2><p>我们说明下面这个函数的光滑性。</p>
+$$
+\begin{align*}
+u(x) &= \int_{\partial \mathbb{R}_+^n} K(x,y)g(y)\,dS(y).
+\end{align*}
+$$$$
+\begin{align*}
+\lim_{\Delta x_i \to 0}\frac{u(x+\Delta x_i)-u(x)}{\Delta x_i}
+&= \lim_{\Delta x_i \to 0}\int_{\partial \mathbb{R}_+^n} K_{x_i}(x+t\Delta x_i,y)g(y)\,dS(y).
+\end{align*}
+$$<p>由于</p>
+$$
+\begin{align*}
+\int_{\partial \mathbb{R}_+^n} K_{x_i}(x+t\Delta x_i,y)g(y)\,dS(y)
+\end{align*}
+$$<p>总被</p>
+$$
+\begin{align*}
+\int_{\partial \mathbb{R}_+^n}\frac{1}{|x-y|^{n+k}}\,dS(y),\quad k>0
+\end{align*}
+$$<p>控制，利用控制收敛定理我们知</p>
+$$
+\begin{align*}
+\frac{\partial u}{\partial x_i}(x)
+&= \int_{\partial \mathbb{R}_+^n}K_{x_i}(x,y)g(y)\,dS(y).
+\end{align*}
+$$<p>由此类推可以归纳证明</p>
+$$
+\begin{align*}
+u(x) &= \int_{\partial \mathbb{R}_+^n}K(x,y)g(y)\,dS(y)
+\end{align*}
+$$<p>是光滑的。</p>
+<p>注：这个过程我们用到了 $\partial \mathbb{R}_+^n$ 的道路连通性、$K$ 的光滑性，</p>
+$$
+\begin{align*}
+\int_{\partial \mathbb{R}_+^n}\frac{1}{|x-y|^{n+k}}\,dS(y)
+\end{align*}
+$$<p>的可积性。</p>
+<h2 id="调和">调和
+</h2><p>不难计算</p>
+$$
+\begin{align*}
+\partial_{x_i}K(x,y)
+&=-\frac{2x_n(x_i-y_i)}{\alpha(n)|x-y|^{n+2}},\\
+\partial_{x_i x_i}K(x,y)
+&=(n+2)\frac{2x_n(x_i-y_i)^2}{\alpha(n)|x-y|^{n+4}}
+-\frac{2x_n}{\alpha(n)}\frac{1}{|x-y|^{n+2}},\\
+\partial_{x_n}K(x,y)
+&=\frac{2}{n\alpha(n)}\frac{1}{|x-y|^n}
+-\frac{2x_n(x_n-y_n)}{\alpha(n)|x-y|^{n+2}},\\
+\partial_{x_n x_n}K(x,y)
+&=-\frac{2}{\alpha(n)}\frac{x_n-y_n}{|x-y|^{n+2}}
+-\frac{4x_n-2y_n}{\alpha(n)}\frac{1}{|x-y|^{n+2}}\\
+&\quad +(n+2)\frac{2x_n(x_n-y_n)^2}{\alpha(n)}\frac{1}{|x-y|^{n+4}}.
+\end{align*}
+$$$$
+\begin{align*}
+\Rightarrow\quad \Delta_x K(x,y)
+&=\frac{4y_n}{\alpha(n)|x-y|^{n+2}}=0,\\
+\Rightarrow\quad \Delta u(x)
+&=\int_{\partial\mathbb{R}_+^n}\Delta_x K(x,y)g(y)\,dy=0.
+\end{align*}
 $$
 </section>
 
