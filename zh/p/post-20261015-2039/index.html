@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="向量丛与纤维丛 定义（向量丛）：直觉上我们需要一个投影映射$\\pi:E\\to M$，$E$是我们要建立的丛对象，是一个流形，$M$也是一个流形，所以自然地我们要求$\\pi$是一个光滑满射。\n我们是在每个点上放一个线性空间，他们彼此需要联系起来，所以我们需要如下的局部平凡化，或者某种意义上就是$E$的坐标卡：设$\\{U_\\alpha\\}$是底流形$M$的一个开覆盖。\n$\\psi_\\alpha:\\pi^{-1}(U_\\alpha)\\to U_\\alpha\\times \\mathbb{R}^k$是一族微分同胚。\n设$E_p=\\pi^{-1}(p)$是$p$点处的纤维，那么$\\psi_\\alpha(E_p)=p\\times \\mathbb{R}^k$，从而我们可以在$E_p$上建立线性结构。\n转移函数$\\psi_\\alpha\\circ \\psi_\\beta^{-1}:(U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k\\to (U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k$，第一个分量为恒等映射，第二个分量为关于$p$的一般线性群值函数。\n由此我们可以定义什么是法丛，设$S$为$M$的正则子流形（从而我们可以定义限制丛（拉回从）），$S$关于$M$的法丛定义为$TM|_S/TS$\n这里有几个值得讨论的点，按理来说法丛应该是环境空间切丛的一个子丛（就像欧氏空间那样），为什么我们这里要定义成一个商丛呢，注意到利用正交补的定义确实合理（事实上是同构的），但是我们必须引入黎曼度量，才能定义正交补，而商丛不依赖于具体的黎曼度量结构，而且一旦引入黎曼度量之后，对应的法丛实际上是同构的。\n带边流形理论 证明$\\mathbb{H}^n$中相对开集之间的微分同胚一定把边界点打到边界点，从而自然地保持内部和边界。\n假设 $$ p\\in\\partial\\mathbb H^n, \\qquad q=F(p)\\in\\operatorname{int}\\mathbb H^n. $$ 令 $$ G=F^{-1}. $$ 因为 $F$ 是微分同胚，所以 $$ DG_q $$ 可逆。 由反函数定理，存在 $q$ 的欧氏开邻域 $W$，使得 $$ G|_W:W\\longrightarrow G(W) $$ 是欧氏开集之间的微分同胚。 特别地， $$ G(W) $$ 是包含 $p$ 的欧氏开集。 但是 $$ G(W)\\subseteq\\mathbb H^n, $$ 因为 $G=F^{-1}$，而 $F^{-1}$ 的值域是 $U\\subseteq\\mathbb H^n$，注意，我们这里用欧氏空间之间的反函数定理，实际上一开始只能得到$G(W)$是欧氏开集，不能得到它包含于$\\mathbb{H}^n$，而是必须用$G=F^{-1}$才能得到这个事情。 因此我们得到： $$ p\\in G(W)\\subseteq\\mathbb H^n, $$ 其中 $G(W)$ 是欧氏开集。 这意味着 ">
+<title>快速建立关于法向量的理论</title>
+
+
+<link rel="canonical" href="https://shikiforever.github.io/zh/p/post-20261015-2039/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.ab6a0607056c08ab14722a731ab6b94d65357397ad3d7603be0e9728f042397f.css"><meta property='og:title' content="快速建立关于法向量的理论">
+<meta property='og:description' content="向量丛与纤维丛 定义（向量丛）：直觉上我们需要一个投影映射$\\pi:E\\to M$，$E$是我们要建立的丛对象，是一个流形，$M$也是一个流形，所以自然地我们要求$\\pi$是一个光滑满射。\n我们是在每个点上放一个线性空间，他们彼此需要联系起来，所以我们需要如下的局部平凡化，或者某种意义上就是$E$的坐标卡：设$\\{U_\\alpha\\}$是底流形$M$的一个开覆盖。\n$\\psi_\\alpha:\\pi^{-1}(U_\\alpha)\\to U_\\alpha\\times \\mathbb{R}^k$是一族微分同胚。\n设$E_p=\\pi^{-1}(p)$是$p$点处的纤维，那么$\\psi_\\alpha(E_p)=p\\times \\mathbb{R}^k$，从而我们可以在$E_p$上建立线性结构。\n转移函数$\\psi_\\alpha\\circ \\psi_\\beta^{-1}:(U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k\\to (U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k$，第一个分量为恒等映射，第二个分量为关于$p$的一般线性群值函数。\n由此我们可以定义什么是法丛，设$S$为$M$的正则子流形（从而我们可以定义限制丛（拉回从）），$S$关于$M$的法丛定义为$TM|_S/TS$\n这里有几个值得讨论的点，按理来说法丛应该是环境空间切丛的一个子丛（就像欧氏空间那样），为什么我们这里要定义成一个商丛呢，注意到利用正交补的定义确实合理（事实上是同构的），但是我们必须引入黎曼度量，才能定义正交补，而商丛不依赖于具体的黎曼度量结构，而且一旦引入黎曼度量之后，对应的法丛实际上是同构的。\n带边流形理论 证明$\\mathbb{H}^n$中相对开集之间的微分同胚一定把边界点打到边界点，从而自然地保持内部和边界。\n假设 $$ p\\in\\partial\\mathbb H^n, \\qquad q=F(p)\\in\\operatorname{int}\\mathbb H^n. $$ 令 $$ G=F^{-1}. $$ 因为 $F$ 是微分同胚，所以 $$ DG_q $$ 可逆。 由反函数定理，存在 $q$ 的欧氏开邻域 $W$，使得 $$ G|_W:W\\longrightarrow G(W) $$ 是欧氏开集之间的微分同胚。 特别地， $$ G(W) $$ 是包含 $p$ 的欧氏开集。 但是 $$ G(W)\\subseteq\\mathbb H^n, $$ 因为 $G=F^{-1}$，而 $F^{-1}$ 的值域是 $U\\subseteq\\mathbb H^n$，注意，我们这里用欧氏空间之间的反函数定理，实际上一开始只能得到$G(W)$是欧氏开集，不能得到它包含于$\\mathbb{H}^n$，而是必须用$G=F^{-1}$才能得到这个事情。 因此我们得到： $$ p\\in G(W)\\subseteq\\mathbb H^n, $$ 其中 $G(W)$ 是欧氏开集。 这意味着 ">
+<meta property='og:url' content='https://shikiforever.github.io/zh/p/post-20261015-2039/'>
+<meta property='og:site_name' content='织式就是力量'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-10-15T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-10-15T00:00:00&#43;08:00'/>
+<meta name="twitter:title" content="快速建立关于法向量的理论">
+<meta name="twitter:description" content="向量丛与纤维丛 定义（向量丛）：直觉上我们需要一个投影映射$\\pi:E\\to M$，$E$是我们要建立的丛对象，是一个流形，$M$也是一个流形，所以自然地我们要求$\\pi$是一个光滑满射。\n我们是在每个点上放一个线性空间，他们彼此需要联系起来，所以我们需要如下的局部平凡化，或者某种意义上就是$E$的坐标卡：设$\\{U_\\alpha\\}$是底流形$M$的一个开覆盖。\n$\\psi_\\alpha:\\pi^{-1}(U_\\alpha)\\to U_\\alpha\\times \\mathbb{R}^k$是一族微分同胚。\n设$E_p=\\pi^{-1}(p)$是$p$点处的纤维，那么$\\psi_\\alpha(E_p)=p\\times \\mathbb{R}^k$，从而我们可以在$E_p$上建立线性结构。\n转移函数$\\psi_\\alpha\\circ \\psi_\\beta^{-1}:(U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k\\to (U_\\alpha\\cap U_\\beta)\\times \\mathbb{R}^k$，第一个分量为恒等映射，第二个分量为关于$p$的一般线性群值函数。\n由此我们可以定义什么是法丛，设$S$为$M$的正则子流形（从而我们可以定义限制丛（拉回从）），$S$关于$M$的法丛定义为$TM|_S/TS$\n这里有几个值得讨论的点，按理来说法丛应该是环境空间切丛的一个子丛（就像欧氏空间那样），为什么我们这里要定义成一个商丛呢，注意到利用正交补的定义确实合理（事实上是同构的），但是我们必须引入黎曼度量，才能定义正交补，而商丛不依赖于具体的黎曼度量结构，而且一旦引入黎曼度量之后，对应的法丛实际上是同构的。\n带边流形理论 证明$\\mathbb{H}^n$中相对开集之间的微分同胚一定把边界点打到边界点，从而自然地保持内部和边界。\n假设 $$ p\\in\\partial\\mathbb H^n, \\qquad q=F(p)\\in\\operatorname{int}\\mathbb H^n. $$ 令 $$ G=F^{-1}. $$ 因为 $F$ 是微分同胚，所以 $$ DG_q $$ 可逆。 由反函数定理，存在 $q$ 的欧氏开邻域 $W$，使得 $$ G|_W:W\\longrightarrow G(W) $$ 是欧氏开集之间的微分同胚。 特别地， $$ G(W) $$ 是包含 $p$ 的欧氏开集。 但是 $$ G(W)\\subseteq\\mathbb H^n, $$ 因为 $G=F^{-1}$，而 $F^{-1}$ 的值域是 $U\\subseteq\\mathbb H^n$，注意，我们这里用欧氏空间之间的反函数定理，实际上一开始只能得到$G(W)$是欧氏开集，不能得到它包含于$\\mathbb{H}^n$，而是必须用$G=F^{-1}$才能得到这个事情。 因此我们得到： $$ p\\in G(W)\\subseteq\\mathbb H^n, $$ 其中 $G(W)$ 是欧氏开集。 这意味着 ">
+    <link rel="shortcut icon" href="/img/kato-megumi-avatar.png" />
+
+    </head>
+    <body class="
+    article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/zh/">
+                    <img src="/img/yamada-avatar.gif" 
+                        width="512"
+                        height="512"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/zh/">织式就是力量</a></h1>
+            <h2 class="site-description">写一些关于数学和计算机的笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/ShikiForever'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://music.163.com/#/user/home?id=550189751'
+                        
+                        title="Netease-music"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-netease-music"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 4c-2.93 1.346 -5 5.046 -5 8.492c0 4.508 4 7.508 8 7.508c4 0 8 -3 8 -7c0 -3.513 -3.5 -5.513 -6 -5.513c-2.5 0 -5 1.513 -5 4.513c0 2 1.5 3 3 3c1.5 0 3 -1 3 -3c0 -3.513 -2 -4.508 -2 -6.515c0 -3.504 3.5 -2.603 4 -1.502" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/zh/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/%E5%85%B3%E4%BA%8E/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/%E9%93%BE%E6%8E%A5/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/zh/log/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 6h.01"/>
+  <path d="M4 12h.01"/>
+  <path d="M4 18h.01"/>
+  <path d="M8 6h2"/>
+  <path d="M8 12h2"/>
+  <path d="M8 18h2"/>
+  <path d="M14 6h6"/>
+  <path d="M14 12h6"/>
+  <path d="M14 18h6"/>
+</svg>
+
+
+                
+                <span>日志</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    <li id="i18n-switch">  
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                        <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                            
+                                
+                                
+                                    
+                                        
+                                    
+                                
+                                <option value="/zh/p/post-20261015-2039/" selected>简体中文</option>
+                            
+                                
+                                
+                                    
+                                
+                                <option value="/en/" >English</option>
+                            
+                        </select>
+                    </li>
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li><a href="#边界上单位内法向量场的构造">边界上单位内法向量场的构造</a></li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/zh/categories/%E6%95%B0%E5%AD%A6/" style="background-color: hsl(300, 60%, 84%); color: hsl(300, 60%, 15%);">
+                数学
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/zh/p/post-20261015-2039/">快速建立关于法向量的理论</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-10-15T00:00:00&#43;08:00'>2026年10月15日星期四</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li><a href="#边界上单位内法向量场的构造">边界上单位内法向量场的构造</a></li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h1 id="向量丛与纤维丛">向量丛与纤维丛
+</h1><p><strong>定义（向量丛）</strong>：直觉上我们需要一个投影映射$\pi:E\to M$，$E$是我们要建立的丛对象，是一个流形，$M$也是一个流形，所以自然地我们要求$\pi$是一个光滑满射。</p>
+<p>我们是在每个点上放一个线性空间，他们彼此需要联系起来，所以我们需要如下的局部平凡化，或者某种意义上就是$E$的坐标卡：设$\{U_\alpha\}$是底流形$M$的一个开覆盖。</p>
+<p>$\psi_\alpha:\pi^{-1}(U_\alpha)\to U_\alpha\times \mathbb{R}^k$是一族微分同胚。</p>
+<p>设$E_p=\pi^{-1}(p)$是$p$点处的纤维，那么$\psi_\alpha(E_p)=p\times \mathbb{R}^k$，从而我们可以在$E_p$上建立线性结构。</p>
+<p>转移函数$\psi_\alpha\circ \psi_\beta^{-1}:(U_\alpha\cap U_\beta)\times \mathbb{R}^k\to (U_\alpha\cap U_\beta)\times \mathbb{R}^k$，第一个分量为恒等映射，第二个分量为关于$p$的一般线性群值函数。</p>
+<p>由此我们可以定义什么是法丛，设$S$为$M$的正则子流形（从而我们可以定义限制丛（拉回从）），$S$关于$M$的法丛定义为$TM|_S/TS$</p>
+<p>这里有几个值得讨论的点，按理来说法丛应该是环境空间切丛的一个子丛（就像欧氏空间那样），为什么我们这里要定义成一个商丛呢，注意到利用正交补的定义确实合理（事实上是同构的），但是我们必须引入黎曼度量，才能定义正交补，而商丛不依赖于具体的黎曼度量结构，而且一旦引入黎曼度量之后，对应的法丛实际上是同构的。</p>
+<h1 id="带边流形理论">带边流形理论
+</h1><p>证明$\mathbb{H}^n$中相对开集之间的微分同胚一定把边界点打到边界点，从而自然地保持内部和边界。</p>
+<p>假设
+</p>
+$$ p\in\partial\mathbb H^n, \qquad q=F(p)\in\operatorname{int}\mathbb H^n. $$<p>
+令
+</p>
+$$ G=F^{-1}. $$<p>
+因为 $F$ 是微分同胚，所以
+</p>
+$$ DG_q $$<p>
+可逆。
+由反函数定理，存在 $q$ 的欧氏开邻域 $W$，使得
+</p>
+$$ G|_W:W\longrightarrow G(W) $$<p>
+是欧氏开集之间的微分同胚。
+特别地，
+</p>
+$$ G(W) $$<p>
+是包含 $p$ 的欧氏开集。
+但是
+</p>
+$$ G(W)\subseteq\mathbb H^n, $$<p>
+因为 $G=F^{-1}$，而 $F^{-1}$ 的值域是 $U\subseteq\mathbb H^n$，注意，我们这里用欧氏空间之间的反函数定理，实际上一开始只能得到$G(W)$是欧氏开集，不能得到它包含于$\mathbb{H}^n$，而是必须用$G=F^{-1}$才能得到这个事情。
+因此我们得到：
+</p>
+$$ p\in G(W)\subseteq\mathbb H^n, $$<p>
+其中 $G(W)$ 是欧氏开集。
+这意味着
+</p>
+$$ p\in\operatorname{int}_{\mathbb R^n}\mathbb H^n. $$<p>
+与
+</p>
+$$ p\in\partial\mathbb H^n $$<p>
+矛盾。
+证毕。</p>
+<p>所以我们这里证明了$\mathbb{H}^n$的相对开集之间的微分同胚一定把边界点打到边界点</p>
+<p>所以实际上这个证明是利用了，如果目标点不是边界点，那因为是微分同胚，所以附近一定是欧氏开集之间的微分同胚（反函数定理），而这个微分同胚的唯一性确保了原像也是欧氏内点，而这与它是边界点矛盾，从而我们可以定义带边流形的边界为存在坐标卡把它打到$\partial\mathbb{H}^n$中的点。</p>
+<p>无边流形和带边流形的乘积一定是一个带边流形，并且边界就是无边流形和边界的乘积。</p>
+<p>这实际上是习题2.6的第二问。</p>
+<h2 id="边界上单位内法向量场的构造">边界上单位内法向量场的构造
+</h2><p>注意到$\partial M$上的微分结构继承自$M$，所以$\partial M$是$M$的正则子流形，从而自然地有$T_p\partial M\subset T_pM$，为一个超平面（$n-1$维），其两侧的切向量称为内外向量。如果定义了黎曼度量，则可以定义内外法向量，因此在边界上每一点都存在唯一的单位内法向量。</p>
+<p>我们证明这个单位内法向量场是法丛的光滑截面。</p>
+<p>从而由于线丛上有处处非零的光滑截面当且仅当线丛平凡，我们知道法丛是平凡线丛。</p>
+<p>首先，我们可以取
+</p>
+$$X=\sum_{\alpha}p_\alpha\frac{\partial}{\partial y_\alpha^n}$$<p>作为全局的光滑法向量场，其中$p_\alpha$是单位分解。（不难验证对每个$y_\alpha^n$，其作用上去都是严格大于$0$的，这为后面截面处处非零做了准备。）</p>
+<p>接着，我们可以对每个坐标邻域都找一个局部正交标架（注意我们做不到把这个东西用单位分解拼接成全局的正交标架），从而局部上我们总可以作正交分解，得到$X$在$T(\partial M)$上的正交投影，其局部表达式为
+</p>
+$$\tilde X=\sum_i g(X,e_i)e_i$$<p>
+所以这个正交投影局部上是光滑的，用$X$减去它也是局部上光滑的，而且这个表达式在每一点$p$都是$X$在$T_p\partial M$上的正交投影，所以是坐标无关的，也就是说这个局部表达式可以全局定义，从而我们全局定义了法丛的光滑截面。</p>
+<p>事实上，我们还可以用局部梯度来定义全局法向量场，对局部坐标$\{y^1,\dots,y^n\}$，$\nabla y^n$是一个局部内法向量场，因为</p>
+$$\langle\nabla y^n,\frac{\partial}{\partial y^i}\rangle = \delta^n_i$$<p>并且换一套坐标$\{\tilde y^1,\dots,\tilde y^n\}$之后，我们有
+</p>
+$$\nabla\tilde y^n=g^{ij}\frac{\partial \tilde y^n}{\partial y^j}\frac{\partial }{\partial y^i}$$<p>限制在$p$点上，我们得到</p>
+$$\nabla\tilde y^n(p)=g^{ij}\delta^{n}_j\frac{\partial \tilde y^n}{\partial y^n}\frac{\partial }{\partial y^i}=g^{ni}\frac{\partial \tilde y^n}{\partial y^n}\frac{\partial }{\partial y^i}=\frac{\partial \tilde y^n}{\partial y^n}\nabla y^n(p)$$<p>前面的系数大于等于$0$，所以两边除去模长单位化之后得到的结果是一样的，也就是说第$n$个坐标的单位梯度场是全局定义的内法向量场，并且用这个向量场来说明更好直接看出它是法丛的光滑截面。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    (() => {
+        const renderPageMath = () => {
+            const elementsToRender = [".main-article", ".widget--toc"];
+
+            elementsToRender.forEach(selector => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    renderMathInElement(element, {
+                        delimiters: [
+                            { left: "$$", right: "$$", display: true },
+                            { left: "$", right: "$", display: false },
+                            { left: "\\(", right: "\\)", display: false },
+                            { left: "\\[", right: "\\]", display: true }
+                        ],
+                        ignoredClasses: ["gist"]
+                    });
+                }
+            });
+        };
+
+        if (document.readyState === "loading") {
+            window.addEventListener("DOMContentLoaded", renderPageMath, { once: true });
+        } else {
+            renderPageMath();
+        }
+    })();
+</script>
+
+    
+</article>
+
+
+    
+
+    
+        
+<section id="comments" class="comments-card" aria-labelledby="comments-title">
+    <header class="comments-card__header">
+        <h2 id="comments-title">评论与讨论</h2>
+    </header><div
+        class="giscus-host"
+        data-giscus-root
+        data-giscus-configured="true"
+        data-repo="ShikiForever/ShikiForever.github.io"
+        data-repo-id="R_kgDORYxBGA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORYxBGM4DIvyB"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-light-theme="light"
+        data-dark-theme="dark_dimmed"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        data-discussions-url="https://github.com/ShikiForever/ShikiForever.github.io/discussions"
+    >
+        <div class="giscus-status" role="status" aria-live="polite">
+            
+                <p data-giscus-status-text>正在加载评论区…</p>
+            
+            <div class="giscus-status__actions">
+                <button type="button" data-giscus-retry hidden>重试加载</button>
+                <a href="https://github.com/ShikiForever/ShikiForever.github.io/discussions" target="_blank" rel="noopener noreferrer">前往 Discussions</a>
+            </div>
+        </div>
+    </div></section>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/zh/p/poisson/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Poisson核在边界上的积分计算</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/zh/p/lp-denseness/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">具有紧支集的光滑函数在L^p中稠密</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/zh/p/post-20260823-2321/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">流形与几何 1.4</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/zh/p/mfd-geometry/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">流形与几何初步1.3</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+<div
+            id="quote-discussion-config"
+            data-article-title="快速建立关于法向量的理论"
+            data-article-url="https://shikiforever.github.io/zh/p/post-20261015-2039/"
+            data-max-length="1200"
+            data-text-fragments="true"
+            hidden
+        ></div><footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2026 织式就是力量
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.5f545763445443bac1c471cd1a0f57a85a322f265f448e64992cf6f7621158e6.js" defer></script>
+<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+<div
+    id="persistent-music-player"
+    data-music-player
+    data-music-server="netease"
+    data-music-type="playlist"
+    data-music-id="18292166792"
+    aria-label="音乐播放器"
+></div>
+<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js" defer></script><script src="/js/music-player.min.b8b65b10dd0aa30dd253a3a7c23394bddf33ebee0761aa222d1b31d4d5393c8d.js" defer></script><script src="/js/music-preferences.min.bda1fa0fe6059eb10e30fdc739492aaffa8d28ce16196386ec904ff5eca20477.js" defer></script><div
+    id="display-settings-root"
+    class="display-settings"
+    data-copy-success="LaTeX 公式已复制"
+    data-copy-failed="复制失败，请检查浏览器权限"
+    data-sakura-on="樱花飘落已开启"
+    data-sakura-off="樱花飘落已关闭"
+    data-formula-on="点击文章公式即可复制 LaTeX"
+    data-formula-off="公式复制已关闭"
+    data-reference-on="引用悬浮预览已开启"
+    data-reference-off="引用悬浮预览已关闭"
+>
+    <button
+        id="display-settings-toggle"
+        class="display-settings__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="display-settings-panel"
+        aria-label="显示设置"
+        title="显示设置"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21a2 2 0 1 1-4 0v-.1A1.7 1.7 0 0 0 8.5 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.1 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.3a2 2 0 1 1 0-4h.1A1.7 1.7 0 0 0 4.1 8.5a1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 8.5 4.1a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.3a2 2 0 1 1 4 0v.1A1.7 1.7 0 0 0 15 4.1a1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 8.5c.12.4.34.75.66 1 .3.25.7.39 1.1.4h.1a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.76 1.1z" />
+        </svg>
+    </button>
+
+    <section id="display-settings-panel" class="display-settings__panel" aria-labelledby="display-settings-title" hidden>
+        <header class="display-settings__header">
+            <div>
+                <h2 id="display-settings-title">显示设置</h2>
+                <p>按照你的喜好调整阅读体验</p>
+            </div>
+            <button id="display-settings-close" class="display-settings__close" type="button" aria-label="关闭设置">×</button>
+        </header>
+
+        <div class="display-settings__group">
+            <h3>视觉特效</h3>
+            <p>为页面增添季节氛围</p>
+            <div class="display-settings__choices" role="radiogroup" aria-label="视觉特效">
+                <label>
+                    <input type="radio" name="display-effect" value="off">
+                    <span>⊘ 关闭</span>
+                </label>
+                <label>
+                    <input type="radio" name="display-effect" value="sakura" checked>
+                    <span>✿ 樱花</span>
+                </label>
+            </div>
+            <p id="display-settings-motion-note" class="display-settings__note" hidden>
+                系统已开启“减少动态效果”，樱花动画暂不播放。
+            </p>
+        </div>
+
+        <div class="display-settings__group display-settings__formula">
+            <div>
+                <h3>公式复制</h3>
+                <p>点击正文中的公式，复制带定界符的 LaTeX</p>
+            </div>
+            <label class="display-settings__switch">
+                <input id="formula-copy-toggle" type="checkbox" checked>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">启用公式复制</span>
+            </label>
+        </div>
+
+        <div class="display-settings__group display-settings__reference">
+            <div>
+                <h3>引用悬浮预览</h3>
+                <p>鼠标停在引用蓝字上时显示定理或概念内容</p>
+            </div>
+            <label class="display-settings__switch">
+                <input id="reference-preview-toggle" type="checkbox" checked>
+                <span aria-hidden="true"></span>
+                <span class="sr-only">启用引用悬浮预览</span>
+            </label>
+        </div>
+    </section>
+</div>
+
+<canvas id="sakura-effect-canvas" class="sakura-effect" aria-hidden="true" hidden></canvas>
+<div id="display-settings-toast" class="display-settings-toast" role="status" aria-live="polite" hidden></div><script src="/js/display-settings.min.e80c29c499051bc7a4185e453c27c5d9199dd222f232e2c9854f70366cd402c8.js" defer></script><script src="/js/reference-preview.min.0c173c042b782283f01b8fa3d8fcb04abfe9b2217e8776c28e9b1bd642f9ccec.js" defer></script><script src="/js/giscus-status.min.9830a269a22130cf6e64596a010cf391c281afa324c0a1b5b0b04f31ab349dc7.js" defer></script><script src="/js/giscus-comments.min.3a3447476944f6457861433d4666d037fed52d4342633cfac378bfed9b0ef32e.js" defer></script><script src="/js/quote-discussion.min.c9472a073375655db6cabd99fd7f34348bc6e13886a054624a37d8cf9bfb4b87.js" defer></script><script src="/js/persistent-navigation.min.059eab47c0b1ae77199869bae6c68ce6c006b80685fc07200c0f71aeaf735712.js" defer></script>
+
+
+    </body>
+</html>
