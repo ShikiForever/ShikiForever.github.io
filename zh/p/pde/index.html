@@ -300,10 +300,16 @@
         <h2 class="widget-title section-title">目录</h2>
 
         <div class="widget--toc">
-            <nav class="toc-nav" id="TableOfContents">
+            <nav class="toc-nav toc-nav--unnumbered" id="TableOfContents">
                 
   <ol>
-    <li><a href="#riesz-representation-thm--lax-milgram-thm">Riesz representation THM &amp; Lax-Milgram THM</a></li>
+    <li><a href="#chapter-2-second-order-linear-elliptic-equations">Chapter 2 Second Order Linear Elliptic Equations</a>
+      <ol>
+        <li><a href="#positive-definiteness">Positive definiteness</a></li>
+        <li><a href="#riesz-representation-thm--lax-milgram-thm">Riesz representation THM &amp; Lax-Milgram THM</a></li>
+      </ol>
+    </li>
+    <li><a href="#chapter-3-functional-analysis">Chapter 3 Functional Analysis</a></li>
   </ol>
 
             </nav>
@@ -382,10 +388,16 @@
                     <span>目录</span>
                 </div>
             </summary>
-            <nav class="toc-nav">
+            <nav class="toc-nav toc-nav--unnumbered">
                 
   <ol>
-    <li><a href="#riesz-representation-thm--lax-milgram-thm">Riesz representation THM &amp; Lax-Milgram THM</a></li>
+    <li><a href="#chapter-2-second-order-linear-elliptic-equations">Chapter 2 Second Order Linear Elliptic Equations</a>
+      <ol>
+        <li><a href="#positive-definiteness">Positive definiteness</a></li>
+        <li><a href="#riesz-representation-thm--lax-milgram-thm">Riesz representation THM &amp; Lax-Milgram THM</a></li>
+      </ol>
+    </li>
+    <li><a href="#chapter-3-functional-analysis">Chapter 3 Functional Analysis</a></li>
   </ol>
 
             </nav>
@@ -413,10 +425,8 @@ $$
 Lw=\underbrace{-\sum_{i,j=1}^{n}D_i(a_{ij}D_jw)}_{\text{principal part of }L}+\sum_{i=1}^{n}b_iD_iw+d_0w.
 $$<!-- where the term of second order is the diffusion of the $u$ -->
 <p>For a non-homogeneous Dirichlet problem, we can use an auxiliary function to transform it into a homogeneous problem. However, the existence of such an auxiliary function will be given in Chapter 4 by the surjectivity of the Trace operator.</p>
-<p><strong>Definition 2.1</strong>: A (real) matrix $A$ is said to be positive definite if $Av\cdot v>0$ for every $v\neq 0,v\in \mathbb{R}^n$.</p>
-<p><strong>Exercise 2.1</strong>： A matrix $A$ is positive definite iff it&rsquo;s coercive.</p>
-<p><strong>Proof.</strong> $v^TAv=v^T\frac{A+A^T}{2}v=:v^TBv\geq \lambda_{\min}v^Tv$. So $A$ is positive definite iff $B$ is positive definite iff $\lambda_{\min}>0$ iff $B$ is coercive.</p>
-<p><strong>Definition 2.1 (Positive definite matrix).</strong> A real matrix $A\in\mathbb{R}^{n\times n}$ is said to be <strong>positive definite</strong> if
+<h2 id="positive-definiteness">Positive definiteness
+</h2><p><strong>Definition 2.1 (Positive definite matrix).</strong> A real matrix $A\in\mathbb{R}^{n\times n}$ is said to be <strong>positive definite</strong> if
 </p>
 $$
 v^TAv>0,\qquad \forall\,v\in\mathbb{R}^n\setminus\{0\}.
@@ -662,7 +672,8 @@ then particularly for $x=y$
 </p>
 $$(Ay, y) = B(y, y) = 0$$<p>
 </p>
-$$\Rightarrow y = 0$$
+$$\Rightarrow y = 0$$<h1 id="chapter-3-functional-analysis">Chapter 3 Functional Analysis
+</h1>
 </section>
 
 
