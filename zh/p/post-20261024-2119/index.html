@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
 <title>快速建立指数映射的理论</title>
 
 
@@ -13,12 +13,12 @@
 
 
 <link rel="stylesheet" href="/scss/style.min.ab6a0607056c08ab14722a731ab6b94d65357397ad3d7603be0e9728f042397f.css"><meta property='og:title' content="快速建立指数映射的理论">
-<meta property='og:description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<meta property='og:description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
 <meta property='og:url' content='https://shikiforever.github.io/zh/p/post-20261024-2119/'>
 <meta property='og:site_name' content='织式就是力量'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2026-10-24T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-10-24T00:00:00&#43;08:00'/>
 <meta name="twitter:title" content="快速建立指数映射的理论">
-<meta name="twitter:description" content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<meta name="twitter:description" content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
     <link rel="shortcut icon" href="/img/kato-megumi-avatar.png" />
 
     </head>
@@ -306,7 +306,11 @@
     <li><a href="#联络">联络</a>
       <ol>
         <li><a href="#协变导数">协变导数</a></li>
-        <li><a href="#场张量与张量场多线性映射与光滑截面">场张量与张量场——多线性映射与光滑截面</a></li>
+        <li><a href="#场张量与张量场多线性映射与光滑截面">场张量与张量场——多线性映射与光滑截面</a>
+          <ol>
+            <li><a href="#-">①. $a)\Rightarrow f)$.</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -393,7 +397,11 @@
     <li><a href="#联络">联络</a>
       <ol>
         <li><a href="#协变导数">协变导数</a></li>
-        <li><a href="#场张量与张量场多线性映射与光滑截面">场张量与张量场——多线性映射与光滑截面</a></li>
+        <li><a href="#场张量与张量场多线性映射与光滑截面">场张量与张量场——多线性映射与光滑截面</a>
+          <ol>
+            <li><a href="#-">①. $a)\Rightarrow f)$.</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -451,7 +459,199 @@ $f_j, g_j$ 为光滑函数，
   <img src="clipboard-20261025-222214-254-1.zh.png" alt="clipboard-20261025-222214-254-1">
   <figcaption>clipboard-20261025-222214-254-1</figcaption>
 </figure>
-
+<p><strong>定理（Hopf-Rinow）</strong>:</p>
+<p>Let $M$ be a Riemannian manifold and let $p\in M$. The following assertions are equivalent.</p>
+<p>a) $\exp_p$ is defined on all of $T_p(M)$.</p>
+<p>b) The closed and bounded sets of $M$ are compact.</p>
+<p>c) $M$ is complete as a metric space.</p>
+<p>d) $M$ is geodesically complete.</p>
+<p>e) There exists a sequence of compact subsets $K_n \subset M$, $K_n \subset K_{n+1}$ and $\bigcup_n K_n = M$, such that if $q_n \notin K_n$ then $d(p, q_n) \to \infty$.</p>
+<p>In addition, any of the statements above implies that</p>
+<p>f) For any $q \in M$ there exists a geodesic $\gamma$ joining $p$ to $q$ with $\ell(\gamma) = d(p, q)$.</p>
+<p><strong>Proof.</strong></p>
+<p>First we notice that $b) \Leftrightarrow e)$</p>
+<p>$\Rightarrow:\quad K_n=\overline{B_n(p)}\text{ is compact.}$</p>
+$$
+K_n\subseteq K_{n+1}.
+$$<p>if $q_n\notin K_n$, $\forall n$.</p>
+<p>Then $d(p,q_n)>n$.</p>
+$$
+\Rightarrow d(p,q_n)\to+\infty.
+$$$$
+\Leftarrow:\quad\text{for }A\text{ a bounded closed set.}
+$$<p>claim: $A\subseteq\displaystyle\bigcup_{n=1}^{N}K_n$ for some $N$.</p>
+<p>otherwise.</p>
+$$
+\exists\ q_n\in A,\quad q_n\notin\bigcup_{n=1}^{N}K_n.
+$$$$
+\Rightarrow q_n\notin K_n
+$$$$
+\Rightarrow d(p,q_n)\to+\infty,
+$$<p>which contradicts that $A$ is bounded.</p>
+<p>Since $\displaystyle\bigcup_{n=1}^{N}K_n$ is cpt, $A$ is closed, we know that $A$ is cpt.</p>
+<hr>
+<p>Since d) means that $\forall q\in M$,</p>
+<p>$\exp_q$ is defined for all of $T_qM$,</p>
+<p>we know that it implies a),</p>
+<p>and we will prove $a)\Rightarrow b)\Rightarrow c)\Rightarrow d)$.</p>
+$$
+\Downarrow
+$$$$
+f)
+$$<h3 id="-">①. $a)\Rightarrow f)$.
+</h3><p>Let $d(p,q)=r$.</p>
+<p>we take a $\delta$ suff. small. s.t.</p>
+$$
+B_\delta(p)=\exp_p(B_\delta(0))\not\ni q.
+$$<p>and $B_\delta(0)$ is compactly contained in</p>
+<p>the normal nbhd. of $0$.</p>
+<p>So we can consider</p>
+$$
+S_\delta(p)=\exp_p(S_\delta(0))
+$$<p>which is the bd. of $B_\delta(q)$</p>
+<p>since $\exp_p$ is a diffeomorphism.</p>
+<p>we know that $S_\delta(p)$ is cpt.</p>
+<p>So there exists $x_0\in S_\delta(p)$</p>
+<p>s.t.</p>
+$$
+d(x_0,q)=\min_{x\in S_\delta(p)}d(x,q).
+$$<p>And we have a geodesic</p>
+$$
+\gamma(s)=\exp_p sv,\quad \|v\|=1.
+$$<p>s.t. $\gamma(0)=p$.</p>
+$$
+\gamma(\delta)=\exp_p\delta v=x_0.
+$$<p>By assumption we know that $\gamma$ is</p>
+<p>defined on all of $\mathbb R$.</p>
+<p>And we claim that $q=\exp_p rv$.</p>
+<p>where $d(p,q)=r$.</p>
+<p>i.e.</p>
+$$
+d(\gamma(r),q)=0.
+$$<p>To prove this, we introduce a parameter</p>
+<p>and prove that for $s\in[0,r]$</p>
+$$
+d(\gamma(s),q)=r-s.
+$$<p>Let</p>
+$$
+A=\{s\in[0,r]:d(\gamma(s),q)=r-s\}.
+$$<p>1). $A\ne\varnothing$ since $0\in A$.</p>
+<p>2). $A$ is connected:</p>
+<p>we need to prove that if</p>
+$$
+s_1,s_2\in A\text{ then }[s_1,s_2]\subseteq A,
+$$<p>which says that if $s_0\in A$ then $[0,s_0]\subseteq A$.</p>
+<p>and the converse is also true.</p>
+<p>Now if $s_0\in A$, $0\le s<s_0$</p>
+<p>we prove that $d(\gamma(s),q)=r-s$.</p>
+<p>①.</p>
+$$
+\begin{aligned}
+d(\gamma(s),q)
+&\le d(\gamma(s),\gamma(s_0))
++d(\gamma(s_0),q)\\
+&=s_0-s+r-s_0\\
+&=r-s.
+\end{aligned}
+$$<p>②.</p>
+$$
+\begin{aligned}
+d(\gamma(s),q)
+&\ge d(p,q)-d(\gamma(s),p)\\
+&=r-s.
+\end{aligned}
+$$<p>So $d(\gamma(s),q)=r-s$.</p>
+<p>so $s\in A$.</p>
+<p>3). $A$ is closed</p>
+<p>if $s_n\to s$, $s_n\in A$,</p>
+<p>then let $n\to\infty$ in</p>
+$$
+d(\gamma(s_n),q)=r-s_n.
+$$<p>we have $s\in A$.</p>
+<p>4). $A$ is open in $[0,r]$.</p>
+<p>for $s_0\in A$.</p>
+<p>if $s_0=0$, we need to prove that</p>
+<p>for some $\delta'>0$, $s_0+\delta'\in A$.</p>
+<p>if $s_0=r$, we have proved it.</p>
+<p>if $s_0\in(0,r)$</p>
+<p>we need to prove that</p>
+<p>for some $\delta'>0$, $s_0+\delta'\in A$.</p>
+<p>So we only need to prove that</p>
+<p>for $s_0\in A$, $s_0\ne r$, $\exists\delta'>0$,</p>
+$$
+s_0+\delta'\in A.
+$$<p>i.e. $\exists\delta'>0$, s.t.</p>
+$$
+\begin{aligned}
+d(\gamma(s_0+\delta'),q)
+&=r-s_0-\delta'\\
+&=d(\gamma(s_0),q)-\delta'.
+\end{aligned}
+$$<p>For $\gamma(s_0)$, $\exists B_{\delta'}(\gamma(s_0))
+=\exp_{\gamma(s_0)}(B_{\delta'}(0))$.</p>
+$$
+\exists x_0'\in S_{\delta'}(\gamma(s_0))
+$$<p>s.t.</p>
+$$
+d(x_0',q)=\min_{x\in S_{\delta'}(\gamma(s_0))}d(x,q).
+$$<p>We claim that</p>
+$$
+\gamma(s_0+\delta')=x_0'
+$$<p>and</p>
+$$
+d(\gamma(s_0),q)=d(x_0',q)+\delta'.
+$$<p>①.</p>
+$$
+\begin{aligned}
+d(\gamma(s_0),q)
+&\le d(\gamma(s_0),x_0')+d(x_0',q)\\
+&=\delta'+d(x_0',q).
+\end{aligned}
+$$<p>②. we prove that</p>
+$$
+\forall\varepsilon>0,\quad
+d(\gamma(s_0),q)+\varepsilon
+\ge d(x_0',q)+\delta'.
+$$<p>Since</p>
+$$
+d(\gamma(s_0),q)<d(\gamma(s_0),q)+\varepsilon.
+$$<p>$\exists C$ connecting $\gamma(s_0)$ and $q$.</p>
+<p>s.t.</p>
+$$
+L(C)<d(\gamma(s_0),q)+\varepsilon.
+$$<p>for $\delta'$ suff. small,</p>
+$$
+q\notin B_{\delta'}(\gamma(s_0)).
+$$<p>$\exists t_0$ s.t.</p>
+$$
+y=C(t_0)\in S_{\delta'}(\gamma(s_0)).
+$$$$
+\begin{aligned}
+L(C)
+&=L(C|_{[0,t_0]})+L(C|_{[t_0,1]})\\
+&\ge d(\gamma(s_0),y)+d(y,q)\\
+&=\delta'+d(x_0',q).
+\end{aligned}
+$$<p>③. we prove that</p>
+$$
+\gamma(s_0+\delta')=x_0'.
+$$<p>Since</p>
+$$
+\begin{aligned}
+d(p,x_0')
+&\ge d(p,q)-d(x_0',q)\\
+&=r-(r-s_0-\delta')\\
+&=s_0+\delta'.
+\end{aligned}
+$$<p>for the curve</p>
+$$
+p\to\gamma(s_0)\to x_0'
+$$<p>whose length $=s_0+\delta'$.</p>
+<p>less or eq. to any one connecting</p>
+<p>$p$ and $x_0'$.</p>
+$$
+\Rightarrow\ \gamma\text{ is regular geodesic.}
+$$
 </section>
 
 
