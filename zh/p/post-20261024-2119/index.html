@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
 <title>快速建立指数映射的理论</title>
 
 
@@ -12,13 +12,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.ab6a0607056c08ab14722a731ab6b94d65357397ad3d7603be0e9728f042397f.css"><meta property='og:title' content="快速建立指数映射的理论">
-<meta property='og:description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<link rel="stylesheet" href="/scss/style.min.c3b59eb1cd99ca7830bb4676fdd43c5265f9c79dafe5a0b68c8a077aa6f6a194.css"><meta property='og:title' content="快速建立指数映射的理论">
+<meta property='og:description' content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
 <meta property='og:url' content='https://shikiforever.github.io/zh/p/post-20261024-2119/'>
 <meta property='og:site_name' content='织式就是力量'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2026-10-24T00:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-10-24T00:00:00&#43;08:00'/>
 <meta name="twitter:title" content="快速建立指数映射的理论">
-<meta name="twitter:description" content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$ ，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$ 设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
+<meta name="twitter:description" content="联络 $D$是切丛$TM$上的一个联络。\n协变导数 设$v\\in T_pM$，我们定义协变导数：\n$D_vY=(D_XY)_p$，其中$X\\in\\Gamma(TM),X_p=v$。\n我们先说明$X$选取的无关性，如果$X_p=0,X\\in\\Gamma(TM)$，那么局部上（坐标邻域$U$），\n$$X=a^i\\frac{\\partial }{\\partial x^i}$$，并且$a_i$在$p$处取值为$0$。\n我们把$X$写成$\\phi a_i\\frac{\\partial }{\\partial x^i}+(1-\\phi)X$的形式，其中$\\phi$是$p$点的鼓包函数，支集落在$U$中（严谨点写需要证明前面这个分段定义的函数光滑）。\n从而可以把$X$表达成$\\sum f_iX_i$，其中$X_i$是光滑向量场，$f_i$光滑且在$p$点取值为$0$，再利用联络关于第一个分量的函数线性性，说明$(D_XY)_p=0$。\n$D_vY$只与$Y$在$p$点附近的值有关，也就是说，如果$Y$在$U_p$上为$0$，我们可以找到支集在$U_p$上，$p$点处为$1$的鼓包函数$\\phi$，得到$\\phi Y\\equiv 0$，然后求导得到$0=D_v Y=D_v \\phi Y$。\n还可以证明$D_{\\dot\\sigma}Y$只和$Y$在$\\sigma$上的值有关，也就是如果$Y(\\sigma)=0$，那么局部上$Y=\\sum f_i\\frac{\\partial }{\\partial x^i}$，并且$f_i$在$\\sigma$上为$0$，利用Leibniz法则得到$D_{\\dot\\sigma}Y=0$。\n场张量与张量场——多线性映射与光滑截面 我们已经知道，$(r,s)$型的张量场就是张量丛$\\bigotimes^{r,s}TM$上的光滑截面，并且我们有张量场点点作为输入$r$个余切向量，$s$个切向量的多线性映射，从而自然地我们可以考虑张量场输入$r$个余切向量场和$s$个切向量场之后在每一点处的取值，并且不难注意到这样的映射是函数线性的，并且每一点处的取值和余切向量场以及切向量场的选取无关，这样的映射输入函数多线性的余切向量场和切向量场，输出一个光滑函数（光滑是因为张量场作为截面光滑，从而系数光滑，输入的余切向量场和切向量场作为截面光滑，从而系数也是光滑的）。\n反过来，如果我们考虑一个函数多线性映射$T$，输入$r$个余切向量场和$s$个切向量场，输出一个光滑函数，我们希望说明这诱导了一个$(r,s)$型张量场。\n我们先说明它逐点是一个$(r,s)$型张量。\n取 $\\omega_{1p}, \\cdots, \\omega_{rp} \\in T_p^*M$， $X_{1p}, \\cdots, X_{sp} \\in T_pM$\n$$ \\begin{aligned} & T_p(\\omega_{1p}, \\cdots, \\omega_{rp}, X_{1p}, \\cdots, X_{sp}) \\\\ & := T(\\omega_1, \\cdots, \\omega_r, X_1, \\cdots, X_s)(p) \\end{aligned} $$设 $\\omega_{1p} = \\cdots = \\omega_{rp} = 0$ $X_{1p} = \\cdots = X_{sp} = 0$\n">
     <link rel="shortcut icon" href="/img/kato-megumi-avatar.png" />
 
     </head>
@@ -769,6 +769,17 @@ $$
             
                 
 <article class="">
+    <a href="/zh/p/pde-technical/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PDE讨论班-技术性结果</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
     <a href="/zh/p/poisson/">
         
 
@@ -807,17 +818,6 @@ $$
 
         <div class="article-details">
             <h2 class="article-title">流形与几何 1.4</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/zh/p/mfd-geometry/">
-        
-
-        <div class="article-details">
-            <h2 class="article-title">流形与几何初步1.3</h2>
         </div>
     </a>
 </article>

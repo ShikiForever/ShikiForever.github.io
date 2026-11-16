@@ -3,57 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shikiforever.github.io/zh/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
                 href="https://shikiforever.github.io/zh/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/"
-                />
   </url><url>
     <loc>https://shikiforever.github.io/zh/categories/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/categories/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
                 href="https://shikiforever.github.io/zh/categories/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/categories/"
-                />
+  </url><url>
+    <loc>https://shikiforever.github.io/zh/p/pde-technical/</loc>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/post/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/tags/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/tags/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
                 href="https://shikiforever.github.io/zh/tags/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/en/tags/"
-                />
   </url><url>
     <loc>https://shikiforever.github.io/zh/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://shikiforever.github.io/zh/p/post-20261024-2119/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/categories/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2026-10-24T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2026-11-14T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://shikiforever.github.io/zh/p/post-20261024-2119/</loc>
     <lastmod>2026-10-24T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://shikiforever.github.io/zh/p/poisson/</loc>
@@ -75,26 +78,26 @@
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/page/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/page/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/page/"
+                href="https://shikiforever.github.io/zh/page/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/%E5%85%B3%E4%BA%8E/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/about/"
+                href="https://shikiforever.github.io/zh/%E5%85%B3%E4%BA%8E/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/p/mfd-geometry/</loc>
@@ -104,62 +107,62 @@
     <lastmod>2026-07-30T00:00:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/log/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/log/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/log/"
+                href="https://shikiforever.github.io/zh/log/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/archives/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/archives/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/archives/"
+                href="https://shikiforever.github.io/zh/archives/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/%E9%93%BE%E6%8E%A5/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/%E9%93%BE%E6%8E%A5/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/links/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/links/"
+                href="https://shikiforever.github.io/zh/%E9%93%BE%E6%8E%A5/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/search/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/search/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/search/"
+                href="https://shikiforever.github.io/zh/search/"
                 />
   </url><url>
     <loc>https://shikiforever.github.io/zh/categories/documentation/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="zh"
-                href="https://shikiforever.github.io/zh/categories/documentation/"
+                hreflang="en"
+                href="https://shikiforever.github.io/en/categories/documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://shikiforever.github.io/en/categories/documentation/"
+                href="https://shikiforever.github.io/zh/categories/documentation/"
                 />
   </url>
 </urlset>
