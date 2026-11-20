@@ -5,7 +5,13 @@
         <description>Recent content in Posts on 织式就是力量</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://shikiforever.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 20 Nov 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://shikiforever.github.io/zh/post/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Sobolev空间的完备性</title>
+            <link>https://shikiforever.github.io/zh/p/sobolev-completeness/</link>
+            <pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+            <guid>https://shikiforever.github.io/zh/p/sobolev-completeness/</guid>
+            <description>&lt;p&gt;我们回忆在闭图像定理的证明过程中引入的图范数：&lt;/p&gt;&#xA;&lt;p&gt;对线性算子$A:D(A)\subset X\to Y$，引入图范数$\|u\|_A=\|u\|_X+\|Au\|_Y$，其中$X,Y$为Banach空间，$D(A)\subset X$为$X$中的闭子空间。那么若$A$为闭算子，&lt;strong&gt;则$D(A)$在图范数$\|\cdot\|_A$下也是完备的&lt;/strong&gt;。&lt;/p&gt;&#xA;&lt;p&gt;对$1\leq p\leq \infty$引入微分算子&lt;/p&gt;&#xA;$$D:W^{k,p}(U)\subset L^p(U)\to (L^p(U))^{\sum_{i=0}^{k} k^i}$$&lt;p&gt;显然$W^{k,p}$中的收敛蕴含了它在$L^p$中的收敛，所以$W^{k,p}(U)$是$L^p(U)$的闭子空间，所以我们只需要验证$D$是一个闭算子。&lt;/p&gt;&#xA;&lt;p&gt;也即如果$u_k\in W^{k,p}(U)$满足$u_k\to u$，且$D^{\alpha}u_k\to u_\alpha$（两个都是在$L^p$意义下），那么$u_\alpha=D^\alpha u$。&lt;/p&gt;&#xA;&lt;p&gt;而这可以直接利用弱导数的定义验证：&lt;/p&gt;&#xA;&lt;p&gt;对$\varphi\in C^\infty_c(U)$&lt;/p&gt;&#xA;$$\int_U u_kD^\alpha \varphi=(-1)^{|\alpha|}\int_U (D^{\alpha}u_k)\varphi$$&lt;p&gt;两边取$k\to\infty$，利用弱导数的唯一性，马上得到$u_\alpha=D^\alpha u$。&lt;/p&gt;&#xA;</description>
+        </item><item>
             <title>PDE讨论班-技术性结果</title>
             <link>https://shikiforever.github.io/zh/p/pde-technical/</link>
             <pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
